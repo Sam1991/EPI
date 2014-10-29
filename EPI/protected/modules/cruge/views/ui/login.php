@@ -32,7 +32,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php Yii::app()->user->ui->tbutton(CrugeTranslator::t('logon', "Login")); ?>
+		<?php Yii::app()->user->ui->tbutton(CrugeTranslator::t('logon', "Ingresar")); ?>
 		<?php echo Yii::app()->user->ui->passwordRecoveryLink; ?>
 		<?php
 			if(Yii::app()->user->um->getDefaultSystem()->getn('registrationonlogin')===1)
