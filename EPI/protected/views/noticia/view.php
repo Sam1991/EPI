@@ -20,6 +20,8 @@ $this->menu=array(
 
 <h1><?php echo $model->no_titulo;?></h1>
 <h3><?php echo $model->no_subtitulo; ?></h3>
+<img src="<?php echo Yii::app()->baseUrl.'/protected/imagenes/'.$model->no_imagen ?>">
+
 <p><?php  echo $model->no_cuerpo; ?></p>
 
  

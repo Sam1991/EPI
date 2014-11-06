@@ -26,13 +26,17 @@ class Noticia extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
+		
 		return array(
+			array('no_imagen', 'file', 'types'=>'jpg, gif, png'),
 			array('no_titulo, no_subtitulo, no_cuerpo', 'required'),
 			array('no_titulo, no_subtitulo', 'length', 'max'=>100),
 			array('no_cuerpo', 'length', 'max'=>5000),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
+			
 			array('no_id, no_titulo, no_subtitulo, no_cuerpo', 'safe', 'on'=>'search'),
+
 		);
 	}
 
@@ -57,6 +61,7 @@ class Noticia extends CActiveRecord
 			'no_titulo' => 'Titulo',
 			'no_subtitulo' => 'Subtitulo',
 			'no_cuerpo' => 'Cuerpo',
+			'foto'=>'Foto',
 		);
 	}
 

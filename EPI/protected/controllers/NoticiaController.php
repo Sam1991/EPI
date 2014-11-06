@@ -70,13 +70,22 @@ class NoticiaController extends Controller
 		if(isset($_POST['Noticia']))
 		{
 			$model->attributes=$_POST['Noticia'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->no_id));
+			$model->no_imagen=CUploadedFile::getInstance($model,'no_imagen'); //NEW (FORMULARIO)
+			if($model->save()){
+
+				//copiar la imagen en el directorio
+                $estructura =Yii::app()->basePath.'\imagenes';
+                $path="$estructura/$model->no_imagen";
+	            $model->no_imagen->saveAs($path);
+	            $this->redirect(array('view','id'=>$model->no_id));
+				//fin_copiar la imagen en el directorio
+			}	
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		 $this->render('create',array(
+		 	'model'=>$model,
+		 ));
+		
 	}
 
 	/**

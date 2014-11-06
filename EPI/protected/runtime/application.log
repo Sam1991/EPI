@@ -409,3 +409,578 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=cruge/ui/rbacajaxsetchilditem
 HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/rbacauthitemchilditems&id=alumno
 ---
+2014/11/06 13:01:25 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:01:25 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', Object(CUploadedFile))
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(73): CActiveRecord->__set('imagen', Object(CUploadedFile))
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:02:54 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:02:54 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', Object(CUploadedFile))
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(73): CActiveRecord->__set('imagen', Object(CUploadedFile))
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:04:39 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:04:39 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', Object(CUploadedFile))
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(73): CActiveRecord->__set('imagen', Object(CUploadedFile))
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:06:18 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:06:18 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', Object(CUploadedFile))
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(73): CActiveRecord->__set('imagen', Object(CUploadedFile))
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:19:29 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:19:29 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', Object(CUploadedFile))
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(73): CActiveRecord->__set('imagen', Object(CUploadedFile))
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:24:54 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:24:54 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', Object(CUploadedFile))
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(73): CActiveRecord->__set('imagen', Object(CUploadedFile))
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:31:21 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:31:21 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', Object(CUploadedFile))
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(73): CActiveRecord->__set('imagen', Object(CUploadedFile))
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:32:25 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:32:25 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(161): CComponent->__set('imagen', Object(CUploadedFile))
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(73): CActiveRecord->__set('imagen', Object(CUploadedFile))
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:39:55 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:39:55 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(145): CComponent->__get('imagen')
+#1 C:\wamp\www\EPI\framework\validators\CFileValidator.php(166): CActiveRecord->__get('imagen')
+#2 C:\wamp\www\EPI\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(Noticia), 'imagen')
+#3 C:\wamp\www\EPI\framework\base\CModel.php(159): CValidator->validate(Object(Noticia), NULL)
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(74): CActiveRecord->save()
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:54:04 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:54:04 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(145): CComponent->__get('imagen')
+#1 C:\wamp\www\EPI\framework\validators\CFileValidator.php(166): CActiveRecord->__get('imagen')
+#2 C:\wamp\www\EPI\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(Noticia), 'imagen')
+#3 C:\wamp\www\EPI\framework\base\CModel.php(159): CValidator->validate(Object(Noticia), NULL)
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(74): CActiveRecord->save()
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:54:56 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:54:56 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(145): CComponent->__get('imagen')
+#1 C:\wamp\www\EPI\framework\validators\CFileValidator.php(166): CActiveRecord->__get('imagen')
+#2 C:\wamp\www\EPI\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(Noticia), 'imagen')
+#3 C:\wamp\www\EPI\framework\base\CModel.php(159): CValidator->validate(Object(Noticia), NULL)
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(74): CActiveRecord->save()
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:55:26 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:55:26 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(145): CComponent->__get('imagen')
+#1 C:\wamp\www\EPI\framework\validators\CFileValidator.php(166): CActiveRecord->__get('imagen')
+#2 C:\wamp\www\EPI\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(Noticia), 'imagen')
+#3 C:\wamp\www\EPI\framework\base\CModel.php(159): CValidator->validate(Object(Noticia), NULL)
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(74): CActiveRecord->save()
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 13:56:10 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 13:56:13 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:00:36 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:00:37 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(145): CComponent->__get('imagen')
+#1 C:\wamp\www\EPI\framework\validators\CFileValidator.php(166): CActiveRecord->__get('imagen')
+#2 C:\wamp\www\EPI\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(Noticia), 'imagen')
+#3 C:\wamp\www\EPI\framework\base\CModel.php(159): CValidator->validate(Object(Noticia), NULL)
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(74): CActiveRecord->save()
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 14:04:27 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:04:27 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(145): CComponent->__get('imagen')
+#1 C:\wamp\www\EPI\framework\validators\CFileValidator.php(166): CActiveRecord->__get('imagen')
+#2 C:\wamp\www\EPI\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(Noticia), 'imagen')
+#3 C:\wamp\www\EPI\framework\base\CModel.php(159): CValidator->validate(Object(Noticia), NULL)
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(74): CActiveRecord->save()
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 14:07:18 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:07:53 [warning] [application] Error al establecer unsafe al atributo "imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:09:31 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:09:52 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:11:11 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:11:11 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php:79)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): NoticiaController->runAction()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): NoticiaController->runActionWithFilters()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): NoticiaController->run()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (79)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:13:53 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:13:53 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php:79)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): NoticiaController->runAction()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): NoticiaController->runActionWithFilters()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): NoticiaController->run()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (79)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:18:01 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:18:21 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:18:21 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php:79)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): NoticiaController->runAction()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): NoticiaController->runActionWithFilters()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): NoticiaController->run()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (79)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:21:24 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:21:49 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:21:49 [error] [php] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: No such file or directory (C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php:79)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): NoticiaController->runAction()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): NoticiaController->runActionWithFilters()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): NoticiaController->run()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (79)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:25:14 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:25:14 [error] [exception.CException] exception 'CException' with message 'La propiedad "Noticia"."imagen" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(145): CComponent->__get('imagen')
+#1 C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php(80): CActiveRecord->__get('imagen')
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/create
+---
+2014/11/06 14:25:37 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:25:37 [error] [php] move_uploaded_file(C:\wamp\www\EPI\EPI\protectedimagenes/ic_launcher.png) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): NoticiaController->actionCreate()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): NoticiaController->runAction()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\EPI\framework\web\CController.php(265): NoticiaController->runActionWithFilters()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): NoticiaController->run()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (80)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:26:42 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:31:19 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:32:06 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:33:12 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:34:09 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:34:09 [error] [php] Undefined variable: estructra (C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php:92)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): NoticiaController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): NoticiaController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): NoticiaController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): NoticiaController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (92)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:34:39 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:35:16 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:35:20 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:35:27 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:38:15 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 14:42:17 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/06 15:01:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/delete')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/delete&id=10
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
