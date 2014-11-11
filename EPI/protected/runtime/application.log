@@ -817,3 +817,310 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
 HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
 ---
+2014/11/11 14:28:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+' in C:\wamp\www\EPI\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\EPI\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\EPI\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\wamp\www\EPI\EPI\protected\modules\cruge\models\data\CrugeSession.php(90): CActiveRecord->findByPk('0')
+#8 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php(46): CrugeSession::loadModel('0')
+#9 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php(412): CrugeFactory->getICrugeSession('0')
+#10 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(451): CrugeUserManager->loadSession('0')
+#11 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(229): CrugeWebUser->getICrugeSession()
+#12 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(242): CrugeWebUser->getId()
+#13 C:\wamp\www\EPI\framework\web\auth\CWebUser.php(200): CrugeWebUser->getIsGuest()
+#14 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(45): CWebUser->init()
+#15 C:\wamp\www\EPI\framework\base\CModule.php(387): CrugeWebUser->init()
+#16 C:\wamp\www\EPI\framework\base\CModule.php(103): CModule->getComponent('user')
+#17 C:\wamp\www\EPI\EPI\protected\views\layouts\main.php(37): CModule->__get('user')
+#18 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#19 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#20 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#21 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#22 C:\wamp\www\EPI\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#23 C:\wamp\www\EPI\framework\web\CBaseController.php(206): COutputProcessor->run()
+#24 C:\wamp\www\EPI\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#25 C:\wamp\www\EPI\EPI\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#26 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#27 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#28 C:\wamp\www\EPI\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#29 C:\wamp\www\EPI\EPI\protected\controllers\SiteController.php(32): CController->render('index')
+#30 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#31 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#32 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#33 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#35 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#36 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#37 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#38 {main}
+REQUEST_URI=/EPI/EPI/
+HTTP_REFERER=http://localhost/EPI/
+---
+2014/11/11 14:28:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+' in C:\wamp\www\EPI\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\EPI\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\EPI\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\wamp\www\EPI\EPI\protected\modules\cruge\models\data\CrugeSession.php(90): CActiveRecord->findByPk('0')
+#8 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php(46): CrugeSession::loadModel('0')
+#9 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php(412): CrugeFactory->getICrugeSession('0')
+#10 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(451): CrugeUserManager->loadSession('0')
+#11 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(229): CrugeWebUser->getICrugeSession()
+#12 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(242): CrugeWebUser->getId()
+#13 C:\wamp\www\EPI\framework\web\auth\CWebUser.php(200): CrugeWebUser->getIsGuest()
+#14 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(45): CWebUser->init()
+#15 C:\wamp\www\EPI\framework\base\CModule.php(387): CrugeWebUser->init()
+#16 C:\wamp\www\EPI\framework\base\CModule.php(103): CModule->getComponent('user')
+#17 C:\wamp\www\EPI\EPI\protected\views\layouts\main.php(37): CModule->__get('user')
+#18 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#19 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#20 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#21 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#22 C:\wamp\www\EPI\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#23 C:\wamp\www\EPI\framework\web\CBaseController.php(206): COutputProcessor->run()
+#24 C:\wamp\www\EPI\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#25 C:\wamp\www\EPI\EPI\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#26 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#27 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#28 C:\wamp\www\EPI\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#29 C:\wamp\www\EPI\EPI\protected\controllers\SiteController.php(32): CController->render('index')
+#30 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#31 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#32 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#33 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#35 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#36 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#37 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#38 {main}
+REQUEST_URI=/EPI/EPI/
+HTTP_REFERER=http://localhost/EPI/
+---
+2014/11/11 14:29:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+' in C:\wamp\www\EPI\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\EPI\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\EPI\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(1428): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(1484): CActiveRecord->getTableAlias(true)
+#7 C:\wamp\www\EPI\EPI\protected\modules\cruge\models\data\CrugeSession.php(90): CActiveRecord->findByPk('0')
+#8 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php(46): CrugeSession::loadModel('0')
+#9 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php(412): CrugeFactory->getICrugeSession('0')
+#10 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(451): CrugeUserManager->loadSession('0')
+#11 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(229): CrugeWebUser->getICrugeSession()
+#12 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(242): CrugeWebUser->getId()
+#13 C:\wamp\www\EPI\framework\web\auth\CWebUser.php(200): CrugeWebUser->getIsGuest()
+#14 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeWebUser.php(45): CWebUser->init()
+#15 C:\wamp\www\EPI\framework\base\CModule.php(387): CrugeWebUser->init()
+#16 C:\wamp\www\EPI\framework\base\CModule.php(103): CModule->getComponent('user')
+#17 C:\wamp\www\EPI\EPI\protected\views\layouts\main.php(37): CModule->__get('user')
+#18 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#19 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#20 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#21 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#22 C:\wamp\www\EPI\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#23 C:\wamp\www\EPI\framework\web\CBaseController.php(206): COutputProcessor->run()
+#24 C:\wamp\www\EPI\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#25 C:\wamp\www\EPI\EPI\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#26 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#27 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#28 C:\wamp\www\EPI\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#29 C:\wamp\www\EPI\EPI\protected\controllers\SiteController.php(32): CController->render('index')
+#30 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#31 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#32 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#33 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#35 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#36 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#37 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#38 {main}
+REQUEST_URI=/EPI/EPI/
+---
+2014/11/11 14:35:07 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Noticia".
+in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/11 14:40:43 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 17641416-2
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (862)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (78)
+2014/11/11 14:40:43 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** leo@hotmail.com
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (865)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (78)
+2014/11/11 14:41:05 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** leonardo
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\ui\CrugeLogon.php (58)
+2014/11/11 14:41:05 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** leonardo
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\auth\CrugeAuthDefault.php (68)
+2014/11/11 14:41:05 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>el usuario no fue hallado</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/11 14:41:38 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 17912202-2
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\ui\CrugeLogon.php (58)
+2014/11/11 14:41:38 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 17912202-2
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\auth\CrugeAuthDefault.php (68)
+2014/11/11 14:41:38 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>el usuario no fue hallado</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/11 14:41:42 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 17912202-2
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\ui\CrugeLogon.php (58)
+2014/11/11 14:41:42 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 17912202-2
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\auth\CrugeAuthDefault.php (68)
+2014/11/11 14:41:42 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>el usuario no fue hallado</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/11/11 14:47:41 [error] [exception.CException] exception 'CException' with message 'La propiedad "CrugeWebUser"."admin" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CWebUser.php(146): CComponent->__get('admin')
+#1 C:\wamp\www\EPI\EPI\protected\views\layouts\main.php(41): CWebUser->__get('admin')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#4 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#5 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#6 C:\wamp\www\EPI\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#7 C:\wamp\www\EPI\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\wamp\www\EPI\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\wamp\www\EPI\EPI\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#10 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#11 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#12 C:\wamp\www\EPI\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#13 C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php(161): CController->render('login', Array)
+#14 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): UiController->actionLogin()
+#15 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('login')
+#26 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/login')
+#27 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/ui/login
+HTTP_REFERER=http://localhost/EPI/EPI/index.php
+---
+2014/11/11 14:48:21 [error] [exception.CException] exception 'CException' with message 'CrugeWebUser y sus behaviors no tienen un mÃ©todo o closure llamado "isAdmin".' in C:\wamp\www\EPI\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\layouts\main.php(41): CComponent->__call('isAdmin', Array)
+#1 C:\wamp\www\EPI\EPI\protected\views\layouts\main.php(41): CrugeWebUser->isAdmin()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#4 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#5 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#6 C:\wamp\www\EPI\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#7 C:\wamp\www\EPI\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\wamp\www\EPI\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\wamp\www\EPI\EPI\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#10 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#11 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#12 C:\wamp\www\EPI\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#13 C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php(161): CController->render('login', Array)
+#14 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): UiController->actionLogin()
+#15 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('login')
+#26 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/login')
+#27 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/11/11 14:49:22 [error] [exception.CException] exception 'CException' with message 'CrugeWebUser y sus behaviors no tienen un mÃ©todo o closure llamado "isAdmin".' in C:\wamp\www\EPI\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\layouts\main.php(41): CComponent->__call('isAdmin', Array)
+#1 C:\wamp\www\EPI\EPI\protected\views\layouts\main.php(41): CrugeWebUser->isAdmin()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#4 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#5 C:\wamp\www\EPI\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#6 C:\wamp\www\EPI\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#7 C:\wamp\www\EPI\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\wamp\www\EPI\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\wamp\www\EPI\EPI\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#10 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#11 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#12 C:\wamp\www\EPI\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#13 C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php(161): CController->render('login', Array)
+#14 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): UiController->actionLogin()
+#15 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('login')
+#26 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/login')
+#27 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/ui/login
+---

@@ -33,23 +33,31 @@
 				// array('label'=>'Home', 'url'=>array('/site/index')),
 				// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				// array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Administrar Usuarios'
-					, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
-					, 'visible'=>!Yii::app()->user->isGuest),
 				
-				//link a crear un alumno
-				array('label'=>'Registrar', 'url'=>array('/alumno/create')),
-				//link a alumnos
-				array('label'=>'Noticias', 'url'=>array('/noticia/index')),
+
+				//CRUGE
+					array('label'=>'Administrar Usuarios'
+						, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
+						, 'visible'=>Yii::app()->user->isSuperAdmin),
+				
+				//TODOS
+					//link a crear un alumno
+					array('label'=>'Registrar', 'url'=>array('/alumno/create'),'visible'=>Yii::app()->user->isGuest),
+					//link a alumnos
+					array('label'=>'Noticias', 'url'=>array('/noticia/index')),
+					array('label'=>'Ingresar', 'url'=>Yii::app()->user->ui->loginUrl, 'visible'=>Yii::app()->user->isGuest),
+		
+					array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
 
 
-				array('label'=>'Ingresar'
-					, 'url'=>Yii::app()->user->ui->loginUrl
-					, 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Salir ('.Yii::app()->user->name.')'
-					, 'url'=>Yii::app()->user->ui->logoutUrl
-					, 'visible'=>!Yii::app()->user->isGuest),
-			),
+				//POR IMPLEMENTAR
+					array('label'=>'Programa EPI'),
+					array('label'=>'Convocatoria'),
+					array('label'=>'Galeria'),
+					array('label'=>'Contacto'),
+
+
+					),
 		)); ?>
 	</div><!-- mainmenu -->
 
@@ -69,3 +77,4 @@
 
 </body>
 </html>
+
