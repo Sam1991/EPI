@@ -409,3 +409,411 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=cruge/ui/rbacajaxsetchilditem
 HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/rbacauthitemchilditems&id=alumno
 ---
+2014/11/09 17:51:58 [error] [exception.CException] exception 'CException' with message 'La propiedad "Alumno"."al_clave" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(145): CComponent->__get('al_clave')
+#1 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('al_clave')
+#2 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Alumno), 'al_clave')
+#3 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Alumno), 'al_clave', Array)
+#4 C:\wamp\www\EPI\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Alumno), 'al_clave', Array)
+#5 C:\wamp\www\EPI\EPI\protected\views\alumno\_form.php(60): CActiveForm->textField(Object(Alumno), 'al_clave', Array)
+#6 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#7 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#8 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#9 C:\wamp\www\EPI\EPI\protected\views\alumno\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#11 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#12 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#13 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php(99): CController->render('create', Array)
+#15 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): AlumnoController->actionCreate()
+#16 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('alumno/create')
+#26 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=alumno/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/11/09 17:59:19 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 176414162
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (862)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (78)
+2014/11/09 17:59:19 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** leocontr@alumnos.ubiobio.cl
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (865)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (78)
+2014/11/09 18:01:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 18:01:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 18:29:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 18:29:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/delete')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/delete&id=6
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/view&id=6
+---
+2014/11/09 18:31:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 18:31:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/delete')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/delete&id=6
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/view&id=6
+---
+2014/11/09 18:31:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/view&id=6
+---
+2014/11/09 18:33:05 [error] [exception.CException] exception 'CException' with message 'No se puede agregar "alumno" como hijo de sí mismo.' in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeAuthManager.php:327
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php(782): CrugeAuthManager->addItemChild('alumno', 'alumno')
+#1 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): UiController->actionRbacAjaxSetChildItem()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#5 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUiAccessControlFilter.php(37): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CrugeUiAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('rbacajaxsetchil...')
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/rbacaj...')
+#16 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/ui/rbacajaxsetchilditem
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/rbacauthitemchilditems&id=alumno
+---
+2014/11/09 18:33:08 [error] [exception.CException] exception 'CException' with message 'No se puede agregar "alumno" como hijo de sí mismo.' in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeAuthManager.php:327
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php(782): CrugeAuthManager->addItemChild('alumno', 'alumno')
+#1 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): UiController->actionRbacAjaxSetChildItem()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeAccessControlFilter.php(90): CFilterChain->run()
+#5 C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUiAccessControlFilter.php(37): CrugeAccessControlFilter->preFilter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CrugeUiAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('rbacajaxsetchil...')
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/rbacaj...')
+#16 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/ui/rbacajaxsetchilditem
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/rbacauthitemchilditems&id=alumno
+---
+2014/11/09 18:33:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 18:33:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 20:25:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 20:25:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 20:28:14 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 179122022
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (862)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (78)
+2014/11/09 20:28:14 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** a@dj.cl
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (865)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (78)
+2014/11/09 20:41:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 20:47:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/09 20:48:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/10 14:44:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/10 14:44:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/create')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/10 14:47:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
+2014/11/10 15:00:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('noticia/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=noticia/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=noticia/index
+---
