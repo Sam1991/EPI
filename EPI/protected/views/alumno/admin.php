@@ -53,6 +53,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'al_comentario',
 		/*
 		'al_clave',
+		'al_paterno',
+		'al_materno',
+		'al_campus',
+		'al_email2',
 		*/
 		array(
 			'class'=>'CButtonColumn',

@@ -46,6 +46,26 @@
 		<?php echo $form->textField($model,'al_clave',array('size'=>60,'maxlength'=>100)); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'al_paterno'); ?>
+		<?php echo $form->textField($model,'al_paterno',array('size'=>60,'maxlength'=>100)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'al_materno'); ?>
+		<?php echo $form->textField($model,'al_materno',array('size'=>60,'maxlength'=>100)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'al_campus'); ?>
+		<?php echo $form->textField($model,'al_campus',array('size'=>60,'maxlength'=>100)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'al_email2'); ?>
+		<?php echo $form->textField($model,'al_email2',array('size'=>30,'maxlength'=>30)); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

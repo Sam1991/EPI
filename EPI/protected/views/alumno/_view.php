@@ -33,5 +33,23 @@
 	<?php echo CHtml::encode($data->al_clave); ?>
 	<br />
 
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('al_paterno')); ?>:</b>
+	<?php echo CHtml::encode($data->al_paterno); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('al_materno')); ?>:</b>
+	<?php echo CHtml::encode($data->al_materno); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('al_campus')); ?>:</b>
+	<?php echo CHtml::encode($data->al_campus); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('al_email2')); ?>:</b>
+	<?php echo CHtml::encode($data->al_email2); ?>
+	<br />
+
+	*/ ?>
 
 </div>

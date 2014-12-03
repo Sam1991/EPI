@@ -99,6 +99,7 @@
 
 	
 	<?php echo $content; ?>
+	
 	<div id="footer">
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/footer.png" >
 	</div>

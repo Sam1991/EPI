@@ -1256,3 +1256,91 @@ REQUEST_URI=/EPI/EPI/index.php
 in C:\wamp\www\EPI\EPI\protected\views\layouts\main.php (31)
 in C:\wamp\www\EPI\EPI\protected\views\layouts\column1.php (6)
 in C:\wamp\www\EPI\EPI\protected\controllers\SiteController.php (32)
+2014/12/03 13:11:47 [error] [exception.CException] exception 'CException' with message 'AlumnoController no ha podido encontrar la vista "_columna2" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\layouts\column2.php(9): CController->renderPartial('_columna2')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#4 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php(79): CController->render('create', Array)
+#5 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): AlumnoController->actionCreate()
+#6 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('alumno/create')
+#16 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=alumno/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php
+---
+2014/12/03 14:04:54 [error] [exception.CException] exception 'CException' with message 'UiController no ha podido encontrar la vista "_columna2" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\layouts\column2.php(9): CController->renderPartial('_columna2')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#4 C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php(161): CController->render('login', Array)
+#5 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): UiController->actionLogin()
+#6 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('login')
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/ui/login')
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/ui/login
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumno/view&id=179122022
+---
+2014/12/03 14:07:28 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 179122022
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\ui\CrugeLogon.php (58)
+2014/12/03 14:07:28 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 179122022
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\auth\CrugeAuthDefault.php (68)
+2014/12/03 14:07:28 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>el usuario no fue hallado</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/03 14:33:24 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 179122022
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (862)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (79)
+2014/12/03 14:33:24 [error] [exception.CrugeException.500] correo duplicado.<br/>500
+REQUEST_URI=/EPI/EPI/index.php?r=alumno/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumno/create
+---
+2014/12/03 14:33:37 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 179122022
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (862)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (79)
+2014/12/03 14:33:37 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** dsads@hotma.com
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (865)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoController.php (79)

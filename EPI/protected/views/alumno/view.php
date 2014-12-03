@@ -28,5 +28,9 @@ $this->menu=array(
 		'al_telefono',
 		'al_comentario',
 		'al_clave',
+		'al_paterno',
+		'al_materno',
+		'al_campus',
+		'al_email2',
 	),
 )); ?>

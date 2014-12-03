@@ -34,17 +34,42 @@
  * @license http://www.yiiframework.com/license/
  */
 
+.guardar{
+color: white;
+background: red;
+font-size: 12px;
+font-family: Verdana,Helvetica;
+font-weight: bold;
+border: 0px;
+width: 80px;
+height: 30px;
+border-radius: 15px;
+}
+
 div.form
 {
+	padding-left: 40px;
+	width: 80%;
 }
 
 div.form input,
 div.form textarea,
 div.form select
 {
-	margin: 0.2em 0 0.5em 0;
+	margin: 0.2em 0 0.1em 0;
 }
 
+div.form input[type="text"], textarea{
+	border: 1px solid red;
+	width: 100%;
+}
+
+
+div.form textarea{
+	height: 62px;
+	
+
+}
 div.form fieldset
 {
 	border: 1px solid #DDD;

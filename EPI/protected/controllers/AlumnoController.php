@@ -6,7 +6,7 @@ class AlumnoController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column2Iguales';
 
 	/**
 	 * @return array action filters
@@ -70,6 +70,7 @@ class AlumnoController extends Controller
 		if(isset($_POST['Alumno']))
 		{
 			$model->attributes=$_POST['Alumno'];
+
 			//unir con cruge
 			$values = array(
 			  'username' => $model->al_rut,
@@ -87,16 +88,14 @@ class AlumnoController extends Controller
                           echo "no se pudo crear el usuario: ".$errores;
             }
 		//fin_unir con cruge
+            
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->al_rut));
-	
-		
-
 		}
 
-		 $this->render('create',array(
-		 	'model'=>$model,
-		 ));
+		$this->render('create',array(
+			'model'=>$model,
+		));
 	}
 
 	/**
