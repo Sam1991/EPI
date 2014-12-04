@@ -2,6 +2,37 @@
 #centrado{
 	text-align: center;
 }
+
+.numerosRedondos{
+border-radius: 15px;
+background: #0ac8a6;
+width: 30px;
+height: 30px;
+color: white;
+}
+
+
+.titulo{
+color: #09c7a2;
+
+}
+
+#principal {
+	width: 920px;
+	display: inline-table;
+	background-color: #f9f9f9;
+	margin-left: 58px;
+	margin-top: 30px;
+	margin-right: 34px;
+}
+
+#segundaria {
+	width: 305px;
+	display: inline-table;
+	vertical-align: bottom;
+}
+
+
 body
 {
 	margin: 0;
@@ -135,8 +166,8 @@ margin-left: 4px;
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	color: #666665;
-	background-color:#EFF4FA;
+	color: #06cca5;
+	/*background-color:#EFF4FA;*/
 	text-decoration:none;
 }
 

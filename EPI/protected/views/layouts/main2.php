@@ -23,9 +23,8 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logoEpi2.png" style="margin-left: 50px;margin-top:14px;" >
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_tag.png" style="vertical-align: top;margin-left: 92px;" >
-		
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logoEpi.png" style="margin-left: 50px;">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores.png" style="margin-left: 305px;vertical-align: top;">
 		<?php  
 			$imageUrl = "".Yii::app()->request->baseUrl."/images/btn_inscripcion.png";
 			$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
@@ -103,7 +102,7 @@
 	<?php echo $content; ?>
 	
 	<div id="footer">
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/footer.png" >
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer.png" >
 	</div>
 
 	<?php if(isset($this->breadcrumbs)):?>

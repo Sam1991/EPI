@@ -1,6 +1,6 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
-<div id="contenedorInscripcion">
+<div class="contenedor">
 <div class="inscripcion">
 	<div id="content">
 		<?php echo $content; ?>
