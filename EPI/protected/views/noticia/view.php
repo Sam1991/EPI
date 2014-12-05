@@ -2,10 +2,6 @@
 /* @var $this NoticiaController */
 /* @var $model Noticia */
 
-$this->breadcrumbs=array(
-	'Noticias'=>array('index'),
-	$model->no_id,
-);
 
 $this->menu=array(
 	array('label'=>'List Noticia', 'url'=>array('index')),
@@ -19,10 +15,16 @@ $this->menu=array(
 <!-- <h1>View Noticia #<?php echo $model->no_id; ?></h1> -->
 
 <h1><?php echo $model->no_titulo;?></h1>
-<h3><?php echo $model->no_subtitulo; ?></h3>
-<p><?php  echo $model->no_cuerpo; ?></p>
 
- 
+<img src="<?php echo Yii::app()->baseUrl.'/protected/imagenes/'.$model->no_imagen ?>" style="float: left;width: 500px;margin-right: 30px;">
+<h3 style="color: #09c7a2;"><?php echo $model->no_subtitulo; ?></h3>
+<p style="margin-right: 49px;text-align: justify"><?php  echo $model->no_cuerpo; ?></p>
+
+ <?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view2',
+	'template'=>"{pager}\n{items}" //THIS DOES WHAT YOU WANT
+	)); ?>
 
 
 

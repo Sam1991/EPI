@@ -8,6 +8,7 @@
  * @property string $no_titulo
  * @property string $no_subtitulo
  * @property string $no_cuerpo
+ * @property string $no_imagen
  */
 class Noticia extends CActiveRecord
 {
@@ -27,9 +28,10 @@ class Noticia extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_titulo, no_subtitulo, no_cuerpo', 'required'),
+			array('no_titulo, no_subtitulo, no_cuerpo, no_imagen', 'required'),
 			array('no_titulo, no_subtitulo', 'length', 'max'=>100),
 			array('no_cuerpo', 'length', 'max'=>5000),
+			array('no_imagen', 'file', 'types'=>'jpg, gif, png'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('no_id, no_titulo, no_subtitulo, no_cuerpo', 'safe', 'on'=>'search'),
@@ -54,9 +56,10 @@ class Noticia extends CActiveRecord
 	{
 		return array(
 			'no_id' => 'No',
-			'no_titulo' => 'Titulo',
-			'no_subtitulo' => 'Subtitulo',
-			'no_cuerpo' => 'Cuerpo',
+			'no_titulo' => 'No Titulo',
+			'no_subtitulo' => 'No Subtitulo',
+			'no_cuerpo' => 'No Cuerpo',
+			'no_imagen' => 'No Imagen',
 		);
 	}
 
@@ -82,6 +85,7 @@ class Noticia extends CActiveRecord
 		$criteria->compare('no_titulo',$this->no_titulo,true);
 		$criteria->compare('no_subtitulo',$this->no_subtitulo,true);
 		$criteria->compare('no_cuerpo',$this->no_cuerpo,true);
+		$criteria->compare('no_imagen',$this->no_imagen,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -1,4 +1,14 @@
+.mas{
+	color: #f65974;
+}
 
+p:after {
+  content:'...';
+  position: absolute;
+  top: 4.6rem;
+  right: 0;
+  background-color: #f9f9f9;
+}
 #centrado{
 	text-align: center;
 }
@@ -9,6 +19,12 @@ background: #0ac8a6;
 width: 30px;
 height: 30px;
 color: white;
+}
+
+.numeros{
+padding-top: 6px;
+text-align: center;	
+font-size: 17px;
 }
 
 
@@ -24,12 +40,14 @@ color: #09c7a2;
 	margin-left: 58px;
 	margin-top: 30px;
 	margin-right: 34px;
+	vertical-align: top;
 }
 
 #segundaria {
 	width: 305px;
 	display: inline-table;
-	vertical-align: bottom;
+	vertical-align: top;
+	margin-top: 138px;
 }
 
 
@@ -223,7 +241,15 @@ div.view
 {
 	padding: 10px;
 	margin: 10px 0;
-	border: 1px solid #C9E0ED;
+	/*border: 1px solid #C9E0ED;*/
+	display: inline-block;
+	width: 254px;
+	vertical-align: top;
+}
+
+div.view img{
+	width:250px; /*se le define el alto*/
+	height:auto; /*el alto se dimenciona en proporcion con el alto*/
 }
 
 div.breadcrumbs

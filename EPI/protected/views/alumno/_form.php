@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/inscripcion-logo.png" style="margin-left: 180px;">
+<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/inscripcion-logo.png" style="margin-left: 180px; margin-top: 40px;margin-bottom: 22px;">
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(

@@ -54,7 +54,8 @@
 				//TODOS
 					
 
-					array('label'=>'Programa EPI', 'url'=>array('')),
+					
+					array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi')),
 					array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias')),
 					array('label'=>'Noticias', 'url'=>array('/noticia/index')),
 					array('label'=>'Galeria', 'url'=>array('')),

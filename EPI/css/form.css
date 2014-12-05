@@ -46,9 +46,14 @@ height: 30px;
 border-radius: 15px;
 }
 
+::-webkit-input-placeholder{
+padding-left: 22px;	
+}
+
+
 div.form
 {
-	padding-left: 40px;
+	padding-left: 91px;
 	width: 80%;
 }
 
@@ -60,8 +65,9 @@ div.form select
 }
 
 #alumno-form input[type="text"], textarea{
-	border: 1px solid red;
-	width: 100%;
+	border: 2px solid red;
+	width: 458px;
+	height: 39px;
 }
 
 
@@ -87,7 +93,7 @@ div.form label
 
 div.form .row
 {
-	margin: 5px 0;
+	margin: 3px 0;
 }
 
 div.form .hint
