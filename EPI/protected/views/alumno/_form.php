@@ -2,6 +2,15 @@
 /* @var $this AlumnoController */
 /* @var $model Alumno */
 /* @var $form CActiveForm */
+
+?>
+
+<!-- incluir jquery para validar el rut -->
+<?php  
+  $baseUrl = Yii::app()->baseUrl; 
+  $cs = Yii::app()->getClientScript();
+  $cs->registerScriptFile($baseUrl.'/js/jquery.Rut.js');
+  
 ?>
 
 <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/inscripcion-logo.png" style="margin-left: 180px; margin-top: 40px;margin-bottom: 22px;">
@@ -13,12 +22,12 @@
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
 )); ?>
 
 	<!-- <p class="note">Fields with <span class="required">*</span> are required.</p> -->
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php //echo $form->errorSummary($model); ?>
 
 	
 	<div class="row">
@@ -97,3 +106,9 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<script>
+$('#Alumno_al_rut').Rut({
+  format_on: 'keyup'
+});
+</script>

@@ -38,7 +38,18 @@ class Alumno extends CActiveRecord
 			array('al_rut', 'length', 'max'=>15),
 			array('al_nombre, al_carrera, al_comentario, al_clave, al_paterno, al_materno, al_campus', 'length', 'max'=>100),
 			array('al_email, al_email2', 'length', 'max'=>30),
-			array('al_telefono', 'length', 'max'=>25),
+			
+			array('al_rut','validateRut'), 
+			array('al_carrera','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La carrera no es válida")),
+			array('al_nombre','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El nombre no es válido")),
+			array('al_paterno','match','pattern'=>'/^([a-zA-Zñáéíóú]{3,80})$/','message'=>CrugeTranslator::t("El apellido no es válido")),
+			array('al_materno','match','pattern'=>'/^([a-zA-Zñáéíóú]{3,80})$/','message'=>CrugeTranslator::t("El apellido no es válido")),
+			array('al_campus','match','pattern'=>'/^([a-zA-Zñáéíóú]{3,80})$/','message'=>CrugeTranslator::t("El apellido no es válido")),
+			array('al_email', 'email'),
+			array('al_email2', 'email'),
+			array('al_telefono', 'length', 'max'=>10, 'min'=>6),
+			array('al_telefono','match','pattern'=>'/^[0-9]{6,10}$/',
+               	'message'=>CrugeTranslator::t("Teléfono incorrecto")),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('al_rut, al_nombre, al_carrera, al_email, al_telefono, al_comentario, al_clave, al_paterno, al_materno, al_campus, al_email2', 'safe', 'on'=>'search'),
@@ -62,17 +73,17 @@ class Alumno extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'al_rut' => 'Al Rut',
-			'al_nombre' => 'Al Nombre',
-			'al_carrera' => 'Al Carrera',
-			'al_email' => 'Al Email',
-			'al_telefono' => 'Al Telefono',
-			'al_comentario' => 'Al Comentario',
-			'al_clave' => 'Al Clave',
-			'al_paterno' => 'Al Paterno',
-			'al_materno' => 'Al Materno',
-			'al_campus' => 'Al Campus',
-			'al_email2' => 'Al Email2',
+			'al_rut' => 'Rut',
+			'al_nombre' => 'Nombres',
+			'al_carrera' => 'Carrera',
+			'al_email' => 'Email',
+			'al_telefono' => 'Telefono',
+			'al_comentario' => 'Comentario',
+			'al_clave' => 'Clave',
+			'al_paterno' => 'Apellido Paterno',
+			'al_materno' => 'Apellido Materno',
+			'al_campus' => 'Campus',
+			'al_email2' => 'Email2',
 		);
 	}
 
@@ -120,5 +131,37 @@ class Alumno extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+
+	public function validateRut($attribute,$params){
+		$rut = $this->al_rut;
+		$suma = "";
+		if(strpos($rut,"-")==false){
+	        $RUT[0] = substr($rut, 0, -1);
+	        $RUT[1] = substr($rut, -1);
+	    }else{
+	        $RUT = explode("-", trim($rut));
+	    }
+	    $elRut = str_replace(".", "", trim($RUT[0]));
+	    $factor = 2;
+	    for($i = strlen($elRut)-1; $i >= 0; $i--):
+	        $factor = $factor > 7 ? 2 : $factor;
+	        $suma += $elRut{$i}*$factor++;
+	    endfor;
+	    $resto = $suma % 11;
+	    $dv = 11 - $resto;
+	    if($dv == 11){
+	        $dv=0;
+	    }else if($dv == 10){
+	        $dv="k";
+	    }else{
+	        $dv=$dv;
+	    }
+	   if($dv == trim(strtolower($RUT[1]))){
+	       return true;
+	   }else{
+	       $this->addError($attribute, 'El rut ingresado NO es válido');
+	   }
 	}
 }

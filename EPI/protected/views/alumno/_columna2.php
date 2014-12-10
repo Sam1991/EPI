@@ -1,19 +1,19 @@
 
-<h1 class="titulo" style="text-align: center;margin-top: 100px;margin-bottom: 80px;"> Pasos</h1>
+<h1 class="titulo" style="text-align: center;margin-top: 100px;margin-bottom: 80px;"> Detalle de la inscripción</h1>
 
 
-<TABLE style="padding-left: 50px;padding-right: 45px;">
-	<TR>
-		<TD><div class="numerosRedondos"><p class="numeros">1</p></div></TD> <TD><div class="parrafoInscripcion">
-	<p>Cualquier estudiante que curse su último año de carrera, puede postular su tesis innovadora</p>
-</div>	</TD>
-	</TR>
-	<TR>
-		<TD><div class="numerosRedondos"><p class="numeros"> 2</p></div></TD> <TD><div class="parrafoInscripcion">
-	<p>Para postular su tesis innovadora, debe llenar el siguiente formulario, desde el momento que lo envies estás siendo candidato prar formar parte del proyecto EPI y asi financiar tu tesis o proyecto de titulo</p>
-</div></TD> 
-	</TR>
-</TABLE>
+<div style="padding-left: 50px;padding-right: 45px;text-align: justify;font-size: 15px;color: #928e8e;">
+Pueden inscribirse alumnos de cualquier carrera de la Universidad del Bío-Bío, campus Concepción y Chillán, que estén habilitados para inscribir actividad de titulación, o bien, estén realizando su seminario 1, en el año académico 2015. (Si tienes dudas puedes consultar en epi@ubiobio.cl).
+<br>
+<br>
+Esta inscripción habilita para ingresar a la primera etapa: Etapa de Formación. Esta etapa consiste en un entrenamiento intensivo en conceptualización y modelos de innovación, además de recibir un entrenamiento en metodologías para generar la innovación. Esta capacitación se puede convalidar con una asignatura de formación integral (oferta institucional).
+<br>
+<br>
+Puedes revisar las bases de la convocatoria para ver las fechas y horarios de realización de las clases y talleres. Accede en este link.
+<br>
+<br>
+La Etapa de Formación es requisito para postular a la segunda etapa, Etapa de Desarrollo de Proyectos de Innovación, que les permitirá optar por el financiamiento de $250.000.
+</div>
 
 
 

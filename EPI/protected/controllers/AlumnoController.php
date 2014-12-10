@@ -65,13 +65,15 @@ class AlumnoController extends Controller
 		$model=new Alumno;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Alumno']))
 		{
 			$model->attributes=$_POST['Alumno'];
 
-			//unir con cruge
+			          
+			if($model->save()){
+				//unir con cruge
 			$values = array(
 			  'username' => $model->al_rut,
 			  'email' => $model->al_email,
@@ -88,9 +90,10 @@ class AlumnoController extends Controller
                           echo "no se pudo crear el usuario: ".$errores;
             }
 		//fin_unir con cruge
-            
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->al_rut));
+            $this->redirect(array('view','id'=>$model->al_rut));
+
+			}
+				
 		}
 
 		$this->render('create',array(

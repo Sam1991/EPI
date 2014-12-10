@@ -23,7 +23,15 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logoEpi.png" style="margin-left: 50px;">
+		
+		<?php  
+			$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logoEpi.png";
+			$image = '<img src="'.$imageUrl.'" style="margin-left: 50px" >';
+			echo CHtml::link($image, array('/site/index'));
+		?>
+
+
+
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores.png" style="margin-left: 305px;vertical-align: top;">
 		<?php  
 			$imageUrl = "".Yii::app()->request->baseUrl."/images/btn_inscripcion.png";
@@ -79,8 +87,8 @@
 			<?php  
 			$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_face.png";
 			$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-			
 			echo CHtml::link($image, array('/alumno/create'));
+			
 			$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_twitter.png";
 			$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
 			echo CHtml::link($image, array('/alumno/create'));
