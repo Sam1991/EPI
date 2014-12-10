@@ -65,6 +65,10 @@ class NoticiaController extends Controller
 		if(isset($_POST['Noticia']))
 		{
 			$model->attributes=$_POST['Noticia'];
+			$cuerpo=$_POST['Noticia']['no_cuerpo'];
+			// $cuerpo="<p>".$cuerpo."<p>";
+			// $cuerpo=str_replace("\n","<p></p>",$cuerpo);
+			$model->no_cuerpo=$cuerpo;
 			$model->no_imagen=CUploadedFile::getInstance($model,'no_imagen'); //NEW (FORMULARIO)
 			if($model->save()){
 				//copiar la imagen en el directorio

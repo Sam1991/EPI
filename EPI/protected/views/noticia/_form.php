@@ -22,13 +22,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'no_titulo'); ?>
-		<?php echo $form->textField($model,'no_titulo',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->textField($model,'no_titulo',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'no_titulo'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'no_subtitulo'); ?>
-		<?php echo $form->textField($model,'no_subtitulo',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->textField($model,'no_subtitulo',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'no_subtitulo'); ?>
 	</div>
 
@@ -42,7 +42,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'no_cuerpo'); ?>
-		<?php echo $form->textField($model,'no_cuerpo',array('size'=>60,'maxlength'=>5000)); ?>
+		<?php echo $form->textArea($model,'no_cuerpo',array('size'=>60,'maxlength'=>5000)); ?>
 		<?php echo $form->error($model,'no_cuerpo'); ?>
 	</div>
 
