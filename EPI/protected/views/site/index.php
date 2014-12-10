@@ -4,9 +4,9 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<div id="slide">
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide.png">
-	</div>
+
+		<?php $this->renderPartial('iframe_wow_slider'); ?>
+	
 
 	<div id="contenidoIndex">
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contenido.png" >

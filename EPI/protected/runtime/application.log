@@ -2272,3 +2272,115 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=alumno/create
 HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=site/index
 ---
+2014/12/10 21:06:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "wow slider" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('wow slider')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=wow%20slider
+---
+2014/12/10 21:06:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "wow slider.html" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('wow slider.html')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=wow%20slider.html
+---
+2014/12/10 21:06:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "wow slider" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('wow slider')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=wow%20slider
+---
+2014/12/10 21:06:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "wow slider" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('wow slider')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=wow%20slider
+---
+2014/12/10 21:06:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "wo_slider" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('wo_slider')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=wo_slider
+---
+2014/12/10 21:07:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "wow slider" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('wow slider')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=wow%20slider
+---
+2014/12/10 21:07:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "wow slider" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('wow slider')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=wow%20slider
+---
+2014/12/10 21:08:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "wow_slider" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('wow_slider')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=wow_slider
+---
