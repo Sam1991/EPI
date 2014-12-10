@@ -29,7 +29,7 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		
-		$this->layout = 'application.views.layouts.main2';
+		$this->layout = 'application.views.layouts.main';
 		$this->render('index');
 	}
 

@@ -251,3 +251,16 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
 .clearfix, .container {display:block;}
 .clear {clear:both;}
+
+.descripcion h3{
+	color: #06cca5;
+	margin-bottom: 0em; 
+	margin-top: 20px;
+}
+
+.descripcion{
+	color: #928e8e;
+	text-align: justify;
+	font-size: 15px;
+	margin-right: 25px;
+}

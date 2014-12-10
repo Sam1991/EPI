@@ -18,8 +18,9 @@ $this->pageTitle=Yii::app()->name;
 		</div>
 		<div id="redesIndex">
 
-			<a class="twitter-timeline" href="https://twitter.com/leo_14fer" width="100%"  height="100%" data-widget-id="536970893915062272">Tweets por el @leo_14fer.</a>
+<a class="twitter-timeline" href="https://twitter.com/programaepi" width="100%"  height="100%" data-widget-id="542691510009876481">Tweets por el @programaepi.</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			
 		</div>
 		
 	</div>
