@@ -64,8 +64,9 @@
 					array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi')),
 					array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias')),
 					array('label'=>'Noticias', 'url'=>array('/noticia/index')),
-					array('label'=>'Galeria', 'url'=>array('')),
-					array('label'=>'Contacto', 'url'=>array('')),
+					array('label'=>'Galeria', 'url'=>array('site/page','view'=>'galeria')),
+					array('label'=>'Contacto', 'url'=>array('site/page','view'=>'contacto')),
+					
 					//link a crear un alumno
 					
 					//link a alumnos

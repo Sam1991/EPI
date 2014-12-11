@@ -18,7 +18,7 @@ $this->menu=array(
 
 <img src="<?php echo Yii::app()->baseUrl.'/protected/imagenes/'.$model->no_imagen ?>" style="float: left;width: 500px;margin-right: 30px;">
 <h3 style="color: #09c7a2;"><?php echo $model->no_subtitulo; ?></h3>
-<p style="margin-right: 49px;text-align: justify"><?php  echo $model->no_cuerpo; ?></p>
+<p  style="margin-right: 49px;text-align: justify"><?php  echo $model->no_cuerpo; ?></p>
 
  <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

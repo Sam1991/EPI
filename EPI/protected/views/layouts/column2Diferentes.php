@@ -7,7 +7,7 @@
 	</div>
 </div>
 <div id="segundaria" style="margin-top: 138px;">
-	<?php $this->renderPartial('_columna2'); ?>
+	<?php $this->renderPartial('/site/_lateral'); ?>
 </div>
 </div>
 <?php $this->endContent(); ?>
