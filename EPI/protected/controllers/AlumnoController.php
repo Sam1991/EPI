@@ -51,7 +51,7 @@ class AlumnoController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
+		$this->render('exito',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
