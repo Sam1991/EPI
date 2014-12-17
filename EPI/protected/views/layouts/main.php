@@ -23,89 +23,93 @@
 <div class="container" id="page">
 
 	<div id="header">
-		
-		<?php  
-			$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logoEpi.png";
-			$image = '<img src="'.$imageUrl.'" style="margin-left: 50px" >';
-			echo CHtml::link($image, array('/site/index'));
-		?>
 
 
+		<TABLE>
+			<TR>
+				<TD>
+					<?php  
+					$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logoEpi.png";
+					$image = '<img src="'.$imageUrl.'" style="margin-left: 50px" >';
+					echo CHtml::link($image, array('/site/index'));
+					?>
+				</TD> 
+				<TD>
+					<div style="margin-top: 20px;display: inline-block;">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores.png" style="margin-left: 305px;vertical-align: top;">
+					</div>
+			
+				<?php  
+					$imageUrl = "".Yii::app()->request->baseUrl."/images/btn_inscripcion.png";
+					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+					echo CHtml::link($image, array('/alumno/create'));
+				?>
+			
+			<div id="mainmenu">
+				<div id="links">
+				<?php $this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						// array('label'=>'Home', 'url'=>array('/site/index')),
+						// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+						// array('label'=>'Contact', 'url'=>array('/site/contact')),
+						
 
-		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores.png" style="margin-left: 305px;vertical-align: top;">
-		<?php  
-			$imageUrl = "".Yii::app()->request->baseUrl."/images/btn_inscripcion.png";
-			$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-			echo CHtml::link($image, array('/alumno/create'));
-		?>
+						//CRUGE
+							array('label'=>'Administrar Usuarios'
+								, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
+								, 'visible'=>Yii::app()->user->isSuperAdmin),
+						
+						//TODOS
+							
 
-		
+							array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi')),
+							array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias')),
+							array('label'=>'Noticias', 'url'=>array('/noticia/index')),
+							array('label'=>'Galeria', 'url'=>array('site/page','view'=>'galeria')),
+							array('label'=>'Contacto', 'url'=>array('site/page','view'=>'contacto')),
+							
+							//link a crear un alumno
+							
+							//link a alumnos
+							
+							// array('label'=>'Ingresar', 'url'=>Yii::app()->user->ui->loginUrl, 'visible'=>Yii::app()->user->isGuest),
+				
+							array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
+
+							),
+				)); ?>
+				</div>
+				<div id="redesSociales">
+					<?php  
+					$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_face.png";
+					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+					echo CHtml::link($image, array('/alumno/create'));
+					
+					$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_twitter.png";
+					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+					echo CHtml::link($image, array('/alumno/create'));
+					
+					$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_linkedin.png";
+					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+					echo CHtml::link($image, array('/alumno/create'));
+					
+					$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_youtube.png";
+					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+					echo CHtml::link($image, array('/alumno/create'));
+				?>	
+				</div>
+				
+
+			</div><!-- mainmenu -->
+				</TD>
+			</TR>
+			
+		</TABLE>
 		
 
 	</div><!-- header -->
 
-	<div id="mainmenu">
-		<div id="links">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				// array('label'=>'Home', 'url'=>array('/site/index')),
-				// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				// array('label'=>'Contact', 'url'=>array('/site/contact')),
-				
 
-				//CRUGE
-					array('label'=>'Administrar Usuarios'
-						, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
-						, 'visible'=>Yii::app()->user->isSuperAdmin),
-				
-				//TODOS
-					
-
-					array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi')),
-					array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias')),
-					array('label'=>'Noticias', 'url'=>array('/noticia/index')),
-					array('label'=>'Galeria', 'url'=>array('site/page','view'=>'galeria')),
-					array('label'=>'Contacto', 'url'=>array('site/page','view'=>'contacto')),
-					
-					//link a crear un alumno
-					
-					//link a alumnos
-					
-					// array('label'=>'Ingresar', 'url'=>Yii::app()->user->ui->loginUrl, 'visible'=>Yii::app()->user->isGuest),
-		
-					array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
-
-
-				
-					
-					
-
-
-					),
-		)); ?>
-		</div>
-		<div id="redesSociales">
-			<?php  
-			$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_face.png";
-			$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-			echo CHtml::link($image, array('/alumno/create'));
-			
-			$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_twitter.png";
-			$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-			echo CHtml::link($image, array('/alumno/create'));
-			
-			$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_linkedin.png";
-			$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-			echo CHtml::link($image, array('/alumno/create'));
-			
-			$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_youtube.png";
-			$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-			echo CHtml::link($image, array('/alumno/create'));
-		?>	
-		</div>
-		
-
-	</div><!-- mainmenu -->
 
 	
 	<?php echo $content; ?>
