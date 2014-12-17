@@ -54,10 +54,10 @@ class Consulta extends CActiveRecord
 	{
 		return array(
 			'con_id' => 'Con',
-			'con_consulta' => 'Con Consulta',
-			'con_email' => 'Con Email',
-			'con_telefono' => 'Con Telefono',
-			'con_fecha' => 'Con Fecha',
+			'con_consulta' => 'Consulta',
+			'con_email' => 'E-mail',
+			'con_telefono' => 'Telefono',
+			'con_fecha' => 'Fecha',
 		);
 	}
 
