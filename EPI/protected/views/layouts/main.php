@@ -36,7 +36,13 @@
 				</TD> 
 				<TD>
 					<div style="margin-top: 20px;display: inline-block;">
-						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores.png" style="margin-left: 305px;vertical-align: top;">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores1.png" style="margin-left: 305px;vertical-align: top;">
+						<?php  
+						$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logosAuspiciadores2.png";
+						$image = '<img src="'.$imageUrl.'" style="vertical-align: top;" >';
+						echo CHtml::link($image, 'http://www.ubiobio.cl/cdinesubb/');
+						?>
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores3.png" style="vertical-align: top;">
 					</div>
 			
 				<?php  
