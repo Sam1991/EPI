@@ -20,7 +20,7 @@
 	
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'con_consulta'); ?>
+		
 		<?php echo $form->textArea($model,'con_consulta',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'con_consulta'); ?>
 	</div>

@@ -3005,3 +3005,21 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=convocatorias
 HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
 ---
+2014/12/17 17:26:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/consulta/create"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/consulta/...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/consulta/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/12/17 17:26:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/consulta/create"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/consulta/...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/consulta/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
