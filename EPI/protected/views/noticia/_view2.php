@@ -3,9 +3,11 @@
 /* @var $data Noticia */
 ?>
 
-<div class="view">
+<div class="view" style="height: 207px;overflow: hidden;">
 	<hr>
-	<img src="<?php echo Yii::app()->baseUrl.'/protected/imagenes/'.$data->no_imagen ?>" >
+	<div style="float: left;width: 250px;margin-right: 30px;height: 167px;overflow: hidden;">
+		<img src="<?php echo Yii::app()->baseUrl.'/protected/imagenes/'.$data->no_imagen ?>" >
+	</div>
 	<br>
 	<?php echo CHtml::link(CHtml::encode($data->no_titulo), array('view', 'id'=>$data->no_id)); ?>
 </div>

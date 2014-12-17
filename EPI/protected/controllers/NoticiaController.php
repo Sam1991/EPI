@@ -48,9 +48,11 @@ class NoticiaController extends Controller
 	public function actionView($id)
 	{
 		$dataProvider=new CActiveDataProvider('Noticia');
+		$model=$this->loadModel($id);
+		$model->no_cuerpo=nl2br($model->no_cuerpo);
 		$dataProvider->pagination->pageSize=3;
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),'dataProvider'=>$dataProvider,
+			'model'=>$model,'dataProvider'=>$dataProvider,
 		));
 	}
 	/**

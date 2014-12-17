@@ -16,9 +16,11 @@ $this->menu=array(
 
 <h1><?php echo $model->no_titulo;?></h1>
 
-<img src="<?php echo Yii::app()->baseUrl.'/protected/imagenes/'.$model->no_imagen ?>" style="float: left;width: 500px;margin-right: 30px;">
+<div style="float: left;width: 500px;margin-right: 30px;max-height: 500px;overflow: hidden;">
+	<img src="<?php echo Yii::app()->baseUrl.'/protected/imagenes/'.$model->no_imagen ?>" style="width: 500px;">
+</div>
 <h3 style="color: #09c7a2;"><?php echo $model->no_subtitulo; ?></h3>
-<p  style="margin-right: 49px;text-align: justify"><?php  echo $model->no_cuerpo; ?></p>
+<p  style="margin-right: 49px;text-align: justify;min-height: 448px;"><?php  echo $model->no_cuerpo; ?></p>
 
  <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
