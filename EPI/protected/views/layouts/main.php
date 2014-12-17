@@ -83,15 +83,15 @@
 					<?php  
 					$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_face.png";
 					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-					echo CHtml::link($image, array('/alumno/create'));
+					echo CHtml::link($image,  'http://www.facebook.com/programaepi?ref=hl');
 					
 					$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_twitter.png";
 					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-					echo CHtml::link($image, array('/alumno/create'));
+					echo CHtml::link($image, 'http://www.twitter.com/programaepi');
 					
 					$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_linkedin.png";
 					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
-					echo CHtml::link($image, array('/alumno/create'));
+					echo CHtml::link($image, 'http://cl.linkedin.com/in/innovacionUBB');
 					
 					$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_youtube.png";
 					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
