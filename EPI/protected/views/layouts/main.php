@@ -72,13 +72,15 @@
 							array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias')),
 							array('label'=>'Noticias', 'url'=>array('/noticia/index')),
 							array('label'=>'Galeria', 'url'=>array('site/page','view'=>'galeria')),
-							array('label'=>'Contacto', 'url'=>array('site/page','view'=>'contacto')),
+							array('label'=>'Contacto', 'url'=>array('consulta/create')),
+							
+
 							
 							//link a crear un alumno
 							
 							//link a alumnos
 							
-							// array('label'=>'Ingresar', 'url'=>Yii::app()->user->ui->loginUrl, 'visible'=>Yii::app()->user->isGuest),
+							array('label'=>'Ingresar', 'url'=>Yii::app()->user->ui->loginUrl, 'visible'=>Yii::app()->user->isGuest,'itemOptions'=>array('style'=>'background-color: #bebebe;')),
 				
 							array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
 

@@ -2903,3 +2903,43 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=http://www.facebook.com/programaepi?ref=hl
 HTTP_REFERER=http://localhost/EPI/EPI/
 ---
+2014/12/17 03:18:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=contacto
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/12/17 03:32:10 [error] [php] Undefined variable: model (C:\wamp\www\EPI\EPI\protected\views\consulta\_form.php:20)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\site\pages\contacto.php(17): SiteController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): SiteController->renderPartial()
+#6 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(140): SiteController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CViewAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\CController.php(286): SiteController->runAction()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): SiteController->run()
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=contacto
+in C:\wamp\www\EPI\EPI\protected\views\consulta\_form.php (20)
+in C:\wamp\www\EPI\EPI\protected\views\site\pages\contacto.php (17)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/17 03:40:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "edit" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('edit')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('edit')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('consulta/edit')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=consulta/edit&id=1
+---
