@@ -61,6 +61,7 @@ class NoticiaController extends Controller
 	 */
 	public function actionCreate()
 	{
+		$this->layout = '//layouts/columnAdmin';
 		$model=new Noticia;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -134,6 +135,7 @@ class NoticiaController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		$this->layout = '//layouts/columnAdmin';
 		$model=new Noticia('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Noticia']))

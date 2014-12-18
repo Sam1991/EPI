@@ -97,12 +97,13 @@ body
 
 
 #contenidoIndex{
-	height: 908px;
+	/*height: 908px;*/
+	text-align: center;
 }
 
-#contenidoIndex img{
+/*#contenidoIndex img{
 	width: 100%;
-}
+}*/
 
 #contenidoIndex2{
 	height: 648px;
@@ -344,4 +345,44 @@ div.search-form
 .operations li a:hover
 {
 	background: #80CFFF;
+}
+
+.comentario {
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+.comentarioImagen {
+	border-radius: 180px;
+	overflow: hidden;
+	border-width: 9px;
+	border-style: solid;
+	border-color: #00a49d;
+	width: 110px;
+	height: 110px;
+	
+}
+.comentarioImagen img{
+	
+	width: 110px;
+	height: 110px;
+	
+}
+
+.comentarioLetras{
+	display: inline-block;
+	width: 200px;
+	margin-top: 64px;
+	font-style: italic;
+}
+
+.comentarioLetras p{
+color: #888888;
+margin-left: 32px;
+}
+
+#principalAdmin{
+width: 70%;
+background-color: #f9f9f9;
 }

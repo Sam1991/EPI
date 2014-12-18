@@ -133,6 +133,7 @@ class ConsultaController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		$this->layout = '//layouts/columnAdmin';
 		$model=new Consulta('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Consulta']))

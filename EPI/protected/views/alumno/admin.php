@@ -2,15 +2,8 @@
 /* @var $this AlumnoController */
 /* @var $model Alumno */
 
-$this->breadcrumbs=array(
-	'Alumnos'=>array('index'),
-	'Manage',
-);
 
-$this->menu=array(
-	array('label'=>'List Alumno', 'url'=>array('index')),
-	array('label'=>'Create Alumno', 'url'=>array('create')),
-);
+
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -26,19 +19,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Alumnos</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+<h1>Alumnos inscritos</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'alumno-grid',
@@ -47,15 +28,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'al_rut',
 		'al_nombre',
-		'al_carrera',
-		'al_email',
-		'al_telefono',
-		'al_comentario',
-		/*
-		'al_clave',
 		'al_paterno',
 		'al_materno',
+		'al_email',
+		'al_telefono',
+		'al_carrera',
 		'al_campus',
+		/*
+		'al_clave',
+		'al_comentario',
 		'al_email2',
 		*/
 		array(

@@ -16,10 +16,7 @@
 	'htmlOptions' => array('enctype' => 'multipart/form-data'),//FORMULARIO IMAGEN
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<?php echo $form->errorSummary($model); ?>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'no_titulo'); ?>
 		<?php echo $form->textField($model,'no_titulo',array('size'=>60,'maxlength'=>255)); ?>
@@ -47,7 +44,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

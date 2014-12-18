@@ -56,10 +56,10 @@ class Noticia extends CActiveRecord
 	{
 		return array(
 			'no_id' => 'No',
-			'no_titulo' => 'No Titulo',
-			'no_subtitulo' => 'No Subtitulo',
-			'no_cuerpo' => 'No Cuerpo',
-			'no_imagen' => 'No Imagen',
+			'no_titulo' => 'Titulo',
+			'no_subtitulo' => 'Subtitulo',
+			'no_cuerpo' => 'Cuerpo',
+			'no_imagen' => 'Imagen',
 		);
 	}
 

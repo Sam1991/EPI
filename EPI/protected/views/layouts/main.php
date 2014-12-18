@@ -61,18 +61,16 @@
 						
 
 						//CRUGE
-							array('label'=>'Administrar Usuarios'
-								, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
-								, 'visible'=>Yii::app()->user->isSuperAdmin),
+							// array('label'=>'Administrar Usuarios'
+							// 	, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
+							// 	, 'visible'=>Yii::app()->user->isSuperAdmin),
 						
-						//TODOS
-							
-
-							array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi')),
-							array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias')),
-							array('label'=>'Noticias', 'url'=>array('/noticia/index')),
-							array('label'=>'Galeria', 'url'=>array('site/page','view'=>'galeria')),
-							array('label'=>'Contacto', 'url'=>array('consulta/create')),
+						//actores externos
+							array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
+							array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
+							array('label'=>'Noticias', 'url'=>array('/noticia/index'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
+							array('label'=>'Galeria', 'url'=>array('site/page','view'=>'galeria'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
+							array('label'=>'Contacto', 'url'=>array('consulta/create'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
 							
 
 							
@@ -82,8 +80,17 @@
 							
 							array('label'=>'Ingresar', 'url'=>Yii::app()->user->ui->loginUrl, 'visible'=>Yii::app()->user->isGuest,'itemOptions'=>array('style'=>'background-color: #bebebe;')),
 				
-							array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
+							
 
+
+							//link administrador
+							array('label'=>'Noticias', 'url'=>array('/noticia/create'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+							array('label'=>'Inscritos', 'url'=>array('/alumno/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+							array('label'=>'Consultas', 'url'=>array('/consulta/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+
+							
+
+							array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
 							),
 				)); ?>
 				</div>
@@ -125,15 +132,6 @@
 	<div id="footer">
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer.png" >
 	</div>
-
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
-	
-	
 
 	
 </div><!-- page -->

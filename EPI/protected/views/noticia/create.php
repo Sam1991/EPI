@@ -2,17 +2,12 @@
 /* @var $this NoticiaController */
 /* @var $model Noticia */
 
-$this->breadcrumbs=array(
-	'Noticias'=>array('index'),
-	'Create',
-);
 
 $this->menu=array(
-	array('label'=>'List Noticia', 'url'=>array('index')),
-	array('label'=>'Manage Noticia', 'url'=>array('admin')),
+	array('label'=>'Administrar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Noticia</h1>
+<h1>Crear noticia</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
