@@ -32,7 +32,7 @@
 	
 	<div class="row">
 		<?php //echo $form->labelEx($model,'al_nombre'); ?>
-		<?php echo $form->textField($model,'al_nombre',array('size'=>60,'maxlength'=>100,'placeholder'=>'Nombre')); ?>
+		<?php echo $form->textField($model,'al_nombre',array('size'=>60,'maxlength'=>100,'placeholder'=>'Nombres')); ?>
 		<?php echo $form->error($model,'al_nombre'); ?>
 	</div>
 
@@ -93,7 +93,7 @@
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'al_clave'); ?>
-		<?php echo $form->textField($model,'al_clave',array('size'=>60,'maxlength'=>100,'placeholder'=>'Clave de acceso')); ?>
+		<?php echo $form->textField($model,'al_clave',array('size'=>60,'maxlength'=>100,'placeholder'=>'Define tu clave de acceso')); ?>
 		<?php echo $form->error($model,'al_clave'); ?>
 	</div>
 

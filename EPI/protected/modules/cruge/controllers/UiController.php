@@ -123,7 +123,7 @@ class UiController extends Controller
     public function actionLogin()
     {
 
-        $this->layout = CrugeUtil::config()->loginLayout;
+        $this->layout = 'application.views.layouts.main';
 
         $model = Yii::app()->user->um->getNewCrugeLogon('login');
 
