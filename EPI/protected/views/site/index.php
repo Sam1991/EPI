@@ -93,8 +93,13 @@ $this->pageTitle=Yii::app()->name;
 		</div>
 
 	<div id="contenidoIndex2">
-		<div id="galeriaIndex">
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/galeria.png">
+		<div id="galeriaIndex" style="width:870px;height:450px">
+			<?php $this->renderPartial('GalleryView'); ?>
+			<?php  
+				$imageUrl = "".Yii::app()->request->baseUrl."/images/galeria1.2.png";
+				$image = '<img src="'.$imageUrl.'" >';
+				echo CHtml::link($image, array('site/page','view'=>'galeria'));
+			?>
 		</div>
 		<div id="redesIndex">
 

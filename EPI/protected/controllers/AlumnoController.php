@@ -73,25 +73,24 @@ class AlumnoController extends Controller
 
 			          
 			if($model->save()){
-				//unir con cruge
-			$values = array(
-			  'username' => $model->al_rut,
-			  'email' => $model->al_email,
-			);
-			$usuario = Yii::app()->user->um->createNewUser($values,$model->al_clave);
-			
-			Yii::app()->user->um->changePassword($usuario,$model->al_clave);
+					//unir con cruge
+				$values = array(
+				  'username' => $model->al_rut,
+				  'email' => $model->al_email,
+				);
+				$usuario = Yii::app()->user->um->createNewUser($values,$model->al_clave);
+				
+				Yii::app()->user->um->changePassword($usuario,$model->al_clave);
 
-            if(Yii::app()->user->um->save($usuario)){
-           echo "Usuario creado: id=".$usuario->primaryKey;
-            }
-            else{
-                   $errores = CHtml::errorSummary($usuario);
-                          echo "no se pudo crear el usuario: ".$errores;
-            }
-		//fin_unir con cruge
-            $this->redirect(array('view','id'=>$model->al_rut));
-
+	            if(Yii::app()->user->um->save($usuario)){
+	           echo "Usuario creado: id=".$usuario->primaryKey;
+	            }
+	            else{
+	                   $errores = CHtml::errorSummary($usuario);
+	                          echo "no se pudo crear el usuario: ".$errores;
+	            }
+			//fin_unir con cruge
+	            $this->redirect(array('view','id'=>$model->al_rut));
 			}
 				
 		}

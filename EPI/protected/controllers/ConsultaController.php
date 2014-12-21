@@ -28,7 +28,7 @@ class ConsultaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create'),
+				'actions'=>array('index','view','create','exito'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -56,6 +56,11 @@ class ConsultaController extends Controller
 		));
 	}
 
+
+	public function actionExito()
+	{
+		$this->render('exito');
+	}
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -71,9 +76,10 @@ class ConsultaController extends Controller
 		{
 			$model->attributes=$_POST['Consulta'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->con_id));
+				$this->redirect(array('exito'));
 		}
 
+		
 		$this->render('create',array(
 			'model'=>$model,
 		));

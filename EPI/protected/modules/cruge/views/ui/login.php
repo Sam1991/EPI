@@ -1,6 +1,13 @@
 <div class="contenedor">
 	<div id="principal">
 		<div style="margin-left: 52px;margin-top: 59px;margin-bottom: 20px;">
+			<!-- incluir jquery para validar el rut -->
+			<?php  
+			  $baseUrl = Yii::app()->baseUrl; 
+			  $cs = Yii::app()->getClientScript();
+			  $cs->registerScriptFile($baseUrl.'/js/jquery.Rut.js');
+			  
+			?>
 			<h1 class="titulo"><?php echo CrugeTranslator::t('logon',"Login"); ?></h1>
 			<?php if(Yii::app()->user->hasFlash('loginflash')): ?>
 			<div class="flash-error">
@@ -8,13 +15,13 @@
 			</div>
 			<?php else: ?>
 			<div class="form">
-			<?php $form=$this->beginWidget('CActiveForm', array(
-				'id'=>'logon-form',
-				'enableClientValidation'=>false,
-				'clientOptions'=>array(
-					'validateOnSubmit'=>true,
-				),
-			)); ?>
+				<?php $form=$this->beginWidget('CActiveForm', array(
+					'id'=>'logon-form',
+					'enableClientValidation'=>false,
+					'clientOptions'=>array(
+						'validateOnSubmit'=>true,
+					),
+				)); ?>
 
 				<div class="row">
 					<?php //echo $form->labelEx($model,'username'); ?>
@@ -24,7 +31,7 @@
 
 				<div class="row">
 					<?php //echo $form->labelEx($model,'password'); ?>
-					<?php echo $form->passwordField($model,'password'); ?>
+					<?php echo $form->passwordField($model,'password',array('placeholder'=>'Contraseña')); ?>
 					<?php echo $form->error($model,'password'); ?>
 				</div>
 
@@ -54,9 +61,15 @@
 				<?php }} ?>
 				
 
-			<?php $this->endWidget(); ?>
+				<?php $this->endWidget(); ?>
 			</div>
 			<?php endif; ?>
 		</div>
 	</div>
 </div>
+
+<script>
+$('#CrugeLogon_username').Rut({
+  format_on: 'keyup'
+});
+</script>
