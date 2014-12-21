@@ -42,6 +42,7 @@ color: #09c7a2;
 	margin-top: 30px;
 	margin-right: 34px;
 	vertical-align: top;
+	min-height: 805px;
 }
 
 #segundaria {
@@ -110,7 +111,7 @@ body
 }
 
 #contenidoIndex2 img{
-	width: 100%;
+	/*width: 100%;*/
 
 }
 
