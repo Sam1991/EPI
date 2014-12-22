@@ -2,10 +2,30 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
-?>
+?><!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/engine1/style.css" />
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
 
-
-		<?php $this->renderPartial('iframe_wow_slider'); ?>
+		<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+	<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+		<li><a href="http://localhost/EPI/EPI/index.php?r=site/page&view=programaEpi"><img src="data1/images/slider1.jpg" alt="APOYAMOS TU PROYECTO DE TITULO" title="APOYAMOS TU PROYECTO DE TÍTULO" id="wows1_0"/></a></li>
+		<li><a href="http://localhost/EPI/EPI/index.php?r=site/page&view=convocatorias"><img src="data1/images/slider2.jpg" alt="APOYO A POSTULACIÓN A FONDOS CONCURSABLES" title="ABIERTA CONVOCATORIA" id="wows1_1"/></a>2015 Primer Semestre</li>
+		<li><a href="http://localhost/EPI/EPI/index.php?r=alumno/create"><img src="data1/images/slider3.jpg" alt="full screen slider" title="INSCRIBETE AQUÍ" id="wows1_2"/></a>Cupos limitados</li>
+		<li><a href="http://localhost/EPI/EPI/index.php?r=site/page&view=galeria"><img src="data1/images/slider4.jpg" alt="199 ESTUDIANTES PARTICIPARON DURANTE EL 2014" title="199 ESTUDIANTES PARTICIPARON DURANTE EL 2014" id="wows1_3"/></a></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="APOYAMOS TU PROYECTO DE TITULO">1</a>
+		<a href="#" title="APOYO A POSTULACIÓN A FONDOS CONCURSABLES">2</a>
+		<a href="#" title="INSCRIPCIONES 2015 ABIERTAS">3</a>
+		<a href="#" title="MÁS DE 200 ESTUDIANTES PARTICIPARON EL 2014">4</a>
+	</div></div><span class="wsl"><a href="http://wowslider.com/vu">image carousel</a> by WOWSlider.com v7.2</span>
+	<div class="ws_shadow"></div>
+	</div>	
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/engine1/wowslider.js"></script>
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
 	
 
 	<div id="contenidoIndex">
