@@ -8,7 +8,7 @@
 	
 
 	<!-- boostrap -->
-	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.3.1-dist/dist/css/bootstrap.min.css" />
+	<!-- <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.3.1-dist/dist/css/bootstrap.min.css" /> -->
 
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
