@@ -5,6 +5,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 
+	
+
+	<!-- boostrap -->
+	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.3.1-dist/dist/css/bootstrap.min.css" />
+
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
@@ -56,7 +61,9 @@
 					echo CHtml::link($image, array('/alumno/create'));
 				?>
 			
-			<div id="mainmenu">
+			
+
+<div id="mainmenu">
 				<div id="links">
 					<?php $this->widget('zii.widgets.CMenu',array(
 						'items'=>array(
@@ -121,6 +128,7 @@
 				
 
 			</div><!-- mainmenu -->
+			
 				</TD>
 			</TR>
 			
@@ -144,3 +152,7 @@
 </body>
 </html>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.3.1-dist/dist/js/bootstrap.min.js"></script>
+    
