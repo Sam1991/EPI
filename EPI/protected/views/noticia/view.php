@@ -22,6 +22,37 @@ $this->menu=array(
 <h3 style="color: #09c7a2;"><?php echo $model->no_subtitulo; ?></h3>
 <p  style="margin-right: 49px;text-align: justify;min-height: 448px;"><?php  echo $model->no_cuerpo; ?></p>
 
+<!-- me gusta -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<?php $ref="http://epi.ubiobio.cl/EPI/index.php?r=noticia/view&amp;id=".$model->no_id; 
+?>
+<div class="fb-share-button" data-href="<?php  echo $ref;?>" data-layout="button"></div>
+
+<!-- Fin-me gusta -->
+
+
+
+<!-- twittear -->
+<a href="https://twitter.com/share" class="twitter-share-button"
+  data-dnt="true"
+  data-count="none"
+  data-via="twitterdev">
+Tweettear
+</a>
+<script type="text/javascript">
+window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+</script>
+<!-- fin_twittear -->
+
  <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view2',
