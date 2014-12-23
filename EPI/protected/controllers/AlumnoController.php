@@ -73,7 +73,8 @@ class AlumnoController extends Controller
 
 			          
 			if($model->save()){
-					//unir con cruge
+				
+				//unir con cruge
 				$values = array(
 				  'username' => $model->al_rut,
 				  'email' => $model->al_email,
@@ -83,13 +84,22 @@ class AlumnoController extends Controller
 				Yii::app()->user->um->changePassword($usuario,$model->al_clave);
 
 	            if(Yii::app()->user->um->save($usuario)){
-	           echo "Usuario creado: id=".$usuario->primaryKey;
+
+	           		// echo "Usuario creado: id=".$usuario->primaryKey;
+		        	
+		        	// asignar el rol alumno
+		        	$rbac = Yii::app()->user->rbac;
+                	$authitemName = 'alumno';
+                	$userId = $usuario->primaryKey;
+                	$rbac->assign($authitemName, $userId);
+					//fin-asignar el rol alumno
 	            }
 	            else{
 	                   $errores = CHtml::errorSummary($usuario);
 	                          echo "no se pudo crear el usuario: ".$errores;
 	            }
-			//fin_unir con cruge
+				//fin_unir con cruge
+
 	            $this->redirect(array('view','id'=>$model->al_rut));
 			}
 				

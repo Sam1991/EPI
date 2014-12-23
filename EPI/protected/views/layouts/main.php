@@ -75,9 +75,9 @@
 							
 
 							//CRUGE
-								// array('label'=>'Administrar Usuarios'
-								// 	, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
-								// 	, 'visible'=>Yii::app()->user->isSuperAdmin),
+								array('label'=>'Administrar Usuarios'
+									, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
+									, 'visible'=>Yii::app()->user->isSuperAdmin),
 							
 							//actores externos
 								array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
