@@ -60,10 +60,10 @@ class Consulta extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'con_id' => 'Con',
+			'con_id' => 'Id',
 			'con_consulta' => 'Consulta',
-			'con_email' => 'Tu email',
-			'con_telefono' => 'Tu Telefono',
+			'con_email' => 'Email',
+			'con_telefono' => 'Telefono',
 			'con_fecha' => 'Fecha',
 		);
 	}
