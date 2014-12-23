@@ -27,7 +27,12 @@
 				<br>
 				-Etapa de Formación: Taller N°1, 15 marzo, de 17:00 a 20:30 horas; Taller N°2, 18 y 19 marzo, de 8:30 a 18:00 horas; Taller N°3, 23 de marzo, de 17:00 a 20:30 horas.
 				<br>
-				-Postulaciones proyectos/tesis innovadora: 1 abril a 21 de abril de 2015.	
+				-Postulaciones proyectos/tesis innovadora: 1 abril a 21 de abril de 2015.
+
+				<h3>Inscripciones</h3>
+				Para inscribirte debes completar un breve formulario on line con tus datos. Ingresa <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=alumno/create">aquí</a> al formulario de inscripción.	
+				<h3>Preguntas frecuentes</h3>
+				Consulta <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/page&view=preguntasFrecuentes">aquí</a>
 			</p>
 		</div>
 	</div>

@@ -75,9 +75,9 @@
 							
 
 							//CRUGE
-								array('label'=>'Administrar Usuarios'
-									, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
-									, 'visible'=>Yii::app()->user->isSuperAdmin),
+								// array('label'=>'Administrar Usuarios'
+								// 	, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
+								// 	, 'visible'=>Yii::app()->user->isSuperAdmin),
 							
 							//links externos
 								array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
@@ -89,7 +89,7 @@
 
 								
 								//link para alumnos
-								array('label'=>'Contacto', 'url'=>array('consulta/create'),'visible'=>(Yii::app()->user->checkAccess('alumno'))),
+								array('label'=>'Contacto', 'url'=>array('consulta/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 								
 					
 								

@@ -48,6 +48,8 @@
 
 			<h3>Contacto</h3>
 			Te puedes contactar con el coordinador del Programa EPI, Claudio Inzunza, a través de su correo electrónico, cinzunza@ubiobio.cl, o al anexo 311 1048.
+			<h3>Preguntas frecuentes</h3>
+			Consulta <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/page&view=preguntasFrecuentes">aquí</a>
 			</p>
 		</div>
 	</div>

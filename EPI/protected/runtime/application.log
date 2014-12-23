@@ -4328,3 +4328,83 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=consulta/create
 HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=consulta/create
 ---
+2014/12/23 03:08:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/consulta/create"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/consulta/...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/consulta/create
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/12/23 03:09:40 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 13.151.870-6
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\ui\CrugeLogon.php (58)
+2014/12/23 03:09:40 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 13.151.870-6
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\auth\CrugeAuthDefault.php (68)
+2014/12/23 03:09:40 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>el usuario no fue hallado</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/23 03:10:02 [error] [php] Trying to get property of non-object (C:\wamp\www\EPI\EPI\protected\views\consulta\_formInterna.php:34)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): ConsultaController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\consulta\createInterna.php(8): ConsultaController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ConsultaController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): ConsultaController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): ConsultaController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\ConsultaController.php(85): ConsultaController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ConsultaController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ConsultaController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ConsultaController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): ConsultaController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ConsultaController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=consulta/create
+in C:\wamp\www\EPI\EPI\protected\views\consulta\_formInterna.php (34)
+in C:\wamp\www\EPI\EPI\protected\views\consulta\createInterna.php (8)
+in C:\wamp\www\EPI\EPI\protected\controllers\ConsultaController.php (85)
+2014/12/23 03:12:59 [error] [php] Trying to get property of non-object (C:\wamp\www\EPI\EPI\protected\views\consulta\_formInterna.php:34)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): ConsultaController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\consulta\createInterna.php(8): ConsultaController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ConsultaController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): ConsultaController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): ConsultaController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\ConsultaController.php(85): ConsultaController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ConsultaController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ConsultaController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ConsultaController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): ConsultaController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ConsultaController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=consulta/create
+in C:\wamp\www\EPI\EPI\protected\views\consulta\_formInterna.php (34)
+in C:\wamp\www\EPI\EPI\protected\views\consulta\createInterna.php (8)
+in C:\wamp\www\EPI\EPI\protected\controllers\ConsultaController.php (85)
