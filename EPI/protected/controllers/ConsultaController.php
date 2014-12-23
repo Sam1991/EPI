@@ -79,10 +79,18 @@ class ConsultaController extends Controller
 				$this->redirect(array('exito'));
 		}
 
+		if(Yii::app()->user->checkAccess('alumno')){
+			$this->render('createInterna',array(
+				'model'=>$model,
+			));
+
+		}
+		else{
+			$this->render('create',array(
+				'model'=>$model,
+			));
+		}
 		
-		$this->render('create',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
