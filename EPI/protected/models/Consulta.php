@@ -30,6 +30,13 @@ class Consulta extends CActiveRecord
 		return array(
 			array('con_consulta, con_email, con_telefono, con_fecha', 'required'),
 			array('con_email, con_telefono', 'length', 'max'=>255),
+
+			//validaciones
+			array('con_email', 'email'),
+			array('con_telefono', 'length', 'max'=>10, 'min'=>6),
+			array('con_telefono','match','pattern'=>'/^[0-9]{6,10}$/',
+               	'message'=>CrugeTranslator::t("Teléfono incorrecto")),
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('con_id, con_consulta, con_email, con_telefono, con_fecha', 'safe', 'on'=>'search'),
