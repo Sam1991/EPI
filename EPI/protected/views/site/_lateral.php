@@ -25,7 +25,7 @@
 		
 		<!-- twitter -->
 		<div class="lateralRedes" style="height: inherit;">
-			<div style="background-color: #edeff4;height: 22px;padding: 5px;border-left: none;border-right: none;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;line-height: 1.28;display: block;margin: 0;padding: 0;border-top: none;border: 1px solid #d8dfea;"><h3 style="font-size: 11px;margin-left: 4px;margin-top: 6px;font-weight: bolder;">Sigenos en Twitter</h3></div>
+			<div style="background-color: #edeff4;height: 22px;padding: 5px;border-left: none;border-right: none;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;line-height: 1.28;display: block;margin: 0;padding: 0;border-top: none;border: 1px solid #d8dfea;"><h3 style="font-size: 11px;margin-left: 4px;margin-top: 6px;font-weight: bolder;">Sígenos en Twitter</h3></div>
 			<div style="display:inline-block">
 				<?php 
 					$imageUrl = "".Yii::app()->request->baseUrl."/images/epi_n.png";
