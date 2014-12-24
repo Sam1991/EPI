@@ -105,9 +105,9 @@
 
 									
 								//link para alumnos
-									array('label'=>'Contacto', 'url'=>array('consulta/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Estado postulacion', 'url'=>array('estadopostulacion/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Estado postulación', 'url'=>array('estadopostulacion/view&id='.Yii::app()->user->name),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 
 								//link administrador
 									array('label'=>'Noticias', 'url'=>array('/noticia/create'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
@@ -115,7 +115,7 @@
 									array('label'=>'Consultas externas', 'url'=>array('/consulta/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Consultas internas', 'url'=>array('/consultainterna/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Actividades', 'url'=>array('/actividades/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Estado postulacion', 'url'=>array('estadopostulacion/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Estado postulación', 'url'=>array('estadopostulacion/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 
 										
 

@@ -4563,3 +4563,246 @@ REQUEST_URI=/EPI/EPI/index.php?r=consulta/create
 in C:\wamp\www\EPI\EPI\protected\views\consulta\_formInterna.php (34)
 in C:\wamp\www\EPI\EPI\protected\views\consulta\createInterna.php (8)
 in C:\wamp\www\EPI\EPI\protected\controllers\ConsultaController.php (85)
+2014/12/24 17:24:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('consultainterna...')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=consultainterna/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=consultainterna/create
+---
+2014/12/24 17:26:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('consultainterna...')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=consultainterna/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=consultainterna/create
+---
+2014/12/24 17:28:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=consultainterna/create
+---
+2014/12/24 17:28:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=estadopostulacion/admin
+---
+2014/12/24 17:30:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=estadopostulacion/admin
+---
+2014/12/24 17:30:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\EPI\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/view
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=estadopostulacion/admin
+---
+2014/12/24 17:32:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\EPI\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/view
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=actividades/index
+---
+2014/12/24 17:32:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\EPI\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/view
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=estadopostulacion/view
+---
+2014/12/24 17:32:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\EPI\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/view
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=estadopostulacion/view
+---
+2014/12/24 17:39:10 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\EPI\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/view
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=estadopostulacion/view
+---
+2014/12/24 18:04:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\EPI\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/view
+HTTP_REFERER=http://localhost/EPI/EPI/index.php
+---
+2014/12/24 18:09:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\EPI\EPI\protected\controllers\EstadopostulacionController.php:158
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\controllers\EstadopostulacionController.php(55): EstadopostulacionController->loadModel('11.111.111-1')
+#1 [internal function]: EstadopostulacionController->actionView('11.111.111-1')
+#2 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(EstadopostulacionController), Array)
+#3 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(EstadopostulacionController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('estadopostulaci...')
+#14 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/view&id=11.111.111-1
+HTTP_REFERER=http://localhost/EPI/EPI/index.php
+---
+2014/12/24 18:32:05 [error] [php] Trying to get property of non-object (C:\wamp\www\EPI\EPI\protected\views\consultainterna\_form.php:33)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): ConsultainternaController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\consultainterna\update.php(21): ConsultainternaController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ConsultainternaController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): ConsultainternaController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): ConsultainternaController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\ConsultainternaController.php(103): ConsultainternaController->render()
+#7 unknown(0): ConsultainternaController->actionUpdate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ConsultainternaController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ConsultainternaController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): ConsultainternaController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ConsultainternaController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=consultainterna/update&id=1
+in C:\wamp\www\EPI\EPI\protected\views\consultainterna\_form.php (33)
+in C:\wamp\www\EPI\EPI\protected\views\consultainterna\update.php (21)
+in C:\wamp\www\EPI\EPI\protected\controllers\ConsultainternaController.php (103)

@@ -49,13 +49,13 @@
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'coni_estado'); ?>
-		<?php echo $form->textField($model,'coni_estado'); ?>
+		<?php echo $form->textField($model,'coni_estado',array('readonly'=>'false')); ?>
 		<?php echo $form->error($model,'coni_estado'); ?>
 	</div>
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'coni_respuesta'); ?>
-		<?php echo $form->textArea($model,'coni_respuesta',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'coni_respuesta',array('rows'=>6, 'cols'=>50, 'placeholder'=>'Respuesta')); ?>
 		<?php echo $form->error($model,'coni_respuesta'); ?>
 	</div>
 

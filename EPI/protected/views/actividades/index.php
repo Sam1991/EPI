@@ -1,15 +1,6 @@
 <?php
 /* @var $this ActividadesController */
 /* @var $dataProvider CActiveDataProvider */
-
-$this->breadcrumbs=array(
-	'Actividades',
-);
-
-$this->menu=array(
-	array('label'=>'Create Actividades', 'url'=>array('create')),
-	array('label'=>'Manage Actividades', 'url'=>array('admin')),
-);
 ?>
 
 <h1>Actividades</h1>
