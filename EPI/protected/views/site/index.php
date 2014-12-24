@@ -2,10 +2,7 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
-?><!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/engine1/style.css" />
-	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/engine1/jquery.js"></script>
-	<!-- End WOWSlider.com HEAD section -->
+?>
 
 		<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
 	<div id="wowslider-container1">
@@ -30,7 +27,12 @@ $this->pageTitle=Yii::app()->name;
 
 	<div id="contenidoIndex">
 		<div>
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contenido1.png" style="width: 100%;">
+			<div style="margin-top: 45px;"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contenido1.1.png" style=""></div>
+			<div style="background-color:#f5f7f9;">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contenido1.2.png" style="display:inline-block;" class="imgBeneficio">
+				<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contenido1.3.png" style="display:inline-block;" class="imgBeneficio">
+			</div>
+			
 		</div>
 		
 		<div style="margin-top:45px;">
@@ -39,7 +41,7 @@ $this->pageTitle=Yii::app()->name;
 
 		<div style="margin-top: 35px;">
 			
-			<div class="comentario" style="margin-right: 105px;">
+			<div class="comentario">
 				<TABLE>
 					<TR>
 						<TD style="width: 110px;vertical-align: top;text-align: center;">
@@ -62,7 +64,7 @@ $this->pageTitle=Yii::app()->name;
 				</TABLE>
 			</div>
 
-			<div class="comentario" style="margin-right: 105px;">
+			<div class="comentario">
 				<TABLE>
 					<TR>
 						<TD style="width: 110px;vertical-align: top;text-align: center;">
@@ -113,7 +115,7 @@ $this->pageTitle=Yii::app()->name;
 		</div>
 
 	<div id="contenidoIndex2">
-		<div id="galeriaIndex" style="width:870px;height:450px">
+		<div id="galeriaIndex" >
 			<?php $this->renderPartial('GalleryView'); ?>
 			<?php  
 				$imageUrl = "".Yii::app()->request->baseUrl."/images/galeria1.2.png";

@@ -116,9 +116,11 @@ body
 }
 
 #galeriaIndex{
-	width: 64%;
+	
 	display:inline-block;
 	vertical-align: top;
+	width:870px;
+	height:450px;
 
 }
 
@@ -351,6 +353,8 @@ div.search-form
 .comentario {
 	display: inline-block;
 	vertical-align: top;
+	margin-left: 30px;
+	margin-right: 30px;
 
 }
 
