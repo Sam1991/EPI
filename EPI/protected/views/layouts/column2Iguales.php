@@ -1,7 +1,7 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
 <div class="contenedor">
-<div class="inscripcion" style="margin-left: 65px;">
+<div class="inscripcion" >
 	<div id="content">
 		<?php echo $content; ?>
 	</div><!-- content -->

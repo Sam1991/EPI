@@ -174,6 +174,10 @@
 
 
 <style>
+
+#alumnoInscripcion{
+	margin-left: 180px;
+}
 #auspiciadores{
 	display: inline-block;
 }
@@ -187,8 +191,103 @@
 #imgLogo{
 	margin-left: 50px;
 }
-	@media all and (max-width: 800px){
-	
+.descripcion{
+	margin-left: 52px;
+}
+
+.inscripcion{
+	margin-left: 65px;
+}
+
+.inscripcion .titulo{
+	text-align: center;
+ margin-top: 100px; 
+ margin-bottom: 80px; 
+}
+
+#divImagenNoticia, #imagenNoticia{
+	width: 500px;
+
+
+}
+
+#divImagenNoticia{
+	float: left;
+	margin-right: 30px;
+	max-height: 500px;
+	overflow: hidden;
+
+
+}
+	@media all and (max-width: 767px){
+
+		#logon-form input[type="text"], textarea, input[type="password"]{
+			width:100%;
+			} 
+
+	#principal div.form{
+		padding-left: 0px;
+	}
+
+	#divImagenNoticia, #imagenNoticia{
+		width: 95%;
+	}
+
+#divImagenNoticia{
+	overflow: hidden;
+	margin-right: 0px;
+	float: none;
+}
+		.inscripcion .titulo {
+			margin-top: 0px;
+			margin-bottom: 10px;
+		}		
+		.inscripcion{
+			display: block;
+		}
+#alumnoInscripcion{
+margin-left: 0px;	
+}
+		#alumno-form *{
+			max-width: 90%;
+		}
+		.inscripcion div.form{
+width: 100%;
+padding-left: 0px;
+		}
+		#content{
+			text-align: -webkit-center;
+		}
+		.inscripcion{
+			margin-left: 0px;
+			width: 100%;
+			height: inherit;
+		}
+
+		#consulta-form *{
+			max-width: 100%;
+			padding-left: 0px;
+		}
+#principal{
+	width: 100%;
+	display: inline-block;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: center;
+}
+#principal div{
+	margin-left: 0px;
+}
+
+#principal img{
+	max-width: 90%;
+}
+		#segundaria{
+			display: none;
+		}
+	#header{
+		height: 185px;
+	}
 	.imgBeneficio{
 		width: 100%;
 	}

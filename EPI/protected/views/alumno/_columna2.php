@@ -1,5 +1,5 @@
 
-<h1 class="titulo" style="text-align: center;margin-top: 100px;margin-bottom: 80px;"> Detalle de la inscripción</h1>
+<h1 class="titulo" > Detalle de la inscripción</h1>
 
 
 <div style="padding-left: 50px;padding-right: 45px;text-align: justify;font-size: 15px;color: #928e8e;">
