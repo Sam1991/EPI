@@ -32,8 +32,6 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('espos_copiaCarnet')); ?>:</b>
 	<?php echo CHtml::encode($data->espos_copiaCarnet); ?>
 	<br />
-
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('espos_alumnoRegular')); ?>:</b>
 	<?php echo CHtml::encode($data->espos_alumnoRegular); ?>
 	<br />
@@ -46,6 +44,6 @@
 	<?php echo CHtml::encode($data->espos_informeFinal); ?>
 	<br />
 
-	*/ ?>
+	
 
 </div>

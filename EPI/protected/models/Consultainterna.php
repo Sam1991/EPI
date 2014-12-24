@@ -58,13 +58,13 @@ class Consultainterna extends CActiveRecord
 	{
 		return array(
 			'coni_id' => 'Coni',
-			'coni_consulta' => 'Coni Consulta',
-			'coni_telefono' => 'Coni Telefono',
-			'coni_email' => 'Coni Email',
-			'coni_fecha' => 'Coni Fecha',
-			'coni_estado' => 'Coni Estado',
-			'coni_respuesta' => 'Coni Respuesta',
-			'coni_fechaRespuesta' => 'Coni Fecha Respuesta',
+			'coni_consulta' => 'Consulta',
+			'coni_telefono' => 'Telefono',
+			'coni_email' => 'Email',
+			'coni_fecha' => 'Fecha',
+			'coni_estado' => 'Estado',
+			'coni_respuesta' => 'Respuesta',
+			'coni_fechaRespuesta' => 'Fecha Respuesta',
 		);
 	}
 
