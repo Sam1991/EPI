@@ -5893,3 +5893,11 @@ REQUEST_URI=/EPI/EPI/index.php?r=estadopostulacion/view&id=17.912.202-2
 in C:\wamp\www\EPI\EPI\protected\views\estadopostulacion\view.php (26)
 in C:\wamp\www\EPI\EPI\protected\controllers\EstadopostulacionController.php (56)
 in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/25 15:26:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "crud"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('crud')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=crud
+---

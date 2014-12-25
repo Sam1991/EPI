@@ -234,6 +234,34 @@
 		overflow: hidden;
 	}
 
+	/*views proyecto*/
+	#proyecto-form label{
+		display: inline-block;
+	}
+	
+	#proyecto-form div.row input[type="text"]{
+		width: 100%
+	}
+	form div.row2 input[type="text"], input[type="password"],select{
+		
+		width: 30%;
+	}
+
+	
+	form div.row4 input[type="text"], input[type="password"],select{
+		
+		width: 10%;
+	}
+
+	#proyecto-form textarea{
+		width: 100%;
+	}
+	#proyecto-form input[type="text"], input[type="password"],select,textarea{
+		border: 2px solid #949494;
+	}
+	
+	/*fin_views proyecto*/
+
 		@media all and (max-width: 767px){
 
 			#logon-form input[type="text"], textarea, input[type="password"]{
