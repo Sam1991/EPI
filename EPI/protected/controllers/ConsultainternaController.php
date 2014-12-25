@@ -32,11 +32,11 @@ class ConsultainternaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -51,9 +51,17 @@ class ConsultainternaController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
+		if(Yii::app()->user->isSuperAdmin){
+			$this->render('viewAdministrador',array(
 			'model'=>$this->loadModel($id),
-		));
+			));
+		}
+		else{
+			$this->render('view',array(
+			'model'=>$this->loadModel($id),
+			));
+		}
+		
 	}
 
 	/**
@@ -87,6 +95,7 @@ class ConsultainternaController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$model->scenario = 'editar';
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -133,14 +142,23 @@ class ConsultainternaController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		
 		$model=new Consultainterna('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Consultainterna']))
 			$model->attributes=$_GET['Consultainterna'];
 
-		$this->render('admin',array(
-			'model'=>$model,
-		));
+		if(Yii::app()->user->isSuperAdmin){
+			$this->render('admin',array(
+				'model'=>$model,
+			));	
+		}
+		else{
+			$this->render('adminAlumno',array(
+					'model'=>$model,
+				));		
+		}
+		
 	}
 
 	/**

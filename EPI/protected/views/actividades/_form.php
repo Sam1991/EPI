@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'act_campus'); ?>
-		<?php echo $form->textField($model,'act_campus',array('size'=>20,'maxlength'=>20,'placeholder'=>'Campus')); ?>
+		<?php echo $form->dropDownList($model,'act_campus',array(''=>'Campus','Concepción'=>'Concepción','Chillan'=>'Chillan')); ?>
 		<?php echo $form->error($model,'act_campus'); ?>
 	</div>
 
@@ -35,19 +35,32 @@
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'act_fecha'); ?>
-		<?php echo $form->textField($model,'act_fecha',array('size'=>60,'maxlength'=>255,'placeholder'=>'fecha')); ?>
+		<?php 
+		$this->widget("zii.widgets.jui.CJuiDatePicker",array(
+			"attribute"=>"act_fecha",
+			"model"=>$model,
+			"language"=>"es",
+			"options"=>array(
+				"dateFormat"=>"yy-mm-dd"
+				),
+			'htmlOptions'=>array('placeholder'=>'Fecha'),
+			));
+		?>
 		<?php echo $form->error($model,'act_fecha'); ?>
 	</div>
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'act_horaInicio'); ?>
-		<?php echo $form->textField($model,'act_horaInicio',array('size'=>20,'maxlength'=>20,'placeholder'=>'Inicio')); ?>
-		<?php echo $form->error($model,'act_horaInicio'); ?>
+		Inicio
+		<?php echo $form->TimeField($model,'act_horaInicio',array('size'=>20,'maxlength'=>20,'placeholder'=>'Inicio')); ?>
+		<?php //echo $form->labelEx($model,'act_horaFin'); ?>
+		Fin
+		<?php echo $form->TimeField($model,'act_horaFin',array('size'=>20,'maxlength'=>20,'placeholder'=>'Fin')); ?>
+		
 	</div>
 
 	<div class="row">
-		<?php //echo $form->labelEx($model,'act_horaFin'); ?>
-		<?php echo $form->textField($model,'act_horaFin',array('size'=>20,'maxlength'=>20,'placeholder'=>'Fin')); ?>
+		<?php echo $form->error($model,'act_horaInicio'); ?>
 		<?php echo $form->error($model,'act_horaFin'); ?>
 	</div>
 

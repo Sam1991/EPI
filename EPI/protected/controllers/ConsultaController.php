@@ -51,6 +51,7 @@ class ConsultaController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$this->layout = '//layouts/columnAdmin';
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -124,11 +125,16 @@ class ConsultaController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model=$this->loadModel($id);
+		$model->con_estado= 1; 
+		if($model->save()){
+			$this->redirect(array('admin'));
+		}
+		
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		 // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		 // if(!isset($_GET['ajax']))
+		 // 	$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
 	/**

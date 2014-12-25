@@ -61,14 +61,14 @@ class Actividades extends CActiveRecord
 	{
 		return array(
 			'act_id' => 'Act',
-			'act_convocatoria' => 'Act Convocatoria',
-			'act_campus' => 'Act Campus',
-			'act_nombre' => 'Act Nombre',
-			'act_fecha' => 'Act Fecha',
-			'act_horaInicio' => 'Act Hora Inicio',
-			'act_horaFin' => 'Act Hora Fin',
-			'act_lugar' => 'Act Lugar',
-			'act_descripcion' => 'Act Descripcion',
+			'act_convocatoria' => 'Convocatoria',
+			'act_campus' => 'Campus',
+			'act_nombre' => 'Nombre',
+			'act_fecha' => 'Fecha',
+			'act_horaInicio' => 'Hora Inicio',
+			'act_horaFin' => 'Hora Fin',
+			'act_lugar' => 'Lugar',
+			'act_descripcion' => 'Descripcion',
 		);
 	}
 

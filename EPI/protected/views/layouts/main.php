@@ -165,14 +165,22 @@
 
 <style>
 
-	form input[type="text"], textarea, input[type="password"]{
+	form input[type="text"], textarea, input[type="password"],select{
 		border: 2px solid red;
 		width: 460px;
 	}
-
-	form input[type="text"],input[type="password"]{
+	form input[type="time"]{
+		border: 2px solid red;
+		height: 25px;
+		
+	}
+	form input[type="text"],input[type="password"],select{
 		height: 25px;
 	}
+
+	/*#actividades-form{
+		color: #a9a9ae;
+	}*/
 
 	form input[type="submit"]{
 		color: white;

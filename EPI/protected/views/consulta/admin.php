@@ -18,21 +18,29 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-<h1>Consultas</h1>
+<h1>Consultas no respondidas</h1>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'consulta-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model->search1(),
 	'filter'=>$model,
 	'columns'=>array(
-		'con_id',
 		'con_consulta',
 		'con_email',
 		'con_telefono',
 		'con_fecha',
 		array(
 			'class'=>'CButtonColumn',
+			'template' => '{view} {delete}',
+			'buttons'=>array(
+			 	'delete' => array(
+			 		'label'=>'Respondida', 
+			 		'url'=>"CHtml::normalizeUrl(array('delete','id'=>\$data->con_id))",
+			 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/tick.gif', 
+			 		'options' => array('class'=>'Delete'),
+   					),
+ 			),
 		),
 	),
 )); ?>

@@ -34,17 +34,15 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'act_id',
 		'act_convocatoria',
 		'act_campus',
 		'act_nombre',
 		'act_fecha',
 		'act_horaInicio',
-		/*
 		'act_horaFin',
 		'act_lugar',
 		'act_descripcion',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
 		),

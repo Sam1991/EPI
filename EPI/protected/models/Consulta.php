@@ -30,6 +30,7 @@ class Consulta extends CActiveRecord
 		return array(
 			array('con_consulta, con_email, con_telefono, con_fecha', 'required'),
 			array('con_email, con_telefono', 'length', 'max'=>255),
+			array('con_estado', 'numerical', 'integerOnly'=>true),
 
 			//validaciones
 			array('con_email', 'email'),
@@ -39,7 +40,7 @@ class Consulta extends CActiveRecord
 
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('con_id, con_consulta, con_email, con_telefono, con_fecha', 'safe', 'on'=>'search'),
+			array('con_id, con_consulta, con_email, con_telefono, con_fecha,con_estado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,6 +66,7 @@ class Consulta extends CActiveRecord
 			'con_email' => 'Email',
 			'con_telefono' => 'Telefono',
 			'con_fecha' => 'Fecha',
+			'con_estado' => 'Estado',
 		);
 	}
 
@@ -91,11 +93,27 @@ class Consulta extends CActiveRecord
 		$criteria->compare('con_email',$this->con_email,true);
 		$criteria->compare('con_telefono',$this->con_telefono,true);
 		$criteria->compare('con_fecha',$this->con_fecha,true);
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function search1()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->addCondition("con_estado = 0");
+		$criteria->compare('con_id',$this->con_id);
+		$criteria->compare('con_consulta',$this->con_consulta,true);
+		$criteria->compare('con_email',$this->con_email,true);
+		$criteria->compare('con_telefono',$this->con_telefono,true);
+		$criteria->compare('con_fecha',$this->con_fecha,true);
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}	
 
 	/**
 	 * Returns the static model of the specified AR class.

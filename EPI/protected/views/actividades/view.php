@@ -16,7 +16,6 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'act_id',
 		'act_convocatoria',
 		'act_campus',
 		'act_fecha',

@@ -2,6 +2,9 @@
 /* @var $this ConsultainternaController */
 /* @var $model Consultainterna */
 
+$this->menu=array(
+	array('label'=>'Nueva', 'url'=>array('create')),
+);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -17,29 +20,22 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Consultas internas no respondidas</h1>
+<h1>Consultas</h1>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'consultainterna-grid',
-	'dataProvider'=>$model->searchAdministrador(),
+	'dataProvider'=>$model->searchAlumno(),
 	'filter'=>$model,
 	'columns'=>array(
 		'coni_consulta',
-		'coni_telefono',
-		'coni_email',
 		'coni_fecha',
+		'coni_respuesta',
+		'coni_fechaRespuesta',
+		
 		array(
 			'class'=>'CButtonColumn',
-			'template' => '{view} {responder}',
-			'buttons'=>array(
-			 	'responder' => array(
-			 		'label'=>'Responder', 
-			 		'url'=>"CHtml::normalizeUrl(array('update','id'=>\$data->coni_id))",
-			 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/tick.gif', 
-			 		'options' => array('class'=>'Delete'),
-   					),
- 			),
+			'template' => '{view}',
 		),
 	),
 )); ?>

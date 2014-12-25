@@ -100,6 +100,14 @@ class AlumnoController extends Controller
 	            }
 				//fin_unir con cruge
 
+				//crear el estado de postulacion
+				$estadoPostulacionAlumno=new Estadopostulacion;
+				$estadoPostulacionAlumno->al_rut=$model->al_rut;
+				$estadoPostulacionAlumno->espos_inscripcion=1;
+				$estadoPostulacionAlumno->save();
+
+				//fin_crear el estado de postulacion
+
 	            $this->redirect(array('view','id'=>$model->al_rut));
 			}
 				

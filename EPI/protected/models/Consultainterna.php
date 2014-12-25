@@ -32,6 +32,12 @@ class Consultainterna extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('coni_consulta, coni_telefono, coni_email, coni_fecha', 'required'),
+
+
+			// al administrdor responder la consulta
+			array('coni_respuesta,coni_estado,coni_fechaRespuesta', 'required','on' => 'editar'),
+			
+
 			array('coni_estado', 'numerical', 'integerOnly'=>true),
 			array('coni_telefono, coni_email', 'length', 'max'=>255),
 			// The following rule is used by search().
@@ -64,7 +70,7 @@ class Consultainterna extends CActiveRecord
 			'coni_fecha' => 'Fecha',
 			'coni_estado' => 'Estado',
 			'coni_respuesta' => 'Respuesta',
-			'coni_fechaRespuesta' => 'Fecha Respuesta',
+			'coni_fechaRespuesta' => 'Fecha respuesta',
 		);
 	}
 
@@ -86,6 +92,52 @@ class Consultainterna extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('coni_id',$this->coni_id);
+		$criteria->compare('coni_consulta',$this->coni_consulta,true);
+		$criteria->compare('coni_telefono',$this->coni_telefono,true);
+		$criteria->compare('coni_email',$this->coni_email,true);
+		$criteria->compare('coni_fecha',$this->coni_fecha,true);
+		$criteria->compare('coni_estado',$this->coni_estado);
+		$criteria->compare('coni_respuesta',$this->coni_respuesta,true);
+		$criteria->compare('coni_fechaRespuesta',$this->coni_fechaRespuesta,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+
+	public function searchAdministrador()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+		
+		$criteria->addCondition("coni_estado = 0");
+		$criteria->compare('coni_id',$this->coni_id);
+		$criteria->compare('coni_consulta',$this->coni_consulta,true);
+		$criteria->compare('coni_telefono',$this->coni_telefono,true);
+		$criteria->compare('coni_email',$this->coni_email,true);
+		$criteria->compare('coni_fecha',$this->coni_fecha,true);
+		$criteria->compare('coni_estado',$this->coni_estado);
+		$criteria->compare('coni_respuesta',$this->coni_respuesta,true);
+		$criteria->compare('coni_fechaRespuesta',$this->coni_fechaRespuesta,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	public function searchAlumno()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		// obtener datos del usuario activo 
+			$alumno=alumno::model()->find("al_rut='".Yii::app()->user->name."'");
+	
+		$criteria->addCondition("coni_email ='".$alumno->al_email."'");
 		$criteria->compare('coni_id',$this->coni_id);
 		$criteria->compare('coni_consulta',$this->coni_consulta,true);
 		$criteria->compare('coni_telefono',$this->coni_telefono,true);
