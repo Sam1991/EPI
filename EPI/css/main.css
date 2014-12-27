@@ -119,8 +119,7 @@ body
 	
 	display:inline-block;
 	vertical-align: top;
-	width:870px;
-	height:450px;
+	margin-bottom: 20px;
 
 }
 
@@ -131,10 +130,10 @@ body
 #footer
 {
 	
-	height: 96px;
+	/*height: 96px;*/
 }
 #footer img{
-	width: 100%;
+	/*width: 100%;*/
 }
 
 #logo

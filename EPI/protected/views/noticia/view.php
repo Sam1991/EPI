@@ -60,7 +60,7 @@ window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.ge
 
 <!-- comentarios -->
 <div style="text-align:center;">
-<div class="fb-comments" data-href="<?php  echo $ref;?>" data-numposts="5" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="<?php  echo $ref;?>" data-width="100%" data-numposts="5" data-mobile="Auto-detected" data-colorscheme="light"></div>
 </div>
 <!-- fin-comentarios -->
 

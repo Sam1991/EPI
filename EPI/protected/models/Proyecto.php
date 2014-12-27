@@ -48,7 +48,8 @@ class Proyecto extends CActiveRecord
 		return array(
 			array('pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela, pro_aporteValorado, pro_aportePecuniario, pro_resumenEjecutivo, pro_descripcionEmpresa, pro_definicionProblema, pro_solucionPropuesta, pro_estadoArte, pro_objetivoGeneral, pro_metodologia, pro_cartaGantt', 'required'),
 			array('pro_aporteValorado, pro_aportePecuniario', 'numerical', 'integerOnly'=>true),
-			array('pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela, pro_cartaGantt', 'length', 'max'=>255),
+			array('pro_cartaGantt', 'file','types'=>'jpg, gif, png,txt,pdf'),
+			array('pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('pro_idProyecto, pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela, pro_aporteValorado, pro_aportePecuniario, pro_resumenEjecutivo, pro_descripcionEmpresa, pro_definicionProblema, pro_solucionPropuesta, pro_estadoArte, pro_objetivoGeneral, pro_metodologia, pro_cartaGantt', 'safe', 'on'=>'search'),
@@ -92,7 +93,7 @@ class Proyecto extends CActiveRecord
 			'pro_definicionProblema' => 'Pro Definicion Problema',
 			'pro_solucionPropuesta' => 'Pro Solucion Propuesta',
 			'pro_estadoArte' => 'Pro Estado Arte',
-			'pro_objetivoGeneral' => 'Pro Objetivo General',
+			'pro_objetivoGeneral' => 'Objetivo general',
 			'pro_metodologia' => 'Pro Metodologia',
 			'pro_cartaGantt' => 'Pro Carta Gantt',
 		);
@@ -145,6 +146,69 @@ class Proyecto extends CActiveRecord
 		));
 	}
 
+	public function searchAlumno()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+
+		//que solo vea los proyectos en los que esta inscrito
+			// obtener datos del usuario activo 
+		$proyectos=alumnoproyecto::model()->findAll("al_rut='".Yii::app()->user->name."'");
+
+		// echo $proyectos[0]->pro_idProyecto;
+
+
+		$condicion='';
+		for ($i=0; $i <count($proyectos) ; $i++) { 
+			if($i>0){
+				$condicion=$condicion.' or ';		
+			}
+			$condicion=$condicion."pro_idProyecto =".$proyectos[$i]->pro_idProyecto;
+		}
+
+		$criteria->addCondition($condicion);	
+		
+		if(count($proyectos)==0){
+			$criteria->addCondition("pro_idProyecto =-1");
+		}
+		// echo $condicion;
+		
+
+		
+
+
+
+
+		$criteria->compare('pro_idProyecto',$this->pro_idProyecto);
+		$criteria->compare('pro_titulo',$this->pro_titulo,true);
+		$criteria->compare('pro_duracion',$this->pro_duracion,true);
+		$criteria->compare('pro_ambito',$this->pro_ambito,true);
+		$criteria->compare('pro_emNombre',$this->pro_emNombre,true);
+		$criteria->compare('pro_emContacto',$this->pro_emContacto,true);
+		$criteria->compare('pro_emTelefono',$this->pro_emTelefono,true);
+		$criteria->compare('emEmail',$this->emEmail,true);
+		$criteria->compare('pro_profeNombre',$this->pro_profeNombre,true);
+		$criteria->compare('pro_profeEmail',$this->pro_profeEmail,true);
+		$criteria->compare('pro_profeTelefono',$this->pro_profeTelefono,true);
+		$criteria->compare('pro_dirEscuela',$this->pro_dirEscuela,true);
+		$criteria->compare('pro_vBEscuela',$this->pro_vBEscuela,true);
+		$criteria->compare('pro_aporteValorado',$this->pro_aporteValorado);
+		$criteria->compare('pro_aportePecuniario',$this->pro_aportePecuniario);
+		$criteria->compare('pro_resumenEjecutivo',$this->pro_resumenEjecutivo,true);
+		$criteria->compare('pro_descripcionEmpresa',$this->pro_descripcionEmpresa,true);
+		$criteria->compare('pro_definicionProblema',$this->pro_definicionProblema,true);
+		$criteria->compare('pro_solucionPropuesta',$this->pro_solucionPropuesta,true);
+		$criteria->compare('pro_estadoArte',$this->pro_estadoArte,true);
+		$criteria->compare('pro_objetivoGeneral',$this->pro_objetivoGeneral,true);
+		$criteria->compare('pro_metodologia',$this->pro_metodologia,true);
+		$criteria->compare('pro_cartaGantt',$this->pro_cartaGantt,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

@@ -3,6 +3,10 @@
 /* @var $model Proyecto */
 
 
+$this->menu=array(
+	array('label'=>'Crear proyecto', 'url'=>array('create')),
+);
+
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -19,22 +23,17 @@ $('.search-form form').submit(function(){
 
 <h1>Proyectos</h1>
 
-
-
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'proyecto-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model->searchAlumno(),
 	'filter'=>$model,
 	'columns'=>array(
 		'pro_titulo',
 		'pro_ambito',
-		'pro_objetivoGeneral',
-		'pro_profeNombre',
 		'pro_emNombre',
-		
-		/*
-		'pro_duracion',
 		'pro_emContacto',
+		'pro_profeNombre',
+		/*
 		'pro_emTelefono',
 		'emEmail',
 		'pro_profeEmail',
@@ -48,12 +47,13 @@ $('.search-form form').submit(function(){
 		'pro_definicionProblema',
 		'pro_solucionPropuesta',
 		'pro_estadoArte',
+		'pro_objetivoGeneral',
 		'pro_metodologia',
 		'pro_cartaGantt',
 		*/
 		array(
 			'class'=>'CButtonColumn',
-			'template' => '{view}',
+			'template' => '{view}{update}',
 		),
 	),
 )); ?>

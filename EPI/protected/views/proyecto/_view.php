@@ -90,10 +90,6 @@
 	<?php echo CHtml::encode($data->pro_objetivoGeneral); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_resultadosEsperados')); ?>:</b>
-	<?php echo CHtml::encode($data->pro_resultadosEsperados); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_metodologia')); ?>:</b>
 	<?php echo CHtml::encode($data->pro_metodologia); ?>
 	<br />

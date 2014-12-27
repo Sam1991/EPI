@@ -117,11 +117,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'pro_resultadosEsperados'); ?>
-		<?php echo $form->textArea($model,'pro_resultadosEsperados',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'pro_metodologia'); ?>
 		<?php echo $form->textArea($model,'pro_metodologia',array('rows'=>6, 'cols'=>50)); ?>
 	</div>

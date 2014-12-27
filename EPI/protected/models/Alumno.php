@@ -73,11 +73,11 @@ class Alumno extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'al_rut' => 'Rut',
-			'al_nombre' => 'Nombres',
-			'al_carrera' => 'Carrera',
-			'al_email' => 'Email',
-			'al_telefono' => 'Telefono',
+			'al_rut' => 'N° CÉDULA DE IDENTIDAD',
+			'al_nombre' => 'NOMBRE ALUMNO(A)',
+			'al_carrera' => 'CARRERA',
+			'al_email' => 'E-MAIL',
+			'al_telefono' => 'TELÉFONO',
 			'al_comentario' => 'Comentario',
 			'al_clave' => 'Clave',
 			'al_paterno' => 'Apellido Paterno',

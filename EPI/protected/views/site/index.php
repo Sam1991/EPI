@@ -116,7 +116,10 @@ $this->pageTitle=Yii::app()->name;
 
 	<div id="contenidoIndex2">
 		<div id="galeriaIndex" >
-			<?php $this->renderPartial('GalleryView'); ?>
+			<div style="width: 833px;height:447px;">
+			<?php $this->renderPartial('GalleryView'); ?>	
+			</div>
+			
 			<?php  
 				$imageUrl = "".Yii::app()->request->baseUrl."/images/galeria1.2.png";
 				$image = '<img src="'.$imageUrl.'" >';
@@ -125,7 +128,7 @@ $this->pageTitle=Yii::app()->name;
 		</div>
 		<div id="redesIndex">
 
-<a class="twitter-timeline" href="https://twitter.com/programaepi" width="100%"  height="100%" data-widget-id="542691510009876481">Tweets por el @programaepi.</a>
+<a class="twitter-timeline" href="https://twitter.com/programaepi" width="520"  data-widget-id="542691510009876481">Tweets por el @programaepi.</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			
 		</div>

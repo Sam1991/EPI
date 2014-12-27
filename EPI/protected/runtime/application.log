@@ -5901,3 +5901,1185 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/EPI/EPI/index.php?r=crud
 ---
+2014/12/25 21:59:11 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\EPI\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(2255): tag()
+#2 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(1434): activeInputField()
+#3 C:\wamp\www\EPI\framework\web\widgets\CActiveForm.php(725): activeTextField()
+#4 C:\wamp\www\EPI\EPI\protected\views\proyecto\_form.php(29): CActiveForm->textField()
+#5 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#7 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#8 C:\wamp\www\EPI\EPI\protected\views\proyecto\create.php(18): ProyectoController->renderPartial()
+#9 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#10 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#11 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#12 C:\wamp\www\EPI\framework\web\CController.php(782): ProyectoController->renderPartial()
+#13 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(79): ProyectoController->render()
+#14 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionCreate()
+#15 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#17 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#20 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#23 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#24 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\_form.php (29)
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (79)
+2014/12/25 21:59:38 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\EPI\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(2255): tag()
+#2 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(1434): activeInputField()
+#3 C:\wamp\www\EPI\framework\web\widgets\CActiveForm.php(725): activeTextField()
+#4 C:\wamp\www\EPI\EPI\protected\views\proyecto\_form.php(29): CActiveForm->textField()
+#5 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#7 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#8 C:\wamp\www\EPI\EPI\protected\views\proyecto\create.php(18): ProyectoController->renderPartial()
+#9 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#10 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#11 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#12 C:\wamp\www\EPI\framework\web\CController.php(782): ProyectoController->renderPartial()
+#13 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(79): ProyectoController->render()
+#14 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionCreate()
+#15 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#17 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#20 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#23 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#24 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\_form.php (29)
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (79)
+2014/12/25 22:00:05 [error] [php] Use of undefined constant pro_titulo - assumed 'pro_titulo' (C:\wamp\www\EPI\EPI\protected\views\proyecto\_form.php:29)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\proyecto\create.php(18): ProyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): ProyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(79): ProyectoController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\_form.php (29)
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (79)
+2014/12/25 22:00:30 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\EPI\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(2255): tag()
+#2 C:\wamp\www\EPI\framework\web\helpers\CHtml.php(1434): activeInputField()
+#3 C:\wamp\www\EPI\framework\web\widgets\CActiveForm.php(725): activeTextField()
+#4 C:\wamp\www\EPI\EPI\protected\views\proyecto\_form.php(29): CActiveForm->textField()
+#5 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#7 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#8 C:\wamp\www\EPI\EPI\protected\views\proyecto\create.php(18): ProyectoController->renderPartial()
+#9 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#10 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#11 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#12 C:\wamp\www\EPI\framework\web\CController.php(782): ProyectoController->renderPartial()
+#13 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(79): ProyectoController->render()
+#14 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionCreate()
+#15 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#17 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#20 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#23 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#24 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\_form.php (29)
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (79)
+2014/12/26 06:38:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=programaEpi
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/12/26 17:49:19 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 17:49:59 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:07:52 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:07:52 [error] [php] Undefined variable: estructura (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:80)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (80)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:09:29 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:09:29 [error] [php] Undefined variable: estructura (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:80)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (80)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:09:57 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:09:57 [error] [php] Undefined variable: estructura (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:80)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (80)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:10:25 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:10:25 [error] [php] Undefined variable: estructura (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:80)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (80)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:10:47 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:10:47 [error] [php] Undefined variable: estructura (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:80)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (80)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:11:19 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:11:19 [error] [php] Undefined variable: estructura (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:80)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (80)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:12:02 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:12:02 [error] [php] Undefined variable: estructura (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:81)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (81)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:12:56 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:16:17 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:16:17 [error] [php] Undefined variable: estructura (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:80)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (80)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:16:55 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:18:11 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:18:21 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:18:49 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:18:49 [error] [php] Undefined variable: carpeta (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:82)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (82)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:20:16 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:20:38 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:22:10 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:22:32 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:24:23 [warning] [application] Error al establecer unsafe al atributo "no_imagen" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:24:34 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:25:06 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:25:14 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:27:23 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:27:31 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:27:44 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:28:14 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:28:34 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:28:57 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:29:08 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:30:52 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:32:41 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:32:50 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:34:10 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:34:10 [error] [php] move_uploaded_file(C:\wamp\www\EPI\EPI\protected\proyectos/$model-&gt;pro_cartaGantt) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Invalid argument (C:\wamp\www\EPI\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionCreate()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (84)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:35:09 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:35:09 [error] [php] move_uploaded_file($estructura/$model-&gt;pro_cartaGantt) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionCreate()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (85)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:35:37 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:43:10 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:43:30 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:45:36 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:45:36 [error] [php] move_uploaded_file(C:\wamp\www\EPI\EPI\protected\proyectos/$model-&gt;pro_cartaGantt) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: Invalid argument (C:\wamp\www\EPI\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionCreate()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/create
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (85)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 18:46:05 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 20:06:29 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 20:06:54 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 20:21:18 [error] [php] Undefined variable: form (C:\wamp\www\EPI\EPI\protected\views\proyecto\view.php:74)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#1 C:\wamp\www\EPI\framework\web\CController.php(782): ProyectoController->renderPartial()
+#2 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(56): ProyectoController->render()
+#3 unknown(0): ProyectoController->actionView()
+#4 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#8 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/view&id=3
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\view.php (74)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (56)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 20:23:36 [error] [php] Undefined variable: data (C:\wamp\www\EPI\EPI\protected\views\proyecto\view.php:51)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#1 C:\wamp\www\EPI\framework\web\CController.php(782): ProyectoController->renderPartial()
+#2 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(56): ProyectoController->render()
+#3 unknown(0): ProyectoController->actionView()
+#4 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#8 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/view&id=3
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\view.php (51)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (56)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 21:02:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CrugeWebUser), 'Usted no se enc...')
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/admin')
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php
+---
+2014/12/26 21:32:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pagoMensual/obtenerRut"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('pagoMensual/obt...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=pagoMensual/obtenerRut&term=1
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:32:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pagoMensual/obtenerRut"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('pagoMensual/obt...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=pagoMensual/obtenerRut&term=17
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:32:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pagoMensual/obtenerRut"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('pagoMensual/obt...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=pagoMensual/obtenerRut&term=17.
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:32:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pagoMensual/obtenerRut"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('pagoMensual/obt...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=pagoMensual/obtenerRut&term=17.9
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:32:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pagoMensual/obtenerRut"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('pagoMensual/obt...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=pagoMensual/obtenerRut&term=1
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:32:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pagoMensual/obtenerRut"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('pagoMensual/obt...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=pagoMensual/obtenerRut&term=17
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:32:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pagoMensual/obtenerRut"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('pagoMensual/obt...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=pagoMensual/obtenerRut&term=174343
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:33:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "pagoMensual/obtenerRut"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('pagoMensual/obt...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=pagoMensual/obtenerRut&term=1
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "obtenerRut" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('obtenerRut')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('obtenerRut')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Alumnoproyecto/...')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Alumnoproyecto/obtenerRut&term=1
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "obtenerRut" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('obtenerRut')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('obtenerRut')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Alumnoproyecto/...')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Alumnoproyecto/obtenerRut&term=17
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:34:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "obtenerRut" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('obtenerRut')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('obtenerRut')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Alumnoproyecto/...')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Alumnoproyecto/obtenerRut&term=17.
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:34:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "obtenerRut" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('obtenerRut')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('obtenerRut')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Alumnoproyecto/...')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Alumnoproyecto/obtenerRut&term=17.9
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create
+---
+2014/12/26 21:36:11 [error] [php] include(Alumnos.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(86): spl_autoload_call()
+#1 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): AlumnoproyectoController->actionObtenerRut()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=Alumnoproyecto/obtenerRut&term=1
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (86)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 21:36:12 [error] [php] include(Alumnos.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(86): spl_autoload_call()
+#1 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): AlumnoproyectoController->actionObtenerRut()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=Alumnoproyecto/obtenerRut&term=17
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (86)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 21:36:14 [error] [php] include(Alumnos.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(86): spl_autoload_call()
+#1 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): AlumnoproyectoController->actionObtenerRut()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=Alumnoproyecto/obtenerRut&term=17.
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (86)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 21:36:27 [error] [php] include(Alumnos.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(86): spl_autoload_call()
+#1 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): AlumnoproyectoController->actionObtenerRut()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=Alumnoproyecto/obtenerRut&term=17.9
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (86)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 21:54:23 [error] [php] Undefined variable: idProyecto (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:39)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&id=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (39)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 21:54:34 [error] [php] Undefined variable: idProyecto (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:39)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&id=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (39)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 21:56:02 [error] [php] Undefined variable: form (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:7)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&id=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (7)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 21:56:56 [error] [php] Undefined variable: idProyecto (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:7)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&id=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (7)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 21:57:15 [error] [php] Undefined variable: idProyecto (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:7)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&id=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (7)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 21:58:08 [error] [php] Undefined variable: idProyecto (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:7)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&id=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (7)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 21:58:16 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in C:\wamp\www\EPI\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('alumnoproyecto/...')
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&idp=3
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=proyecto/view&id=3
+---
+2014/12/26 21:59:16 [error] [php] Undefined variable: id (C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php:78)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#3 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#10 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&idp=3
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (78)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 21:59:35 [error] [php] Undefined variable: idProyecto (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:7)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&idp=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (7)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 22:00:00 [error] [php] Undefined variable: idp (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:7)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&idp=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (7)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 22:03:35 [error] [exception.CException] exception 'CException' with message 'La propiedad "AlumnoproyectoController"."idp" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php(7): CComponent->__get('idp')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#4 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): CController->renderPartial('_form', Array)
+#5 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#6 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#7 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#8 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): CController->render('create', Array)
+#10 [internal function]: AlumnoproyectoController->actionCreate('3')
+#11 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AlumnoproyectoController), Array)
+#12 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlumnoproyectoController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('alumnoproyecto/...')
+#23 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&idp=3
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=proyecto/view&id=3
+---
+2014/12/26 22:04:56 [error] [exception.CException] exception 'CException' with message 'La propiedad "AlumnoproyectoController"."idp" no se encuentra definida.' in C:\wamp\www\EPI\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php(7): CComponent->__get('idp')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#4 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): CController->renderPartial('_form', Array)
+#5 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#6 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#7 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#8 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#9 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): CController->render('create', Array)
+#10 [internal function]: AlumnoproyectoController->actionCreate('3')
+#11 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AlumnoproyectoController), Array)
+#12 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlumnoproyectoController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('alumnoproyecto/...')
+#23 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&idp=3
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=proyecto/view&id=3
+---
+2014/12/26 22:07:28 [error] [php] Undefined variable: idp (C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php:7)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#1 C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php(18): AlumnoproyectoController->renderPartial()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): AlumnoproyectoController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): AlumnoproyectoController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): AlumnoproyectoController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(79): AlumnoproyectoController->render()
+#7 unknown(0): AlumnoproyectoController->actionCreate()
+#8 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): AlumnoproyectoController->runAction()
+#12 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): AlumnoproyectoController->filterAccessControl()
+#15 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\EPI\framework\web\CController.php(265): AlumnoproyectoController->runActionWithFilters()
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): AlumnoproyectoController->run()
+#19 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/create&idp=3
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\_form.php (7)
+in C:\wamp\www\EPI\EPI\protected\views\alumnoproyecto\create.php (18)
+in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php (79)
+2014/12/26 22:43:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php:175
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\controllers\AlumnoproyectoController.php(55): AlumnoproyectoController->loadModel('3')
+#1 [internal function]: AlumnoproyectoController->actionView('3')
+#2 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AlumnoproyectoController), Array)
+#3 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AlumnoproyectoController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('alumnoproyecto/...')
+#14 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=alumnoproyecto/view&id=3
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=alumnoproyecto/create&idp=3
+---
+2014/12/26 22:55:29 [warning] [application] Error al establecer unsafe al atributo "pro_cartaGantt" de "Proyecto".
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (72)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/26 22:58:18 [error] [exception.CException] exception 'CException' with message 'Proyecto y sus behaviors no tienen un método o closure llamado "searchAlumno".' in C:\wamp\www\EPI\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\ar\CActiveRecord.php(227): CComponent->__call('searchAlumno', Array)
+#1 C:\wamp\www\EPI\EPI\protected\views\proyecto\adminAlumno.php(33): CActiveRecord->__call('searchAlumno', Array)
+#2 C:\wamp\www\EPI\EPI\protected\views\proyecto\adminAlumno.php(33): Proyecto->searchAlumno()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#4 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', Array, true)
+#5 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', Array, true)
+#6 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('adminAlumno', Array, true)
+#7 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(171): CController->render('adminAlumno', Array)
+#8 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionAdmin()
+#9 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/admin')
+#19 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=proyecto/view&id=4
+---
+2014/12/26 23:19:09 [error] [php] Undefined variable: proyecto (C:\wamp\www\EPI\EPI\protected\models\Proyecto.php:163)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#1 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#2 C:\wamp\www\EPI\framework\web\CController.php(782): ProyectoController->renderPartial()
+#3 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(171): ProyectoController->render()
+#4 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionAdmin()
+#5 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#13 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/admin
+in C:\wamp\www\EPI\EPI\protected\models\Proyecto.php (163)
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\adminAlumno.php (33)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (171)
+2014/12/26 23:40:04 [error] [php] Use of undefined constant i - assumed 'i' (C:\wamp\www\EPI\EPI\protected\models\Proyecto.php:168)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CBaseController.php(95): ProyectoController->renderInternal()
+#1 C:\wamp\www\EPI\framework\web\CController.php(869): ProyectoController->renderFile()
+#2 C:\wamp\www\EPI\framework\web\CController.php(782): ProyectoController->renderPartial()
+#3 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(171): ProyectoController->render()
+#4 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionAdmin()
+#5 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#13 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/admin
+in C:\wamp\www\EPI\EPI\protected\models\Proyecto.php (168)
+in C:\wamp\www\EPI\EPI\protected\views\proyecto\adminAlumno.php (33)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (171)
+2014/12/26 23:42:39 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 13.151.870-6
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\ui\CrugeLogon.php (58)
+2014/12/26 23:42:39 [warning] [application] CrugeFactory::getICrugeStoredUser
+ **NO HALLADO** 13.151.870-6
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeFactory.php (322)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\components\CrugeUserManager.php (252)
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\models\auth\CrugeAuthDefault.php (68)
+2014/12/26 23:42:39 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>el usuario no fue hallado</li>
+<li>usuario o correo invalido</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)

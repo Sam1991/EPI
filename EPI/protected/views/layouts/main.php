@@ -48,28 +48,28 @@
 				$image = '<img src="'.$imageUrl.'" style="position: absolute;" id="imgLogo" >';
 				echo CHtml::link($image, array('/site/index'));
 			?>
-			
-			<div id="auspiciadores" style="margin-top: 20px;margin-left: 300px;">
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores1.png" style="margin-left: 305px;vertical-align: top;">
-				<?php  
-					$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logosAuspiciadores2.png";
-					$image = '<img src="'.$imageUrl.'" style="vertical-align: top;" >';
-					echo CHtml::link($image, 'http://www.ubiobio.cl/cdinesubb/');
+			<div style="text-align:right;">
+				<div id="auspiciadores" style="margin-top: 20px;">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores1.png" style="vertical-align: top;">
+					<?php  
+						$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logosAuspiciadores2.png";
+						$image = '<img src="'.$imageUrl.'" style="vertical-align: top;" >';
+						echo CHtml::link($image, 'http://www.ubiobio.cl/cdinesubb/');
+						?>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores3.1.png" style="vertical-align: top;">
+					<?php  
+						$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logosAuspiciadores3.2.png";
+						$image = '<img src="'.$imageUrl.'" style="vertical-align: top;" >';
+						echo CHtml::link($image, 'http://www.dgi.ubiobio.cl');
 					?>
-				<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores3.1.png" style="vertical-align: top;">
+				</div>
+					
 				<?php  
-					$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logosAuspiciadores3.2.png";
-					$image = '<img src="'.$imageUrl.'" style="vertical-align: top;" >';
-					echo CHtml::link($image, 'http://www.dgi.ubiobio.cl');
+					$imageUrl = "".Yii::app()->request->baseUrl."/images/btn_inscripcion.png";
+					$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;margin-right: 3%;right: 0%;" id="imgInscripcion">';
+					echo CHtml::link($image, array('/alumno/create'));
 				?>
 			</div>
-				
-			<?php  
-				$imageUrl = "".Yii::app()->request->baseUrl."/images/btn_inscripcion.png";
-				$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" id="imgInscripcion">';
-				echo CHtml::link($image, array('/alumno/create'));
-			?>
-				
 				
 			<div id="mainmenu">
 
@@ -108,6 +108,7 @@
 									array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Estado postulación', 'url'=>array('estadopostulacion/view&id='.Yii::app()->user->name),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Proyecto', 'url'=>array('proyecto/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 
 								//link administrador
 									array('label'=>'Noticias', 'url'=>array('/noticia/create'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
@@ -116,6 +117,7 @@
 									array('label'=>'Consultas internas', 'url'=>array('/consultainterna/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Actividades', 'url'=>array('/actividades/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Estado postulación', 'url'=>array('estadopostulacion/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Proyecto', 'url'=>array('proyecto/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 
 										
 
@@ -130,19 +132,19 @@
 				<div id="redesSociales" >
 					<?php  
 						$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_face.png";
-						$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+						$image = '<img src="'.$imageUrl.'" >';
 						echo CHtml::link($image,  'http://www.facebook.com/programaepi?ref=hl');
 							
 						$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_twitter.png";
-						$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+						$image = '<img src="'.$imageUrl.'"  >';
 						echo CHtml::link($image, 'http://www.twitter.com/programaepi');
 							
 						$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_linkedin.png";
-						$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+						$image = '<img src="'.$imageUrl.'" >';
 						echo CHtml::link($image, 'http://cl.linkedin.com/in/innovacionUBB');
 							
 						$imageUrl = "".Yii::app()->request->baseUrl."/images/logo_youtube.png";
-						$image = '<img src="'.$imageUrl.'" style="display:inline-block;float: right;margin-right: 3%;" >';
+						$image = '<img src="'.$imageUrl.'" >';
 						echo CHtml::link($image, 'https://www.youtube.com/channel/UCHxdayTfL2vJZqekkKO-ZoQ');
 					?>	
 				</div>
@@ -151,9 +153,31 @@
 		</div><!-- header -->
 
 		<?php echo $content; ?>
+
+				
 		
-		<div id="footer">
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer.png" >
+		<div id="footer" style="background-color:#0BD8B0;text-align: center;">
+			<!-- <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer.png" > -->
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer1.1.png" >
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer1.2.png" >
+			<?php  
+				$imageUrl = "".Yii::app()->request->baseUrl."/images/index_footer1.3.png";
+				$image = '<img src="'.$imageUrl.'">';
+				echo CHtml::link($image, 'http://www.ubiobio.cl/cdinesubb/');
+			?>
+
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer1.4.png" >
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer1.5.png" >
+			
+			<?php  
+				$imageUrl = "".Yii::app()->request->baseUrl."/images/index_footer1.6.png";
+				$image = '<img src="'.$imageUrl.'" >';
+				echo CHtml::link($image, 'http://www.dgi.ubiobio.cl');
+			?>
+
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer1.7.png" >
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer1.8.png" >
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/index_footer1.9.png" >
 		</div>
 
 		
@@ -165,6 +189,22 @@
 
 <style>
 
+	div#redesSociales{
+		vertical-align: top;
+	}
+	#mainmenu ul{
+		padding: 0px;
+	}
+	#redesSociales img{
+		/*display:inline-block;
+		float: right;
+		margin-right: 3%;*/
+	}
+
+	.navbar{
+		min-height: 0px;
+		margin-bottom: 0px;
+	}
 	form input[type="text"], textarea, input[type="password"],select{
 		border: 2px solid red;
 		width: 460px;
@@ -198,6 +238,7 @@
 	}
 	#auspiciadores{
 		display: inline-block;
+		margin-right: 32px;
 	}
 
 	#redesSociales{
@@ -211,6 +252,16 @@
 	}
 	.descripcion{
 		margin-left: 52px;
+	}
+
+	#principal img{
+				max-width: 90%;
+	}
+	#principal{
+		width: 60%;
+	}
+	#segundaria{
+		width: 20%;
 	}
 
 	.inscripcion{
@@ -239,19 +290,17 @@
 		display: inline-block;
 	}
 	
-	#proyecto-form div.row input[type="text"]{
-		width: 100%
-	}
+	
 	form div.row2 input[type="text"], input[type="password"],select{
 		
-		width: 30%;
+		width: 35%;
 	}
 
 	
 	form div.row4 input[type="text"], input[type="password"],select{
 		
 		width: 10%;
-	}
+			}
 
 	#proyecto-form textarea{
 		width: 100%;
@@ -262,7 +311,12 @@
 	
 	/*fin_views proyecto*/
 
-		@media all and (max-width: 767px){
+
+
+
+
+/*formato movil*/
+@media all and (max-width: 766px){
 
 			#logon-form input[type="text"], textarea, input[type="password"]{
 				width:100%;
@@ -322,9 +376,7 @@
 				margin-left: 0px;
 			}
 
-			#principal img{
-				max-width: 90%;
-			}
+			
 			#segundaria{
 				display: none;
 			}
@@ -339,11 +391,14 @@
 			}
 			#galeriaIndex{
 				/*width: 100%*/
-				display: none;
+				/*display: none;*/
 			}
 			#imgLogo{
-				margin-top: 50px;
-				margin-left: 0px;
+				/*margin-top: 2%;*/
+				/*margin-left: 0px;*/
+				margin-left:25%; 
+				top: 50px;
+				
 			}
 			.navbar{
 				/*position: absolute;*/
@@ -376,7 +431,69 @@
 				top: -110px;
 				left: 200px;
 			}*/
-		} /*fin_media width 767*/
+		} /*fin_formato movil*/
+
+
+
+
+
+@media (min-width: 767px) and (max-width: 1075px){
+	#mainmenu {
+		margin-top: 90px;
+		text-align: center;
+	}	
+
+	
+
+	#imgLogo{
+		top:80px;
+		margin-left: 35%;
+	}
+}
+
+
+
+
+
+	@media (min-width: 768px) and (max-width: 1304px){
+	
+		#redesIndex{
+				width: 100%;
+				
+			}
+		}
+
+		@media all and (max-width: 450px){
+			#imgLogo{
+				top: 50px;
+				margin-left: 0%;
+			}
+			.comentarioLetras{
+				width: 100%;
+			}
+			.comentario p{
+				margin-left: 5px;
+				
+			}
+			.comentario{
+				margin-left: 10px; 
+				display: block;
+			}
+
+		}
+
+		@media all and (max-width: 849px){
+			#galeriaIndex{
+				display: none;
+			}
+
+
+#redesIndex{
+				margin-top: 30px;
+
+			}
+		}
+
 
 	#page{
 		width: 100%;

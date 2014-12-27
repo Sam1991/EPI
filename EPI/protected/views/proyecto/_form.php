@@ -13,87 +13,57 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+		'htmlOptions' => array('enctype' => 'multipart/form-data'),//FORMULARIO IMAGEN
 )); ?>
 
 	
 <h7 >1.2 PROYECTO PROPUESTO</h7>
 	
 
-<div style="display:table">
-	<div style="display:table-row">
-		<div class="primeraColumna">
-			<?php echo $form->label($model,'pro_titulo'); ?>
-		</div>
-		<div style="display:table-cell">
-			<div class="row">
-				<?php echo $form->textField($model,'pro_titulo',array('size'=>60,'maxlength'=>255)); ?>
-				<?php echo $form->error($model,'pro_titulo'); ?>
-			</div>
-		</div>
-	</div>
+<br><br>
 
-	<div style="display:table-row">
-		<div class="primeraColumna">
-			<?php echo $form->label($model,'pro_duracion'); ?>
-		</div>
-			<div style="display:table-cell">
-				<div class="row2">
-					<?php echo $form->textField($model,'pro_duracion',array('size'=>60,'maxlength'=>255)); ?>
-					<?php echo $form->label($model,'pro_ambito'); ?>
-					<?php echo $form->textField($model,'pro_ambito',array('size'=>60,'maxlength'=>255)); ?>
-					<?php echo $form->error($model,'pro_duracion'); ?>
-					<?php echo $form->error($model,'pro_ambito'); ?>
-				</div>
-			</div>
+	
+	<div class="segundaColumna">
+		<?php echo $form->textField($model,'pro_titulo',array('size'=>60,'maxlength'=>255,'placeholder'=>'TÍTULO PROYECTO')); ?>
+		<?php echo $form->error($model,'pro_titulo'); ?>
 	</div>
-</div>
+	
+		
+	<div class="segundaColumna">
+		<?php echo $form->textField($model,'pro_duracion',array('size'=>60,'maxlength'=>255,'placeholder'=>'DURACIÓN PROYECTO')); ?>
+		<?php echo $form->error($model,'pro_duracion'); ?>
+	</div>
+	
 
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_ambito',array('size'=>60,'maxlength'=>255,'placeholder'=>'ÁMBITO')); ?>
+			<?php echo $form->error($model,'pro_ambito'); ?>
+		</div>
 <br>
 <br>
 <h7 >1.3 EMPRESA O INSTITUCIÓN PATROCINANTE DEL PROYECTO</h7>
+<br><br>
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_emNombre',array('size'=>60,'maxlength'=>255,'placeholder'=>'NOMBRE EMPRESA')); ?>
+			<?php echo $form->error($model,'pro_emNombre'); ?>
+		</div>
 
-<div style="display:table">
-	<div style="display:table-row">
-		<div class="primeraColumna">
-			<?php echo $form->label($model,'pro_emNombre'); ?>
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_emContacto',array('size'=>60,'maxlength'=>255,'placeholder'=>'NOMBRE CONTACTO')); ?>
+			<?php echo $form->error($model,'pro_emContacto'); ?>
 		</div>
-		<div style="display:table-cell">
-			<div class="row">
-				<?php echo $form->textField($model,'pro_emNombre',array('size'=>60,'maxlength'=>255)); ?>
-				<?php echo $form->error($model,'pro_emNombre'); ?>
-			</div>
-		</div>
-	</div>
 
-	<div style="display:table-row">
-		<div class="primeraColumna">
-			<?php echo $form->label($model,'pro_emContacto'); ?>
-		</div>
-			<div style="display:table-cell">
-				<div class="row2">
-					<?php echo $form->textField($model,'pro_emContacto',array('size'=>60,'maxlength'=>255)); ?>
-					<?php echo $form->label($model,'pro_emTelefono'); ?>
-					<?php echo $form->textField($model,'pro_emTelefono',array('size'=>60,'maxlength'=>255)); ?>
-					<?php echo $form->error($model,'pro_emContacto'); ?>
-					<?php echo $form->error($model,'pro_emTelefono'); ?>
-				</div>
-			</div>
-	</div>
-	<div style="display:table-row">
-		<div class="primeraColumna">
-		<?php echo $form->label($model,'emEmail'); ?>
-		
-		</div>
-		<div style="display:table-cell">
 
-	<div class="row">
-		<?php echo $form->textField($model,'emEmail',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'emEmail'); ?>
-	</div>
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_emTelefono',array('size'=>60,'maxlength'=>255,'placeholder'=>'TELÉFONO')); ?>
+			<?php echo $form->error($model,'pro_emTelefono'); ?>
+		</div>
+
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'emEmail',array('size'=>60,'maxlength'=>255,'placeholder'=>'E-MAIL')); ?>
+			<?php echo $form->error($model,'emEmail'); ?>
+		</div>
 				
-		</div>
-	</div>
-</div>
 
 
 <br>
@@ -102,57 +72,35 @@
 
 <h7>1.4 PROFESOR GUÍA Y DIRECCIÓN DE ESCUELA</h7>
 
-
-<div style="display:table">
-	<div style="display:table-row">
-		<div class="primeraColumna">
-		<?php echo $form->label($model,'pro_profeNombre'); ?>
-
-		</div>
+<br><br>
 		
-		<div style="display:table-cell">
-			<div class="row">
-				<?php echo $form->textField($model,'pro_profeNombre',array('size'=>60,'maxlength'=>255)); ?>
-				<?php echo $form->error($model,'pro_profeNombre'); ?>
-			</div>
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_profeNombre',array('size'=>60,'maxlength'=>255,'placeholder'=>'NOMBRE PROFESOR GUÍA')); ?>
+			<?php echo $form->error($model,'pro_profeNombre'); ?>
 		</div>
-	</div>
 
-	<div style="display:table-row">
-		<div class="primeraColumna">
-			<?php echo $form->label($model,'pro_profeEmail'); ?>
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_profeEmail',array('size'=>60,'maxlength'=>255,'placeholder'=>'E-MAIL')); ?>
+			<?php echo $form->error($model,'pro_profeEmail'); ?>
 		</div>
-		
-		<div style="display:table-cell">
-			<div class="row2">
-				<?php echo $form->textField($model,'pro_profeEmail',array('size'=>60,'maxlength'=>255)); ?>
-				<?php echo $form->label($model,'pro_profeTelefono'); ?>
-				<?php echo $form->textField($model,'pro_profeTelefono',array('size'=>60,'maxlength'=>255)); ?>
-				<?php echo $form->error($model,'pro_profeEmail'); ?>
-				<?php echo $form->error($model,'pro_profeTelefono'); ?>
-			</div>
-		</div>
-	</div>
 	
-	<div style="display:table-row">
-		<div class="primeraColumna">
 		
-		<?php echo $form->label($model,'pro_dirEscuela'); ?>
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_profeTelefono',array('size'=>60,'maxlength'=>255,'placeholder'=>'TELÉFONO')); ?>
+			<?php echo $form->error($model,'pro_profeTelefono'); ?>
 		</div>
-		
-		<div style="display:table-cell">
-				
-	<div class="row2">
-		<?php echo $form->textField($model,'pro_dirEscuela',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->label($model,'pro_vBEscuela'); ?>
-		<?php echo $form->textField($model,'pro_vBEscuela',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'pro_dirEscuela'); ?>
-		<?php echo $form->error($model,'pro_vBEscuela'); ?>
-	</div>
-		</div>
-	</div>
-</div>			
 
+		
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_dirEscuela',array('size'=>60,'maxlength'=>255,'placeholder'=>'DIRECCIÓN DE ESCUELA')); ?>
+			<?php echo $form->error($model,'pro_dirEscuela'); ?>
+		</div>
+	
+		
+		<div class="segundaColumna">
+			<?php echo $form->textField($model,'pro_vBEscuela',array('size'=>60,'maxlength'=>255,'placeholder'=>'V°B° ESCUELA')); ?>
+			<?php echo $form->error($model,'pro_vBEscuela'); ?>
+		</div>
 
 
 	<br><br>
@@ -252,9 +200,12 @@ Señale el método de trabajo que utilizará para alcanzar los objetivos especí
 	<br><br>
 <h7>3.8 CARTA GANTT </h7>
 	<div class="row">
-		<?php echo $form->fileField($model,'no_imagen'); ?>
+		<?php echo $form->fileField($model,'pro_cartaGantt'); ?>
 		<?php echo $form->error($model,'pro_cartaGantt'); ?>
 	</div>
+
+<br><br>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
@@ -267,17 +218,35 @@ Señale el método de trabajo que utilizará para alcanzar los objetivos especí
 
 <style>
 
-.primeraColumna{
-	display:table-cell;
-	width:30%;
-	background-color:#d9d9d9;
+.fila{
+	display:table-row;
+	border-bottom:1px solid #ffffff;
 }
+
+#proyecto-form div.segundaColumna input[type="text"]{
+	width: 50%;
+}
+
+#proyecto-form div.tabla input[type="text"]{
+	border:none;
+}
+
+.tabla div {
+	
+}
+
+
+
 h7{
 	font-weight: bold;
 }	
 
+.tabla{
+	/*border: 1px solid rgb(140, 140, 140);*/
+	display:table;
+}
 #proyecto-form div.row,div.row2{
-text-align: right;	
+/*text-align: right;	*/
 }
 
 </style>

@@ -1,6 +1,6 @@
 <?php
 
-class ProyectoController extends Controller
+class AlumnoproyectoController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -32,11 +32,11 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin'),
+				'actions'=>array('create','update','obtenerRut'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete'),
+				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -60,39 +60,21 @@ class ProyectoController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public $idProyecto;
+	public function actionCreate($idp)
 	{
-		$model=new Proyecto;
+		$model=new Alumnoproyecto;
+		
+		$this->idProyecto = $idp;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Proyecto']))
+		if(isset($_POST['Alumnoproyecto']))
 		{
-			$model->attributes=$_POST['Proyecto'];
-
-			echo $model->pro_cartaGantt;
-
-			// para la subida de archivos
-			$model->pro_cartaGantt=CUploadedFile::getInstance($model,'pro_cartaGantt');
-			// Fin_para la subida de archivos
-			
-			if($model->save()){
-				//copiar la imagen en el directorio
-                $estructura =Yii::app()->basePath.'\proyectos';
-                $path="$estructura/$model->pro_cartaGantt";
-	          	$model->pro_cartaGantt->saveAs($path);
-				//fin_copiar la imagen en el directorio
-
-				//poner el creador como participante
-				$alumnoProyecto=new Alumnoproyecto;
-				$alumnoProyecto->pro_idProyecto=$model->pro_idProyecto;
-				$alumnoProyecto->al_rut=Yii::app()->user->name;
-				$alumnoProyecto->save();
-				//fin_poner el creador como participante
-
-			$this->redirect(array('view','id'=>$model->pro_idProyecto));
-			}
+			$model->attributes=$_POST['Alumnoproyecto'];
+			if($model->save())
+				$this->redirect(array('proyecto/view','id'=>$this->idProyecto));
 		}
 
 		$this->render('create',array(
@@ -100,6 +82,21 @@ class ProyectoController extends Controller
 		));
 	}
 
+	public function actionObtenerRut() {
+	    $request=trim($_GET['term']);
+
+	    if($request!=''){
+	        $model=Alumno::model()->findAll(array("condition"=>"al_rut like '$request%'"));
+	        $data=array();
+
+	        foreach($model as $get){
+	            $data[]=$get->al_rut;
+	        }
+
+	        $this->layout='empty';
+	        echo json_encode($data);
+	    }
+	}
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -112,11 +109,11 @@ class ProyectoController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Proyecto']))
+		if(isset($_POST['Alumnoproyecto']))
 		{
-			$model->attributes=$_POST['Proyecto'];
+			$model->attributes=$_POST['Alumnoproyecto'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->pro_idProyecto));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(
@@ -143,7 +140,7 @@ class ProyectoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Proyecto');
+		$dataProvider=new CActiveDataProvider('Alumnoproyecto');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -154,34 +151,26 @@ class ProyectoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Proyecto('search');
+		$model=new Alumnoproyecto('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Proyecto']))
-			$model->attributes=$_GET['Proyecto'];
+		if(isset($_GET['Alumnoproyecto']))
+			$model->attributes=$_GET['Alumnoproyecto'];
 
-
-		if(Yii::app()->user->isSuperAdmin){
-			$this->render('admin',array(
-				'model'=>$model,
-			));	
-		}
-		else{
-			$this->render('adminAlumno',array(
-					'model'=>$model,
-				));		
-		}
+		$this->render('admin',array(
+			'model'=>$model,
+		));
 	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Proyecto the loaded model
+	 * @return Alumnoproyecto the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Proyecto::model()->findByPk($id);
+		$model=Alumnoproyecto::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -189,11 +178,11 @@ class ProyectoController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Proyecto $model the model to be validated
+	 * @param Alumnoproyecto $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='proyecto-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='alumnoproyecto-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

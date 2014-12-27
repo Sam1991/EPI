@@ -9,13 +9,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Proyecto', 'url'=>array('index')),
-	array('label'=>'Create Proyecto', 'url'=>array('create')),
-	array('label'=>'View Proyecto', 'url'=>array('view', 'id'=>$model->pro_idProyecto)),
-	array('label'=>'Manage Proyecto', 'url'=>array('admin')),
+	array('label'=>'Ver proyecto', 'url'=>array('view', 'id'=>$model->pro_idProyecto)),
+	array('label'=>'Proyecto', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Proyecto <?php echo $model->pro_idProyecto; ?></h1>
+<h1>Editar proyecto: <?php echo $model->pro_titulo; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
