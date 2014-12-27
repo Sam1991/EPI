@@ -347,7 +347,7 @@ input[type="text"]{
 
 
 
-/*el minimo lo toma*/
+
 @media (min-width: 768px) and (max-width: 1075px){
 	#mainmenu {
 		margin-top: 90px;
@@ -515,7 +515,17 @@ input[type="text"]{
 	
 } /*fin_formato movil*/
 
+	
+
+
+
+
+
 	/*mas de movile*/
+
+
+
+
 
 	@media (min-width: 768px){
 	
@@ -525,10 +535,17 @@ input[type="text"]{
 
 		}
 
-		#imgLogo {/*margines del logo del header*/
-			margin-left: 50px;
-			margin-top: 20px;
+/*		margin-left: 35%;
+margin-top: 75px;*/
+
+	@media  (min-width: 1076px){
+			#imgLogo {/*margines del logo del header*/
+				margin-left: 50px;
+				margin-top: 20px;
+			}
 		}
+
+		
 
 		#header{/*espacio despues del contenido en el header*/
 			padding-bottom: 10px;
@@ -537,6 +554,10 @@ input[type="text"]{
 		#auspiciadores{
 			margin-top: 12px;
 			margin-bottom: 11px;
+		}
+
+		.navbar-collapse{
+			padding-left: 0px;
 		}
 	}
 
