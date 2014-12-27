@@ -35,18 +35,13 @@ color: #09c7a2;
 }
 
 #principal {
-	width: 920px;
 	display: inline-table;
 	background-color: #f9f9f9;
-	margin-left: 58px;
 	margin-top: 30px;
-	margin-right: 34px;
 	vertical-align: top;
-	min-height: 805px;
 }
 
 #segundaria {
-	width: 305px;
 	display: inline-table;
 	vertical-align: top;
 	margin-top: 138px;
@@ -64,10 +59,9 @@ body
 
 #page
 {
-	margin-top: 5px;
+	/*margin-top: 5px;*/
 	margin-bottom: 5px;
 	background: white;
-	width: 1346px;
 }
 
 #header
@@ -88,14 +82,13 @@ body
 
 #slide{
 
-	height: 427px;
 }
 
-#slide img{
+/*#slide img{
 	width: 100%;
 	height: 100%;
 }
-
+*/
 
 #contenidoIndex{
 	/*height: 908px;*/
@@ -140,13 +133,13 @@ body
 {
 	padding: 10px 20px;
 	font-size: 200%;
-	height: 78px;
+	/*height: 78px;*/
 }
 
 #mainmenu
 {
 	/*background:white url(bg.gif) repeat-x left top;*/
-	height: 49px;
+	/*height: 49px;*/
 	text-align: right;
 }
 
@@ -243,16 +236,15 @@ div.form .rememberMe label
 
 div.view
 {
-	padding: 10px;
 	margin: 10px 0;
 	/*border: 1px solid #C9E0ED;*/
 	display: inline-block;
-	width: 254px;
+	/*width: 254px;*/
 	vertical-align: top;
 }
 
 div.view img{
-	width:250px; /*se le define el alto*/
+	/*width:250px; se le define el alto*/
 	height:auto; /*el alto se dimenciona en proporcion con el alto*/
 }
 
@@ -363,20 +355,19 @@ div.search-form
 	border-width: 9px;
 	border-style: solid;
 	border-color: #00a49d;
-	width: 110px;
-	height: 110px;
+	/*width: 110px;
+	height: 110px;*/
 	
 }
+
 .comentarioImagen img{
-	
 	width: 110px;
 	height: 110px;
-	
 }
 
 .comentarioLetras{
 	display: inline-block;
-	width: 200px;
+	max-width: 200px;
 	margin-top: 64px;
 	font-style: italic;
 }

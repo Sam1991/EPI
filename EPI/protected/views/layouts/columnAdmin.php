@@ -2,7 +2,7 @@
 <?php $this->beginContent('//layouts/main'); ?>
 <div class="contenedor">
 <div id="principal">
-	<div style="margin-left: 52px;margin-top: 59px;">
+	<div style="">
 		<?php echo $content; ?>
 	</div>
 </div>

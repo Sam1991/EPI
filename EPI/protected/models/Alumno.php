@@ -80,10 +80,10 @@ class Alumno extends CActiveRecord
 			'al_telefono' => 'TELÉFONO',
 			'al_comentario' => 'Comentario',
 			'al_clave' => 'Clave',
-			'al_paterno' => 'Apellido Paterno',
-			'al_materno' => 'Apellido Materno',
-			'al_campus' => 'Campus',
-			'al_email2' => 'Email2',
+			'al_paterno' => 'APELLIDO PATERNO',
+			'al_materno' => 'APELLIDO MATERNO',
+			'al_campus' => 'CAMPUS',
+			'al_email2' => 'E-MAIL',
 		);
 	}
 

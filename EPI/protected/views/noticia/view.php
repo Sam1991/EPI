@@ -20,7 +20,7 @@ $this->menu=array(
 	<img src="<?php echo Yii::app()->baseUrl.'/protected/imagenes/'.$model->no_imagen ?>"  id="imagenNoticia">
 </div>
 <h3 style="color: #09c7a2;"><?php echo $model->no_subtitulo; ?></h3>
-<p  style="margin-right: 49px;text-align: justify;min-height: 448px;"><?php  echo $model->no_cuerpo; ?></p>
+<p  style="text-align: justify;"><?php  echo $model->no_cuerpo; ?></p>
 
 <!-- me gusta -->
 <div id="fb-root"></div>
@@ -66,7 +66,7 @@ window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.ge
 
  <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view2',
+	'itemView'=>'_viewInteriorNoticia',
 	'template'=>"{pager}\n{items}" //THIS DOES WHAT YOU WANT
 	)); ?>
 

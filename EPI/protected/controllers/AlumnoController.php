@@ -51,9 +51,18 @@ class AlumnoController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('exito',array(
+
+		if(Yii::app()->user->isSuperAdmin){
+			$this->layout = '//layouts/columnAdmin';
+			$this->render('view',array(
 			'model'=>$this->loadModel($id),
-		));
+			));
+		}
+		else{
+			$this->render('exito',array(
+			'model'=>$this->loadModel($id),
+			));
+		}
 	}
 
 	/**

@@ -66,13 +66,11 @@ div.form select
 
 #alumno-form input[type="text"], textarea{
 	border: 2px solid red;
-	width: 458px;
 	height: 39px;
 }
 
 #consulta-form input[type="text"], textarea{
 	border: 2px solid red;
-	width: 460px;
 	height: 25px;
 }
 
@@ -80,7 +78,6 @@ div.form select
 
 #logon-form input[type="text"], textarea,input[type="password"]{
 	border: 2px solid red;
-	width: 460px;
 	height: 25px;
 }
 
@@ -100,7 +97,6 @@ div.form select
 
 #noticia-form input[type="text"], textarea,input[type="password"]{
 	border: 2px solid red;
-	width: 460px;
 	height: 25px;
 }
 div.form textarea{
@@ -212,7 +208,6 @@ div.wide.form label
 	margin-right: 10px;
 	position: relative;
 	text-align: right;
-	width: 100px;
 }
 
 div.wide.form .row

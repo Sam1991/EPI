@@ -178,12 +178,12 @@ else{
 	
 .completo{
 	border-radius: 180px;
-overflow: hidden;
-border-width: 9px;
-border-style: solid;
-border-color: #00a49d;
-width: 110px;
-height: 110px;
+	overflow: hidden;
+	border-width: 9px;
+	border-style: solid;
+	border-color: #00a49d;
+	width: 110px;
+	height: 110px;
 }
 
 .incompleto{

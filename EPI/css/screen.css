@@ -78,7 +78,7 @@ caption {background:#eee;}
 .bottom {margin-bottom:0;padding-bottom:0;}
 
 /* grid.css */
-.container {width:950px;margin:0 auto;}
+/*.container {width:950px;margin:0 auto;}*/
 .column, .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24 {float:left;margin-right:10px;}
 .last {margin-right:0;}
 .span-1 {width:30px;}
@@ -102,14 +102,15 @@ caption {background:#eee;}
 .span-19 {width:750px;}
 
 .inscripcion{
-	width: 605px;
+	/*width: 605px;*/
+	width:45%;
 	background-color: #f9f9f9;
 	display: inline-table;
 	margin-top: 20px;
 	margin-bottom: 30px;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 	vertical-align: top;
-	height: 490px;
+	/*height: 490px;*/
 }
 
 .contenedor{
@@ -262,22 +263,22 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 	color: #928e8e;
 	text-align: justify;
 	font-size: 15px;
-	margin-right: 25px;
+	/*margin-right: 25px;*/
 }
 
 .lateralRedes{
-	width: 307px;
-	height: 266px;
+	/*width: 307px;
+	height: 266px;*/
 	margin-bottom: 10px;
 	background-color: #ffffff;
 }
 
-#fotos img{
+/*#fotos img{
 	width: 400px;
 height: auto;
 
-}
+}*/
 
 .clear			{ clear:both; }
-.photo-link		{ padding:5px; margin:5px; border:1px solid #ccc; display:block; width:200px; float:left; }
-.photo-link:hover	{ border-color:#999; }
+.photo-link		{ padding:5px; margin:5px; border:1px solid #ccc; display:block; float:left; }
+/*.photo-link:hover	{ border-color:#999; }*/

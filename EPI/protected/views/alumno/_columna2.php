@@ -2,7 +2,7 @@
 <h1 class="titulo" > Detalle de la inscripción</h1>
 
 
-<div style="padding-left: 50px;padding-right: 45px;text-align: justify;font-size: 15px;color: #928e8e;">
+<div style="text-align: justify;font-size: 15px;color: #928e8e;">
 Pueden inscribirse alumnos de cualquier carrera de la Universidad del Bío-Bío, campus Concepción y Chillán, que estén habilitados para inscribir actividad de titulación, o bien, estén realizando su seminario 1, en el año académico 2015. (Si tienes dudas puedes consultar en epi@ubiobio.cl).
 <br>
 <br>

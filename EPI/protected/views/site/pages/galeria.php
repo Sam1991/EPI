@@ -2,7 +2,7 @@
 
 <div class="contenedor">
 	<div id="principal">
-		<div class="descripcion" style="margin-left: 52px;margin-top: 59px;">
+		<div class="descripcion" style="margin-top: 59px;">
 			<h1 class="titulo" >Galeria</h1>
 			<?php $this->renderPartial('easyGallery'); ?>
 		</div>

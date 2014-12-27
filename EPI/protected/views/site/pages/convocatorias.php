@@ -1,7 +1,7 @@
 
 <div class="contenedor">
 	<div id="principal">
-		<div class="descripcion" style="margin-left: 52px;margin-top: 59px;">
+		<div class="descripcion" style="margin-top: 59px;">
 			<h1 class="titulo" style="margin-top: 59px;">Convocatorias</h1>
 			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/convocatorias_principal.png" style="margin-bottom: 35px;">
 			<p>

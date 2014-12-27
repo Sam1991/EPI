@@ -39,7 +39,7 @@
 
 <body>
 
-	<div class="container" id="page" style="padding:0px;margin:0px;">
+	<div class="container" id="page" style="padding:0px">
 
 		<div id="header">
 
@@ -49,7 +49,7 @@
 				echo CHtml::link($image, array('/site/index'));
 			?>
 			<div style="text-align:right;">
-				<div id="auspiciadores" style="margin-top: 20px;">
+				<div id="auspiciadores" >
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/header_logosAuspiciadores1.png" style="vertical-align: top;">
 					<?php  
 						$imageUrl = "".Yii::app()->request->baseUrl."/images/header_logosAuspiciadores2.png";
@@ -109,6 +109,7 @@
 									array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Estado postulación', 'url'=>array('estadopostulacion/view&id='.Yii::app()->user->name),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Proyecto', 'url'=>array('proyecto/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 
 								//link administrador
 									array('label'=>'Noticias', 'url'=>array('/noticia/create'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
@@ -118,6 +119,7 @@
 									array('label'=>'Actividades', 'url'=>array('/actividades/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Estado postulación', 'url'=>array('estadopostulacion/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Proyecto', 'url'=>array('proyecto/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 
 										
 
@@ -189,6 +191,24 @@
 
 <style>
 
+	div.items{
+	text-align: center;	
+	}
+	
+
+	div.view {
+		margin: 10px 0;
+		display: inline-block;
+		width: 254px;
+		vertical-align: top;
+		padding-bottom: 10px;
+	}
+
+	div.view img {
+		width: 100%;
+		height: auto;
+	}
+
 	div#redesSociales{
 		vertical-align: top;
 	}
@@ -207,7 +227,6 @@
 	}
 	form input[type="text"], textarea, input[type="password"],select{
 		border: 2px solid red;
-		width: 460px;
 	}
 	form input[type="time"]{
 		border: 2px solid red;
@@ -234,7 +253,7 @@
 		border-radius: 15px;
 	}
 	#alumnoInscripcion{
-		margin-left: 180px;
+		/*margin-left: 180px;*/
 	}
 	#auspiciadores{
 		display: inline-block;
@@ -245,27 +264,29 @@
 		display: inline;
 	}
 	.navbar-header{
-		width: 197px;
+		/*width: 197px;*/
 	}
 	#imgLogo{
-		margin-left: 50px;
+		/*margin-left: 50px;*/
 	}
 	.descripcion{
-		margin-left: 52px;
+		/*margin-left: 52px;*/
 	}
 
 	#principal img{
-				max-width: 90%;
+				max-width: 100%;
 	}
 	#principal{
 		width: 60%;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
 	#segundaria{
 		width: 20%;
 	}
 
 	.inscripcion{
-		margin-left: 65px;
+		/*margin-left: 65px;*/
 	}
 
 	.inscripcion .titulo{
@@ -275,7 +296,7 @@
 	}
 
 	#divImagenNoticia, #imagenNoticia{
-		width: 500px;
+		/*width: 500px;*/
 	}
 
 	#divImagenNoticia{
@@ -283,6 +304,7 @@
 		margin-right: 30px;
 		max-height: 500px;
 		overflow: hidden;
+		max-width: 500px;
 	}
 
 	/*views proyecto*/
@@ -312,132 +334,21 @@
 	/*fin_views proyecto*/
 
 
+input[type="text"]{
+	width: 80%;
+}
+</style>
 
 
-
-/*formato movil*/
-@media all and (max-width: 766px){
-
-			#logon-form input[type="text"], textarea, input[type="password"]{
-				width:100%;
-			} 
-
-			#principal div.form{
-				padding-left: 0px;
-			}
-
-			#divImagenNoticia, #imagenNoticia{
-				width: 95%;
-			}
-
-			#divImagenNoticia{
-				overflow: hidden;
-				margin-right: 0px;
-				float: none;
-			}
-			.inscripcion .titulo {
-				margin-top: 0px;
-				margin-bottom: 10px;
-			}		
-			.inscripcion{
-				display: block;
-			}
-			#alumnoInscripcion{
-			margin-left: 0px;	
-			}
-			#alumno-form *{
-				max-width: 90%;
-			}
-			.inscripcion div.form{
-				width: 100%;
-				padding-left: 0px;
-			}
-			#content{
-				text-align: -webkit-center;
-			}
-			.inscripcion{
-				margin-left: 0px;
-				width: 100%;
-				height: inherit;
-			}
-
-			#consulta-form *{
-				max-width: 100%;
-				padding-left: 0px;
-			}
-			#principal{
-				width: 100%;
-				display: inline-block;
-				margin-left: 0px;
-				margin-right: 0px;
-				text-align: center;
-			}
-			#principal div{
-				margin-left: 0px;
-			}
-
-			
-			#segundaria{
-				display: none;
-			}
-			#header{
-				height: 185px;
-			}
-			.imgBeneficio{
-				width: 100%;
-			}
-			#redesIndex{
-				width:70%;
-			}
-			#galeriaIndex{
-				/*width: 100%*/
-				/*display: none;*/
-			}
-			#imgLogo{
-				/*margin-top: 2%;*/
-				/*margin-left: 0px;*/
-				margin-left:25%; 
-				top: 50px;
-				
-			}
-			.navbar{
-				/*position: absolute;*/
-				z-index: 1001;
-				margin-top: 135px;
-			}
-
-			#redesSociales{
-				display: none;
-			}
-			#imgInscripcion{
-				position: absolute;
-				/*	top: 5px;
-				left: 0px;*/
-			}
-
-			#wowslider-container1{
-				/*margin-top: 136px;*/
-			}
-			#auspiciadores{
-				display: none;
-			}
-			/*#mainmenu{
-				position: absolute;
-				left: 0px;
-				top: 120px;
-			}*/
-			/*#redesSociales{
-				position: absolute;
-				top: -110px;
-				left: 200px;
-			}*/
-		} /*fin_formato movil*/
+<style> /*puntos de responsive*/
 
 
 
 
 
-@media (min-width: 767px) and (max-width: 1075px){
+
+/*el minimo lo toma*/
+@media (min-width: 768px) and (max-width: 1075px){
 	#mainmenu {
 		margin-top: 90px;
 		text-align: center;
@@ -498,6 +409,139 @@
 	#page{
 		width: 100%;
 	}
+
+@media all and (max-width: 769px){/*formato movil*/
+
+	#logon-form input[type="text"], textarea, input[type="password"]{
+		width:100%;
+	} 
+
+	#principal div.form{
+		padding-left: 0px;
+	}
+
+	#divImagenNoticia, #imagenNoticia{
+		width: 95%;
+	}
+
+	#divImagenNoticia{
+		overflow: hidden;
+		margin-right: 0px;
+		float: none;
+	}
+
+	.inscripcion .titulo {
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}		
+
+	.inscripcion{
+		display: block;
+	}
+
+	#alumnoInscripcion{
+		margin-left: 0px;	
+	}
+	
+	#alumno-form *{
+		max-width: 90%;
+	}
+	
+	.inscripcion div.form{
+		width: 100%;
+		padding-left: 0px;
+	}
+	
+	#content{
+		text-align: -webkit-center;
+	}
+	
+	.inscripcion{
+		margin-left: 0px;
+		width: 100%;
+		height: inherit;
+	}
+
+	#consulta-form *{
+		max-width: 100%;
+		padding-left: 0px;
+	}
+	
+	#principal{
+		width: 100%;
+		display: inline-block;
+		margin-left: 0px;
+		margin-right: 0px;
+		text-align: center;
+	}
+	
+	#principal div{
+		margin-left: 0px;
+	}
+			
+	#segundaria{
+		display: none;
+	}
+
+	.imgBeneficio{
+		width: 100%;
+	}
+
+	#redesIndex{
+		width:70%;
+	}
+
+	#imgLogo{
+		margin-left:25%; 
+		top: 50px;
+	}
+
+	.navbar{
+		z-index: 1001;
+		margin-top: 135px;
+	}
+
+	#redesSociales{
+		display: none;
+	}
+	
+	#imgInscripcion{
+		position: absolute;
+	}
+
+	#auspiciadores{
+		display: none;
+	}
+	
+} /*fin_formato movil*/
+
+	/*mas de movile*/
+
+	@media (min-width: 768px){
+	
+		#page{ /*espacion arriba*/
+			margin-top: 2px;
+			padding-bottom: 18px;
+
+		}
+
+		#imgLogo {/*margines del logo del header*/
+			margin-left: 50px;
+			margin-top: 20px;
+		}
+
+		#header{/*espacio despues del contenido en el header*/
+			padding-bottom: 10px;
+		}
+		
+		#auspiciadores{
+			margin-top: 12px;
+			margin-bottom: 11px;
+		}
+	}
+
+
+
 </style>
 
 

@@ -1,7 +1,7 @@
 
 <div class="contenedor">
 	<div id="principal">
-		<div class="descripcion" style="margin-left: 52px;margin-top: 59px;">
+		<div class="descripcion" style="margin-top: 59px;">
 			<h1 class="titulo" style="margin-top: 59px;">Preguntas frecuentes</h1>
 			<p>
 				<h3>¿Quiénes pueden postular?</h3>
