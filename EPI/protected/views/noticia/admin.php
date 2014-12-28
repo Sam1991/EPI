@@ -3,7 +3,7 @@
 /* @var $model Noticia */
 
 $this->breadcrumbs=array(
-	'Noticias'=>array('index'),
+	'Crear Noticia'=>array('index'),
 	'Manage',
 );
 

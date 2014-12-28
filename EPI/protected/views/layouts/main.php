@@ -111,13 +111,12 @@
 									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 
 								//link administrador
-									array('label'=>'Noticias', 'url'=>array('/noticia/create'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Noticias', 'url'=>array('/noticia/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Inscritos', 'url'=>array('/alumno/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Consultas externas', 'url'=>array('/consulta/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Consultas internas', 'url'=>array('/consultainterna/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Consultas Publico', 'url'=>array('/consulta/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Consultas Participantes', 'url'=>array('/consultainterna/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Actividades', 'url'=>array('/actividades/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Estado postulación', 'url'=>array('estadopostulacion/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Proyecto', 'url'=>array('proyecto/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Postulaciónes', 'url'=>array('proyecto/admin/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 
 										

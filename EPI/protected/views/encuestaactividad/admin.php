@@ -3,7 +3,7 @@
 /* @var $model Encuestaactividad */
 
 $this->menu=array(
-	array('label'=>'Crear encuesta', 'url'=>array('create')),
+	array('label'=>'Crear Encuesta', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

@@ -17,7 +17,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Consultas internas no respondidas</h1>
+<h1>Consultas Internas No Respondidas</h1>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -31,7 +31,7 @@ $('.search-form form').submit(function(){
 		'coni_fecha',
 		array(
 			'class'=>'CButtonColumn',
-			'template' => '{view} {responder}',
+			'template' => '{responder}',
 			'buttons'=>array(
 			 	'responder' => array(
 			 		'label'=>'Responder', 

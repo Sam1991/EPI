@@ -4,10 +4,10 @@
 
 
 $this->menu=array(
-	array('label'=>'Administrar', 'url'=>array('admin')),
+	array('label'=>'Ver Noticias', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Crear noticia</h1>
+<h1>Crear Noticia</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

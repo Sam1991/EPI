@@ -18,7 +18,7 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-<h1>Consultas no respondidas</h1>
+<h1>Consultas No Respondidas</h1>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(

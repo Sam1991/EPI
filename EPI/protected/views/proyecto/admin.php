@@ -2,6 +2,9 @@
 /* @var $this ProyectoController */
 /* @var $model Proyecto */
 
+$this->menu=array(
+	array('label'=>'Estado Postulaciones', 'url'=>array('estadopostulacion/admin')),
+);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

@@ -19,7 +19,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Alumnos inscritos</h1>
+<h1>Alumnos Inscritos</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'alumno-grid',

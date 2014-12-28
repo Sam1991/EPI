@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Crear actividad', 'url'=>array('create')),
+	array('label'=>'Crear Actividad', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
