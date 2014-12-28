@@ -70,25 +70,23 @@ class EncuestaactividadController extends Controller
 		{
 			$model->attributes=$_POST['Encuestaactividad'];
 
-			//buscar el id de la actividad
-			$actividad=Actividades::model()->find("act_nombre='".$model->act_id."'");
-			$model->act_id=$actividad->act_id;
+			// //buscar el id de la actividad
+			// $actividad=Actividades::model()->find("act_nombre='".$model->act_id."'");
+			// $model->act_id=$actividad->act_id;
 
 			//una para cada alumno
 			$alumnos=Alumno::model()->findAll();
 
 			$values='';
 			for ($i=0; $i <count($alumnos) ; $i++) {
-
-			if($i!=0 ){
-				$values=$values.", ";
+				if($i!=0 ){
+					$values=$values.", ";
+				}
+			 	$values=$values."('".$model->en_convocatoria."',".$model->act_id.",'".$model->en_tipo."','".$alumnos[$i]->al_rut."')";
 			}
-			 $values=$values."('".$model->en_convocatoria."',".$model->act_id.",'".$model->en_tipo."','".$alumnos[$i]->al_rut."')";
-			}
-
 			
-			 $sql = 'INSERT INTO encuestaactividad (en_convocatoria, act_id,en_tipo,al_rut) VALUES ' . $values;
-			 $command = Yii::app()->db->createCommand($sql);
+			$sql = 'INSERT INTO encuestaactividad (en_convocatoria, act_id,en_tipo,al_rut) VALUES ' . $values;
+			$command = Yii::app()->db->createCommand($sql);
 
 			if($command->execute()){
 				$this->redirect(array('admin'));

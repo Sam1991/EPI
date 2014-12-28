@@ -8235,3 +8235,28 @@ REQUEST_URI=/EPI/EPI/index.php?r=noticia/index
 in C:\wamp\www\EPI\EPI\protected\views\noticia\index.php (43)
 in C:\wamp\www\EPI\EPI\protected\controllers\NoticiaController.php (131)
 in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/28 19:54:00 [error] [php] Trying to get property of non-object (C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php:75)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): EncuestaactividadController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): EncuestaactividadController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): EncuestaactividadController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): EncuestaactividadController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=encuestaactividad/create
+in C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php (75)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/28 20:12:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=galeria
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---

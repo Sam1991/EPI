@@ -323,14 +323,14 @@
 	#proyecto-form textarea{
 		width: 100%;
 	}
-	#proyecto-form input[type="text"],select,textarea{
+	#proyecto-form input[type="text"],textarea{
 		border: 2px solid #949494;
 	}
 	
 	/*fin_views proyecto*/
 
 
-input[type="text"],textarea{
+input[type="text"],textarea,select{
 	width: 80%;
 }
 	#page{

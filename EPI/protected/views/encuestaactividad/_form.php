@@ -26,18 +26,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'act_id'); ?>
-		<?php  
-			$this->widget('zii.widgets.jui.CJuiAutoComplete',array(
-			    'name'=>'Encuestaactividad_act_id',
-			    'attribute'=>'act_id',
-				'model'=>$model,
-			    'source'=>$this->createUrl('Encuestaactividad/obtenerActividades'),
-			    'htmlOptions'=>array(
-			        'style'=>'height:20px;',
-		    		),
-		    	)
-		    );
-		?>		
+		<?php echo $form->dropDownList($model,'act_id',CHtml::listData(Actividades::model()->findAll(),"act_id","act_nombre")); ?>
 		<?php echo $form->error($model,'act_id'); ?>
 	</div>
 
