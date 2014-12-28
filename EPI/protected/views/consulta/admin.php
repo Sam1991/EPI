@@ -32,7 +32,7 @@ $('.search-form form').submit(function(){
 		'con_fecha',
 		array(
 			'class'=>'CButtonColumn',
-			'template' => '{view} {delete}',
+			'template' => '{delete}',
 			'buttons'=>array(
 			 	'delete' => array(
 			 		'label'=>'Respondida', 
