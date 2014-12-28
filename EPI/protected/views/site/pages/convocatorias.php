@@ -1,8 +1,7 @@
 
 <div class="contenedor">
 	<div id="principal">
-		<div class="descripcion" style="margin-top: 59px;">
-			<h1 class="titulo" style="margin-top: 59px;">Convocatorias</h1>
+			<h1 class="titulo">Convocatorias</h1>
 			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/convocatorias_principal.png" style="margin-bottom: 35px;">
 			<p>
 				Desde el <font style="color: #06cca5;"> 22 de diciembre de 2014 </font> y hasta el <font style="color: #06cca5;">15 de marzo del 2015</font> se encuentra abierta las inscripciones al Programa EPI, en campus Concepción.
@@ -34,7 +33,6 @@
 				<h3>Preguntas frecuentes</h3>
 				Consulta <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/page&view=preguntasFrecuentes">aquí</a>
 			</p>
-		</div>
 	</div>
 
 	<div id="segundaria"> 

@@ -15,4 +15,6 @@
 
 <!-- <h1>Create Alumno</h1> -->
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<div id="inscripcionIzquierda">
+	<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

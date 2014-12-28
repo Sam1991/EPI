@@ -35,14 +35,14 @@ color: #09c7a2;
 }
 
 #principal {
-	display: inline-table;
+	display: inline-block;
 	background-color: #f9f9f9;
 	margin-top: 30px;
 	vertical-align: top;
 }
 
 #segundaria {
-	display: inline-table;
+	display: inline-block;
 	vertical-align: top;
 	margin-top: 138px;
 }

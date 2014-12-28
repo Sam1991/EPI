@@ -109,7 +109,7 @@ $this->pageTitle=Yii::app()->name;
 				</TABLE>
 			</div>
 
-			<div style="margin-top:35px;">
+			<div style="margin-top:35px;margin-bottom:35px;">
 				<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contenido4.png" >	
 			</div>
 		</div>

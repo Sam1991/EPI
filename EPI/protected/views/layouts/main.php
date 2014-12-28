@@ -191,9 +191,15 @@
 
 <style>
 
-	div.items{
-	text-align: center;	
+	h3 {
+		color: #06cca5;
+		margin-bottom: 0em;
+		margin-top: 20px;
 	}
+	/*.contenedor {text-align: center;}*/
+
+ 	#inscripcionIzquierda{text-align: center;}
+	
 	
 
 	div.view {
@@ -276,14 +282,6 @@
 	#principal img{
 				max-width: 100%;
 	}
-	#principal{
-		width: 60%;
-		margin-bottom: 20px;
-		padding-bottom: 20px;
-	}
-	#segundaria{
-		width: 20%;
-	}
 
 	.inscripcion{
 		/*margin-left: 65px;*/
@@ -327,52 +325,28 @@
 	#proyecto-form textarea{
 		width: 100%;
 	}
-	#proyecto-form input[type="text"], input[type="password"],select,textarea{
+	#proyecto-form input[type="text"],select,textarea{
 		border: 2px solid #949494;
 	}
 	
 	/*fin_views proyecto*/
 
 
-input[type="text"]{
+input[type="text"],textarea{
 	width: 80%;
 }
+	#page{
+		width: 100%;
+	}
+	#logon-form input[type="text"], input[type="password"]{
+		width:100%;
+	} 
 </style>
 
 
 <style> /*puntos de responsive*/
 
 
-
-
-
-
-
-@media (min-width: 768px) and (max-width: 1075px){
-	#mainmenu {
-		margin-top: 90px;
-		text-align: center;
-	}	
-
-	
-
-	#imgLogo{
-		top:80px;
-		margin-left: 35%;
-	}
-}
-
-
-
-
-
-	@media (min-width: 768px) and (max-width: 1304px){
-	
-		#redesIndex{
-				width: 100%;
-				
-			}
-		}
 
 		@media all and (max-width: 450px){
 			#imgLogo{
@@ -393,173 +367,108 @@ input[type="text"]{
 
 		}
 
-		@media all and (max-width: 849px){
-			#galeriaIndex{
-				display: none;
-			}
 
 
-#redesIndex{
-				margin-top: 30px;
 
-			}
-		}
+@media all and (max-width: 767px){/*formato movil*/
 
+	div.items{text-align: center;}
 
-	#page{
-		width: 100%;
-	}
+	#divImagenNoticia, #imagenNoticia{width: 95%}
 
-@media all and (max-width: 769px){/*formato movil*/
+	#divImagenNoticia{overflow: hidden;}
 
-	#logon-form input[type="text"], textarea, input[type="password"]{
-		width:100%;
-	} 
-
-	#principal div.form{
-		padding-left: 0px;
-	}
-
-	#divImagenNoticia, #imagenNoticia{
-		width: 95%;
-	}
-
-	#divImagenNoticia{
-		overflow: hidden;
-		margin-right: 0px;
-		float: none;
-	}
-
-	.inscripcion .titulo {
-		margin-top: 0px;
-		margin-bottom: 10px;
-	}		
-
-	.inscripcion{
-		display: block;
-	}
-
-	#alumnoInscripcion{
-		margin-left: 0px;	
-	}
+	#alumnoInscripcion{margin-left: 0px;}
 	
-	#alumno-form *{
-		max-width: 90%;
-	}
+	/*#content{text-align: -webkit-center;}*/
+
+	#principal{width: 93%;display: inline-block;}
 	
-	.inscripcion div.form{
-		width: 100%;
-		padding-left: 0px;
-	}
+	.imgBeneficio{width: 100%;}
+
+	#redesIndex{width:70%;}
+
+	.navbar{z-index: 1001;margin-top: 135px;}
 	
-	#content{
-		text-align: -webkit-center;
-	}
-	
-	.inscripcion{
-		margin-left: 0px;
-		width: 100%;
-		height: inherit;
-	}
+	#imgInscripcion{position: absolute;}
 
-	#consulta-form *{
-		max-width: 100%;
-		padding-left: 0px;
-	}
-	
-	#principal{
-		width: 100%;
-		display: inline-block;
-		margin-left: 0px;
-		margin-right: 0px;
-		text-align: center;
-	}
-	
-	#principal div{
-		margin-left: 0px;
-	}
-			
-	#segundaria{
-		display: none;
-	}
+	/*cosas que se eliminan*/
+	#segundaria{display: none;}
+	#redesSociales{display: none;}
+	#auspiciadores{display: none;}
 
-	.imgBeneficio{
-		width: 100%;
-	}
+	#principal{padding-top:5%;padding-right:5%;padding-left:2%;}
 
-	#redesIndex{
-		width:70%;
-	}
-
-	#imgLogo{
-		margin-left:25%; 
-		top: 50px;
-	}
-
-	.navbar{
-		z-index: 1001;
-		margin-top: 135px;
-	}
-
-	#redesSociales{
-		display: none;
-	}
-	
-	#imgInscripcion{
-		position: absolute;
-	}
-
-	#auspiciadores{
-		display: none;
-	}
+	/*comportamiento del logo*/
+	#imgLogo{margin-left:25%;top: 50px;	}
+	@media (min-width: 397px) and (max-width: 469px){#imgLogo{margin-left:15%;}}
+	@media all and (max-width: 396px){#imgLogo{margin-left:7%;}}
 	
 } /*fin_formato movil*/
 
-	
+/*eliminar la galeria*/
+@media all and (max-width: 849px){#galeriaIndex{display: none;}}
 
 
+@media (min-width: 768px){/*mas de mobile*/
 
+	#fb-root {
+    display: none;
+}
 
+	.contenedor{
+		min-height: 500px;
+	}	
+/* To fill the container and nothing else */
 
-	/*mas de movile*/
-
-
-
-
-
-	@media (min-width: 768px){
-	
-		#page{ /*espacion arriba*/
-			margin-top: 2px;
-			padding-bottom: 18px;
-
-		}
-
-/*		margin-left: 35%;
-margin-top: 75px;*/
-
-	@media  (min-width: 1076px){
-			#imgLogo {/*margines del logo del header*/
-				margin-left: 50px;
-				margin-top: 20px;
-			}
-		}
-
-		
-
-		#header{/*espacio despues del contenido en el header*/
-			padding-bottom: 10px;
-		}
-		
-		#auspiciadores{
-			margin-top: 12px;
-			margin-bottom: 11px;
-		}
-
-		.navbar-collapse{
-			padding-left: 0px;
-		}
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+}
+	#principal{
+		width: 62%;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
 	}
+	#segundaria{
+		width: 23%;
+	}
+	/*exterior del div principal*/
+	#principal{margin-top: 30px;margin-right: 2%;margin-left: 4%;}
+	
+	/*contenido del div principal*/
+	#principal{padding-top:59px;padding-right:52px;padding-left:25px;}
+
+	.igualesIzquierda, .igualesDerecha{	
+		display: inline-block;
+		width: 45%;background-color: #f9f9f9;
+		vertical-align: top;
+	}
+	
+	/*espacion arriba*/
+	#page{margin-top: 2px;padding-bottom: 18px;}
+	
+	/*espacio despues del contenido en el header*/
+	#header{padding-bottom: 10px;}
+	
+	#auspiciadores{margin-top: 12px;margin-bottom: 11px;}
+
+	.navbar-collapse{padding-left: 0px;}
+
+	/*para que el twitter este en su maximo tamaño*/
+	@media (min-width: 768px) and (max-width: 1304px){#redesIndex{width: 100%;}}
+
+	@media (min-width: 768px) and (max-width: 1075px){
+		#mainmenu {margin-top: 90px;text-align: center;}	
+		#imgLogo{top:80px;margin-left: 35%;}
+		#principal{width: 56%;}
+		#segundaria{width: 30%;}
+		/*exterior del div principal*/
+		#principal{margin-top: 30px;margin-right: 1%;margin-left: 2%;}
+	}
+	
+	/*margines del logo del header*/
+	@media  (min-width: 1076px){#imgLogo {margin-left: 50px;margin-top: 0px;}}
+}
 
 
 

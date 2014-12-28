@@ -10,7 +10,6 @@
 
 <div class="contenedor">
 	<div id="principal">
-		<div class="descripcion" style="margin-top: 59px;">
 			<h1 class="titulo" >¿Qué es el Programa EPI?</h1>
 			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/programaEpi_principal.png" style="margin-bottom: 35px;">
 			<!-- <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/convocatorias_texto.png" style="margin-bottom: 15px;">	 -->	
@@ -51,7 +50,7 @@
 			<h3>Preguntas frecuentes</h3>
 			Consulta <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/page&view=preguntasFrecuentes">aquí</a>
 			</p>
-		</div>
+		
 	</div>
 
 	<div id="segundaria"> 
