@@ -96,8 +96,8 @@
 									// 	, 'visible'=>Yii::app()->user->isSuperAdmin),
 
 								//links externos
-									array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi'),'visible'=>(!Yii::app()->user->isSuperAdmin && !Yii::app()->user->checkAccess('alumno'))),
+									array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias'),'visible'=>(!Yii::app()->user->isSuperAdmin && !Yii::app()->user->checkAccess('alumno'))),
 									array('label'=>'Noticias', 'url'=>array('/noticia/index'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Galeria', 'url'=>array('site/page','view'=>'galeria'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Contacto', 'url'=>array('consulta/create'),'visible'=>(!Yii::app()->user->checkAccess('alumno'))),
@@ -107,8 +107,7 @@
 								//link para alumnos
 									array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Estado postulación', 'url'=>array('estadopostulacion/view&id='.Yii::app()->user->name),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Proyecto', 'url'=>array('proyecto/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Postulación', 'url'=>array('estadopostulacion/view&id='.Yii::app()->user->name),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 
 								//link administrador

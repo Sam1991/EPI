@@ -2,6 +2,9 @@
 /* @var $this EstadopostulacionController */
 /* @var $model Estadopostulacion */
 
+$this->menu=array(
+	array('label'=>'Proyecto', 'url'=>array('proyecto/admin')),
+);
 
 ?>
 
