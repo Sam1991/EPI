@@ -20,7 +20,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Encuestas</h1>
+<h1>Encuestas </h1>
 
 
 

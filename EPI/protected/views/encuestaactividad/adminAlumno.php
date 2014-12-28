@@ -16,7 +16,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Encuestas</h1>
+<h1>Encuestas Sin Responder</h1>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(

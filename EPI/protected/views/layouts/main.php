@@ -122,7 +122,7 @@
 
 										
 
-									array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
+									array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
 									),
 								'activeCssClass' => 'active',
 								'htmlOptions' => array('class'=>'nav navbar-nav',),
