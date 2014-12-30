@@ -44,6 +44,7 @@ class Encuestaactividad extends CActiveRecord
 			array('en_convocatoria, en_tipo', 'length', 'max'=>10),
 			array('en_pregunta1, en_pregunta2, en_pregunta3, en_pregunta4', 'length', 'max'=>255),
 			array('en_comentario', 'safe'),
+			array('en_comentario', 'length', 'min'=>3),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('en_id, al_rut, en_convocatoria, act_id, en_tipo, en_pregunta1, en_pregunta2, en_pregunta3, en_pregunta4, en_comentario', 'safe', 'on'=>'search'),
@@ -72,11 +73,11 @@ class Encuestaactividad extends CActiveRecord
 			'en_convocatoria' => 'Ec Convocatoria',
 			'act_id' => 'Act',
 			'en_tipo' => 'En Tipo',
-			'en_pregunta1' => 'En Pregunta1',
-			'en_pregunta2' => 'En Pregunta2',
-			'en_pregunta3' => 'En Pregunta3',
-			'en_pregunta4' => 'En Pregunta4',
-			'en_comentario' => 'Comentarios:',
+			'en_pregunta1' => 'Debe contestar la Pregunta 1',
+			'en_pregunta2' => 'Debe contestar la Pregunta 2',
+			'en_pregunta3' => 'Debe contestar la Pregunta 3',
+			'en_pregunta4' => 'Debe contestar la Pregunta 4',
+			'en_comentario' => 'COMENTARIO',
 			'en_estado' => 'En Estado',
 
 		);

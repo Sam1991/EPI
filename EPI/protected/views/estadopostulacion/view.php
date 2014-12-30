@@ -44,7 +44,7 @@ else{
 <?php 
 }
   ?>
-  <label >Informe innovacion</label>
+  <label >Informe Innovación</label>
 </div>
 
 <div class="estado">
@@ -61,7 +61,7 @@ else{
 <?php 
 }
   ?>
- <label >Anexo 2</label>
+ <label >Postulación</label>
 </div>
 
 
@@ -79,7 +79,7 @@ else{
 <?php 
 }
   ?>
- <label >Carta empresa</label>
+ <label >Carta Empresa</label>
 </div>
 
 
@@ -99,7 +99,7 @@ else{
 <?php 
 }
   ?>
- <label >Informe prehallasgo</label>
+ <label >Informe Prehallazgo</label>
 </div>
 
 
@@ -139,7 +139,7 @@ else{
 <?php 
 }
   ?>
- <label >Certificado alumno regular</label>
+ <label >Certificado Alumno Regular</label>
 </div>
 
 
@@ -157,7 +157,7 @@ else{
 <?php 
 }
   ?>
- <label >Curriculum</label>
+ <label >Currículum</label>
 </div>
 
 
@@ -175,7 +175,7 @@ else{
 <?php 
 }
   ?>
- <label >Informe final</label>
+ <label >Informe Final</label>
 </div>
 
 <style>

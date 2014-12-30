@@ -82,6 +82,7 @@
 				<br>
 				Para postular a la Etapa de Desarrollo de Proyectos de Innovación se debe cumplir con
 				los siguientes requisitos:
+				<br>
 				- Su idea de tesis busca alcanzar resultados innovadores;
 				<br>
 				- Su tesis o proyecto está vinculado a una empresa/institución (tiene carta de apoyo de

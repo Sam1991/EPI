@@ -4,7 +4,7 @@
 			<h1 class="titulo">Convocatorias</h1>
 			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/convocatorias_principal.png" style="margin-bottom: 35px;">
 			<p>
-				Desde el <font style="color: #06cca5;"> 22 de diciembre de 2014 </font> y hasta el <font style="color: #06cca5;">15 de marzo del 2015</font> se encuentra abierta las inscripciones al Programa EPI, en campus Concepción.
+				Desde el <font style="color: #06cca5;"> 22 de diciembre de 2014 </font> y hasta el <font style="color: #06cca5;">15 de marzo del 2015</font> se encuentran abierta la inscripcion al Programa EPI, en campus Concepción.
 
 				<h3>Requisitos</h3>
 				-Ser alumno regular.

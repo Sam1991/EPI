@@ -37,7 +37,7 @@ class Consultainterna extends CActiveRecord
 			// al administrdor responder la consulta
 			array('coni_respuesta,coni_estado,coni_fechaRespuesta', 'required','on' => 'editar'),
 			
-
+			array('coni_consulta','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La CONSULTAR no es válida")),
 			array('coni_estado', 'numerical', 'integerOnly'=>true),
 			array('coni_telefono, coni_email', 'length', 'max'=>255),
 			// The following rule is used by search().
@@ -64,13 +64,13 @@ class Consultainterna extends CActiveRecord
 	{
 		return array(
 			'coni_id' => 'Coni',
-			'coni_consulta' => 'Consulta',
-			'coni_telefono' => 'Telefono',
-			'coni_email' => 'Email',
-			'coni_fecha' => 'Fecha',
-			'coni_estado' => 'Estado',
-			'coni_respuesta' => 'Respuesta',
-			'coni_fechaRespuesta' => 'Fecha respuesta',
+			'coni_consulta' => 'CONSULTA',
+			'coni_telefono' => 'TELEFONO',
+			'coni_email' => 'E-MAIL',
+			'coni_fecha' => 'FECHA',
+			'coni_estado' => 'ESTADO',
+			'coni_respuesta' => 'RESPUESTA',
+			'coni_fechaRespuesta' => 'FECHA RESPUESTA',
 		);
 	}
 

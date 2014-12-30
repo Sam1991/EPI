@@ -37,6 +37,7 @@ class Consulta extends CActiveRecord
 			array('con_telefono', 'length', 'max'=>10, 'min'=>6),
 			array('con_telefono','match','pattern'=>'/^[0-9]{6,10}$/',
                	'message'=>CrugeTranslator::t("Teléfono incorrecto")),
+			array('con_consulta','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La CONSULTAR no es válida")),
 
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -62,11 +63,11 @@ class Consulta extends CActiveRecord
 	{
 		return array(
 			'con_id' => 'Id',
-			'con_consulta' => 'Consulta',
-			'con_email' => 'Email',
-			'con_telefono' => 'Telefono',
-			'con_fecha' => 'Fecha',
-			'con_estado' => 'Estado',
+			'con_consulta' => 'CONSULTA',
+			'con_email' => 'E-MAIL',
+			'con_telefono' => 'TELEFONO',
+			'con_fecha' => 'FECHA',
+			'con_estado' => 'ESTADO',
 		);
 	}
 

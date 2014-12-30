@@ -47,8 +47,34 @@ class Proyecto extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela, pro_aporteValorado, pro_aportePecuniario, pro_resumenEjecutivo, pro_descripcionEmpresa, pro_definicionProblema, pro_solucionPropuesta, pro_estadoArte, pro_objetivoGeneral, pro_metodologia, pro_cartaGantt', 'required'),
-			array('pro_aporteValorado, pro_aportePecuniario', 'numerical', 'integerOnly'=>true),
+
+			array('pro_aporteValorado, pro_aportePecuniario', 'numerical', 'integerOnly'=>true,'min'=>0, 'max'=>99999999),
+			
 			array('pro_cartaGantt', 'file','types'=>'jpg, gif, png,txt,pdf'),
+			
+			array('pro_titulo','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El TÍTULO no es válido")),
+			
+			array('pro_ambito','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El TÍTULO no es válido")),
+
+			array('pro_duracion','match','pattern'=>'/^([0-9a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La DURACIÓN no es válido")),
+			
+			array('pro_emNombre','match','pattern'=>'/^([0-9a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El NOMBRE no es válido")),
+
+			array('pro_titulo','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El TITULO no es válido")),
+
+			array('pro_emTelefono','match','pattern'=>'/^[0-9]{6,10}$/','message'=>CrugeTranslator::t("TELÉFONO incorrecto")),
+
+			array('emEmail', 'email'),
+
+
+			array('pro_profeNombre','match','pattern'=>'/^([0-9a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La NOMBRE no es válido")),
+			array('pro_profeEmail', 'email'),			
+			array('pro_profeTelefono','match','pattern'=>'/^[0-9]{6,10}$/','message'=>CrugeTranslator::t("Teléfono incorrecto")),
+			array('pro_dirEscuela','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El TITULO no es válido")),
+
+			array('pro_resumenEjecutivo, pro_descripcionEmpresa, pro_definicionProblema, pro_solucionPropuesta, pro_estadoArte, pro_objetivoGeneral, pro_metodologia', 'length', 'min'=>50),
+
+
 			array('pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -88,14 +114,14 @@ class Proyecto extends CActiveRecord
 			'pro_vBEscuela' => 'V°B° ESCUELA',
 			'pro_aporteValorado' => 'APORTE ($) VALORADO',
 			'pro_aportePecuniario' => 'APORTE ($) PECUNIARIO',
-			'pro_resumenEjecutivo' => 'Pro Resumen Ejecutivo',
-			'pro_descripcionEmpresa' => 'Pro Descripcion Empresa',
-			'pro_definicionProblema' => 'Pro Definicion Problema',
-			'pro_solucionPropuesta' => 'Pro Solucion Propuesta',
-			'pro_estadoArte' => 'Pro Estado Arte',
-			'pro_objetivoGeneral' => 'Objetivo general',
-			'pro_metodologia' => 'Pro Metodologia',
-			'pro_cartaGantt' => 'Pro Carta Gantt',
+			'pro_resumenEjecutivo' => 'RESÚMEN EJECUTIVO',
+			'pro_descripcionEmpresa' => 'DESCRIPCIÓN EMPRESA',
+			'pro_definicionProblema' => 'DEFINICIÓN PROBLEMA',
+			'pro_solucionPropuesta' => 'SOLUCIÓN PROPUESTA',
+			'pro_estadoArte' => 'ESTADO ARTE',
+			'pro_objetivoGeneral' => 'OBJETIVO GENERAL',
+			'pro_metodologia' => 'METODOLOGÍA',
+			'pro_cartaGantt' => 'CARTA GANTT',
 		);
 	}
 

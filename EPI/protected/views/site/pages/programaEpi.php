@@ -43,7 +43,7 @@
 			- Ser alumno regular de alguna carrera de la Universidad del Bío-Bío, campus Concepción o Chillán.
 			<br>
 			- Estar habilitado para inscribir actividad de titulación (seminario 1 o 2, tesis, proyecto de título, taller de título, etc.).
-			Para inscribirse debe completar el formulario on line con sus datos. Ingresa aquí al formulario de inscripción. Cupos limitados.
+			<br>Para inscribirte debes completar un breve formulario on line con tus datos. Ingresa <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=alumno/create">aquí</a> al formulario de inscripción.	
 
 			<h3>Contacto</h3>
 			Te puedes contactar con el coordinador del Programa EPI, Claudio Inzunza, a través de su correo electrónico, cinzunza@ubiobio.cl, o al anexo 311 1048.
