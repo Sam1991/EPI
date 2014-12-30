@@ -19,10 +19,6 @@ class SiteController extends Controller
 				'class'=>'CViewAction',
 			),
 
-			 'coco'=>array(
-                'class'=>'CocoAction',
-            ),
-			
 		);
 	}
 
