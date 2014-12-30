@@ -118,7 +118,7 @@
 									array('label'=>'Actividades', 'url'=>array('/actividades/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Postulaciónes', 'url'=>array('proyecto/admin/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
-
+									array('label'=>'Subir Archivo', 'url'=>array('subirarchivos/index'),'visible'=>(Yii::app()->user->isSuperAdmin)),
 										
 
 									array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
@@ -189,6 +189,17 @@
 
 <style>
 
+
+	#file_upload-button{
+		color: white;
+		background: red;
+		font-size: 12px;
+		font-family: Verdana,Helvetica;
+		font-weight: bold;
+		border: 0px;
+		border-radius: 15px;
+		
+	}
 	h3 {
 		color: #06cca5;
 		margin-bottom: 0em;

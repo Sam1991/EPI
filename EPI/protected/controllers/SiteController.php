@@ -18,6 +18,11 @@ class SiteController extends Controller
 			'page'=>array(
 				'class'=>'CViewAction',
 			),
+
+			 'coco'=>array(
+                'class'=>'CocoAction',
+            ),
+			
 		);
 	}
 

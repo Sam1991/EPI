@@ -104,6 +104,8 @@ class Encuestaactividad extends CActiveRecord
 		//solo muestra las respondidas
 		$criteria->addCondition("en_estado =1");
 
+
+
 		$criteria->compare('en_id',$this->en_id);
 		$criteria->compare('al_rut',$this->al_rut,true);
 		$criteria->compare('en_convocatoria',$this->en_convocatoria,true);
@@ -130,8 +132,13 @@ class Encuestaactividad extends CActiveRecord
 		// solo vea sus encuestas
 		$criteria->addCondition("al_rut ='".Yii::app()->user->name."'");
 
+		//obtener el nombre de la actividad
+		// $actividad=Actividad::model()->find("act_id=".$this->act_id);
+		// echo  $actividad->act_nombre;
+		// echo $this->act_id;
 		//solo las que no ha respondido
 		$criteria->addCondition("en_estado =0");
+
 
 		$criteria->compare('en_id',$this->en_id);
 		$criteria->compare('al_rut',$this->al_rut,true);

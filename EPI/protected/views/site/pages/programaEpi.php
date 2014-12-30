@@ -36,7 +36,7 @@
 			- Vinculación con empresas e instituciones.
 			<br>
 			- Aporte de $250.000 para el desarrollo del proyecto o tesis innovadora.
-
+			
 			<h3>¿Cómo participar?</h3>
 			Los requisitos para postular son:
 			<br>

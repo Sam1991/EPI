@@ -8260,3 +8260,623 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=galeria
 HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
 ---
+2014/12/29 12:06:25 [error] [php] include(Actividad.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php(138): spl_autoload_call()
+#1 C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php(24): Encuestaactividad->searchAlumno()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): EncuestaactividadController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): EncuestaactividadController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): EncuestaactividadController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php(193): EncuestaactividadController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): EncuestaactividadController->actionAdmin()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): EncuestaactividadController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): EncuestaactividadController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): EncuestaactividadController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): EncuestaactividadController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=encuestaactividad/admin
+in C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php (138)
+in C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php (24)
+in C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php (193)
+2014/12/29 12:07:01 [error] [php] include(Actividad.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php(138): spl_autoload_call()
+#1 C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php(24): Encuestaactividad->searchAlumno()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): EncuestaactividadController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): EncuestaactividadController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): EncuestaactividadController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php(193): EncuestaactividadController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): EncuestaactividadController->actionAdmin()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): EncuestaactividadController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): EncuestaactividadController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): EncuestaactividadController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): EncuestaactividadController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=encuestaactividad/admin
+in C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php (138)
+in C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php (24)
+in C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php (193)
+2014/12/29 12:07:04 [error] [php] include(Actividad.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php(138): spl_autoload_call()
+#1 C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php(24): Encuestaactividad->searchAlumno()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): EncuestaactividadController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): EncuestaactividadController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): EncuestaactividadController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php(193): EncuestaactividadController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): EncuestaactividadController->actionAdmin()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): EncuestaactividadController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): EncuestaactividadController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): EncuestaactividadController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): EncuestaactividadController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=encuestaactividad/admin
+in C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php (138)
+in C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php (24)
+in C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php (193)
+2014/12/29 12:13:45 [error] [php] include(Actividad.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php(136): spl_autoload_call()
+#1 C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php(24): Encuestaactividad->searchAlumno()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): EncuestaactividadController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): EncuestaactividadController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): EncuestaactividadController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php(193): EncuestaactividadController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): EncuestaactividadController->actionAdmin()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): EncuestaactividadController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): EncuestaactividadController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): EncuestaactividadController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): EncuestaactividadController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=encuestaactividad/admin
+in C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php (136)
+in C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php (24)
+in C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php (193)
+2014/12/29 12:14:09 [error] [php] include(Actividad.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php(136): spl_autoload_call()
+#1 C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php(24): Encuestaactividad->searchAlumno()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): EncuestaactividadController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): EncuestaactividadController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): EncuestaactividadController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php(193): EncuestaactividadController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): EncuestaactividadController->actionAdmin()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): EncuestaactividadController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): EncuestaactividadController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): EncuestaactividadController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): EncuestaactividadController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=encuestaactividad/admin
+in C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php (136)
+in C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php (24)
+in C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php (193)
+2014/12/29 12:15:14 [error] [php] include(Actividad.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\EPI\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php(136): spl_autoload_call()
+#1 C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php(24): Encuestaactividad->searchAlumno()
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\EPI\framework\web\CBaseController.php(95): EncuestaactividadController->renderInternal()
+#4 C:\wamp\www\EPI\framework\web\CController.php(869): EncuestaactividadController->renderFile()
+#5 C:\wamp\www\EPI\framework\web\CController.php(782): EncuestaactividadController->renderPartial()
+#6 C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php(193): EncuestaactividadController->render()
+#7 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): EncuestaactividadController->actionAdmin()
+#8 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): EncuestaactividadController->runAction()
+#10 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): EncuestaactividadController->filterAccessControl()
+#13 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\EPI\framework\web\CController.php(265): EncuestaactividadController->runActionWithFilters()
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): EncuestaactividadController->run()
+#17 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=encuestaactividad/admin
+in C:\wamp\www\EPI\EPI\protected\models\Encuestaactividad.php (136)
+in C:\wamp\www\EPI\EPI\protected\views\encuestaactividad\adminAlumno.php (24)
+in C:\wamp\www\EPI\EPI\protected\controllers\EncuestaactividadController.php (193)
+2014/12/29 23:02:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subirarchivos/index"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos/i...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos/index
+---
+2014/12/29 23:02:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subirarchivos/index"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos/i...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos/index
+---
+2014/12/29 23:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subirarchivos/index"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos/i...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos/index
+---
+2014/12/29 23:04:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subirarchivos/index"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos/i...')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos/index
+---
+2014/12/29 23:04:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/29 23:04:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Subirarchivos
+---
+2014/12/29 23:05:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Subirarchivos
+---
+2014/12/29 23:05:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Subirarchivos
+---
+2014/12/29 23:05:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Subirarchivos
+---
+2014/12/29 23:05:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/29 23:06:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Subirarchivos
+---
+2014/12/29 23:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Subirarchivos
+---
+2014/12/29 23:06:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('Subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=Subirarchivos
+---
+2014/12/29 23:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subirarchivos"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/29 23:09:09 [error] [php] Undefined variable: model (C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php:23)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): SubirarchivosController->renderFile()
+#1 C:\wamp\www\EPI\framework\web\CController.php(782): SubirarchivosController->renderPartial()
+#2 C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php(56): SubirarchivosController->render()
+#3 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SubirarchivosController->actionIndex()
+#4 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): SubirarchivosController->runAction()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): SubirarchivosController->filterAccessControl()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(265): SubirarchivosController->runActionWithFilters()
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): SubirarchivosController->run()
+#13 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+in C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php (23)
+in C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php (56)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/29 23:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "coco" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('coco')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('coco')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/coco')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/coco&action=upload&data=a%3A6%3A%7Bs%3A17%3A%22allowedExtensions%22%3Ba%3A4%3A%7Bi%3A0%3Bs%3A4%3A%22jpeg%22%3Bi%3A1%3Bs%3A3%3A%22jpg%22%3Bi%3A2%3Bs%3A3%3A%22gif%22%3Bi%3A3%3Bs%3A3%3A%22png%22%3B%7Ds%3A9%3A%22sizeLimit%22%3Bi%3A2000000%3Bs%3A9%3A%22uploadDir%22%3Bs%3A7%3A%22assets%2F%22%3Bs%3A17%3A%22receptorClassName%22%3Bs%3A26%3A%22application.models.MyModel%22%3Bs%3A10%3A%22methodName%22%3Bs%3A14%3A%22onFileUploaded%22%3Bs%3A8%3A%22userdata%22%3BN%3B%7D&qqfile=Captura+de+pantalla+el+2014-12-02+a+las+15.56.07.png
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/29 23:18:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "coco" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('coco')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('coco')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/coco')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/coco&action=upload&data=a%3A6%3A%7Bs%3A17%3A%22allowedExtensions%22%3Ba%3A4%3A%7Bi%3A0%3Bs%3A4%3A%22jpeg%22%3Bi%3A1%3Bs%3A3%3A%22jpg%22%3Bi%3A2%3Bs%3A3%3A%22gif%22%3Bi%3A3%3Bs%3A3%3A%22png%22%3B%7Ds%3A9%3A%22sizeLimit%22%3Bi%3A2000000%3Bs%3A9%3A%22uploadDir%22%3Bs%3A7%3A%22assets%2F%22%3Bs%3A17%3A%22receptorClassName%22%3BN%3Bs%3A10%3A%22methodName%22%3Bs%3A19%3A%22coco_onFileUploaded%22%3Bs%3A8%3A%22userdata%22%3BN%3B%7D&qqfile=snapshot+(1).png
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/30 00:28:47 [error] [php] Undefined variable: model (C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php:49)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): SubirarchivosController->renderFile()
+#1 C:\wamp\www\EPI\framework\web\CController.php(782): SubirarchivosController->renderPartial()
+#2 C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php(43): SubirarchivosController->render()
+#3 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SubirarchivosController->actionIndex()
+#4 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): SubirarchivosController->runAction()
+#6 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): SubirarchivosController->filterAccessControl()
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(265): SubirarchivosController->runActionWithFilters()
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): SubirarchivosController->run()
+#13 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+in C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php (49)
+in C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php (43)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2014/12/30 01:02:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=galeria
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/12/30 01:02:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=imagenes
+---
+2014/12/30 01:02:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=imagenes
+---
+2014/12/30 01:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=imagenes
+---
+2014/12/30 01:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "imagenes" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('imagenes')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('imagenes')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/imagenes')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/imagenes
+---
+2014/12/30 04:42:04 [error] [exception.CException] exception 'CException' with message 'SubirarchivosController no ha podido encontrar la vista "/EPI/EPI/uploadify/index" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php(7): CController->renderPartial('/EPI/EPI/upload...')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', NULL, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', NULL, true)
+#4 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php(57): CController->render('index')
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SubirarchivosController->actionIndex()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/30 04:43:00 [error] [exception.CException] exception 'CException' with message 'SubirarchivosController no ha podido encontrar la vista "/EPI/EPI/uploadify/index.php" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php(7): CController->renderPartial('/EPI/EPI/upload...')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', NULL, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', NULL, true)
+#4 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php(57): CController->render('index')
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SubirarchivosController->actionIndex()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/30 04:54:57 [error] [exception.CException] exception 'CException' with message 'SubirarchivosController no ha podido encontrar la vista "application.uploadify.index.php" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php(7): CController->renderPartial('application.upl...')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', NULL, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', NULL, true)
+#4 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php(57): CController->render('index')
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SubirarchivosController->actionIndex()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/30 04:55:17 [error] [exception.CException] exception 'CException' with message 'SubirarchivosController no ha podido encontrar la vista "application.uploadify.index.php" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php(7): CController->renderPartial('application.upl...')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', NULL, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', NULL, true)
+#4 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php(57): CController->render('index')
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SubirarchivosController->actionIndex()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/30 04:55:21 [error] [exception.CException] exception 'CException' with message 'SubirarchivosController no ha podido encontrar la vista "application.uploadify.index.php" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php(7): CController->renderPartial('application.upl...')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', NULL, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', NULL, true)
+#4 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php(57): CController->render('index')
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SubirarchivosController->actionIndex()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/30 04:55:48 [error] [exception.CException] exception 'CException' with message 'SubirarchivosController no ha podido encontrar la vista "/EPI/EPI/uploadify/index" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\views\subirarchivos\index.php(7): CController->renderPartial('/EPI/EPI/upload...')
+#1 C:\wamp\www\EPI\framework\web\CBaseController.php(126): require('C:\wamp\www\EPI...')
+#2 C:\wamp\www\EPI\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\EPI...', NULL, true)
+#3 C:\wamp\www\EPI\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\EPI...', NULL, true)
+#4 C:\wamp\www\EPI\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#5 C:\wamp\www\EPI\EPI\protected\controllers\SubirarchivosController.php(57): CController->render('index')
+#6 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): SubirarchivosController->actionIndex()
+#7 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos')
+#17 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/30 05:00:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=convocatorias
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/12/30 05:03:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=galeria
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2014/12/30 05:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "subirarchivos" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('subirarchivos')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=subirarchivos
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=subirarchivos
+---
+2014/12/30 05:07:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "subirarchivos" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('subirarchivos')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=subirarchivos
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=site/page&view=subirarchivos
+---
+2014/12/30 05:08:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "subirarchivos" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('subirarchivos')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=subirarchivos
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=site/page&view=subirarchivos
+---
+2014/12/30 05:08:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La vista solicitada "subirarchivos" no fue encontrada.' in C:\wamp\www\EPI\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('subirarchivos')
+#1 C:\wamp\www\EPI\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=site/page&view=subirarchivos
+---
+2014/12/30 05:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "admin" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos/a...')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=site/page&view=subirarchivos
+---
+2014/12/30 05:08:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "admin" solicitada.' in C:\wamp\www\EPI\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('subirarchivos/a...')
+#3 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=subirarchivos/admin
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=subirarchivos/admin
+---
