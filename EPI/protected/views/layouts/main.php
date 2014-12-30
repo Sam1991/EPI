@@ -447,12 +447,24 @@ input[type="text"],textarea,select{
 	/*contenido del div principal*/
 	#principal{padding-top:59px;padding-right:52px;padding-left:25px;}
 
+
+	/*exterior del div principal*/
+	.igualesIzquierda{margin-top: 30px;margin-right: 2%;margin-left: 4%;}
+	
+	/*contenido del div principal*/
+	.igualesIzquierda{padding-top:59px;padding-right:52px;padding-left:25px;}
+
+	.igualesDerecha{padding-top:59px;margin-top: 30px;text-align: center;}
+
 	.igualesIzquierda, .igualesDerecha{	
 		display: inline-block;
-		width: 45%;background-color: #f9f9f9;
+		width: 44%;background-color: #f9f9f9;
 		vertical-align: top;
 	}
 	
+	#detalleInscripcion{padding-right:52px;padding-left:25px;
+
+	}
 	/*espacion arriba*/
 	#page{margin-top: 2px;padding-bottom: 18px;}
 	

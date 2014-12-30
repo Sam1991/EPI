@@ -2,7 +2,7 @@
 <h1 class="titulo" > Detalle de la inscripción</h1>
 
 
-<div style="text-align: justify;font-size: 15px;color: #928e8e;">
+<p style="text-align: justify;font-size: 15px;color: #928e8e;" id="detalleInscripcion">
 Pueden inscribirse alumnos de cualquier carrera de la Universidad del Bío-Bío, campus Concepción y Chillán, que estén habilitados para inscribir actividad de titulación, o bien, estén realizando su seminario 1, en el año académico 2015. (Si tienes dudas puedes consultar en epi@ubiobio.cl).
 <br>
 <br>
@@ -13,7 +13,7 @@ Puedes revisar las bases de la convocatoria para ver las fechas y horarios de re
 <br>
 <br>
 La Etapa de Formación es requisito para postular a la segunda etapa, Etapa de Desarrollo de Proyectos de Innovación, que les permitirá optar por el financiamiento de $250.000.
-</div>
+</p>
 
 
 
