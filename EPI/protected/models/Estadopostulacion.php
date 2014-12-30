@@ -34,8 +34,9 @@ class Estadopostulacion extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('al_rut', 'required'),
-			array('espos_inscripcion, espos_informeInnovacion, espos_anexo2, espos_cartaEmpresa, espos_prehallasgo, espos_copiaCarnet, espos_alumnoRegular, espos_curriculum, espos_informeFinal', 'numerical', 'integerOnly'=>true),
 			array('al_rut', 'length', 'max'=>15),
+			// array('espos_informeInnovacion', 'file','types'=>'jpg, png,txt,pdf,doc,docx'),
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('al_rut, espos_inscripcion, espos_informeInnovacion, espos_anexo2, espos_cartaEmpresa, espos_prehallasgo, espos_copiaCarnet, espos_alumnoRegular, espos_curriculum, espos_informeFinal', 'safe', 'on'=>'search'),

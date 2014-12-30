@@ -94,9 +94,89 @@ class EstadopostulacionController extends Controller
 
 		if(isset($_POST['Estadopostulacion']))
 		{
-			$model->attributes=$_POST['Estadopostulacion'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->al_rut));
+			
+
+			// $post=CUploadedFile::getInstance($_POST['Estadopostulacion']['espos_cartaEmpresa']);
+
+			echo print_r($_FILES['Estadopostulacion']['name']['espos_cartaEmpresa']);
+
+
+
+			// comprobar que archivos se estan subiendo
+			if($_FILES['Estadopostulacion']['name']['espos_informeInnovacion']){
+				$model->espos_informeInnovacion=$_POST['Estadopostulacion']['espos_informeInnovacion'];	
+				$model->espos_informeInnovacion=CUploadedFile::getInstance($model,'espos_informeInnovacion');
+			}
+
+			if($_FILES['Estadopostulacion']['name']['espos_cartaEmpresa']){
+				$model->espos_cartaEmpresa=$_POST['Estadopostulacion']['espos_cartaEmpresa'];
+				$model->espos_cartaEmpresa=CUploadedFile::getInstance($model,'espos_cartaEmpresa');
+			}
+
+			if($_FILES['Estadopostulacion']['name']['espos_prehallasgo']){
+				$model->espos_prehallasgo=$_POST['Estadopostulacion']['espos_prehallasgo'];
+				$model->espos_prehallasgo=CUploadedFile::getInstance($model,'espos_prehallasgo');
+			}
+			if($_FILES['Estadopostulacion']['name']['espos_copiaCarnet']){
+				$model->espos_copiaCarnet=$_POST['Estadopostulacion']['espos_copiaCarnet'];
+				$model->espos_copiaCarnet=CUploadedFile::getInstance($model,'espos_copiaCarnet');
+			}
+			if($_FILES['Estadopostulacion']['name']['espos_alumnoRegular']){
+				$model->espos_alumnoRegular=$_POST['Estadopostulacion']['espos_alumnoRegular'];
+				$model->espos_alumnoRegular=CUploadedFile::getInstance($model,'espos_alumnoRegular');
+			}
+
+			if($_FILES['Estadopostulacion']['name']['espos_curriculum']){
+				$model->espos_curriculum=$_POST['Estadopostulacion']['espos_curriculum'];
+				$model->espos_curriculum=CUploadedFile::getInstance($model,'espos_curriculum');
+			}
+
+			if($_FILES['Estadopostulacion']['name']['espos_informeFinal']){
+				$model->espos_informeFinal=$_POST['Estadopostulacion']['espos_informeFinal'];
+				$model->espos_informeFinal=CUploadedFile::getInstance($model,'espos_informeFinal');
+			}
+			// fin_comprobar que archivos se estan subiendo
+
+			
+			if($model->save()){
+			
+				//copiar la imagen en el directorio
+	               $estructura =Yii::app()->basePath.'\proyectos';
+
+				if($_FILES['Estadopostulacion']['name']['espos_informeInnovacion']){
+	                $path="$estructura/$model->espos_informeInnovacion";
+		          	$model->espos_informeInnovacion->saveAs($path);
+				}  
+
+	            if($_FILES['Estadopostulacion']['name']['espos_cartaEmpresa']){
+		          	$path="$estructura/$model->espos_cartaEmpresa";
+		          	$model->espos_cartaEmpresa->saveAs($path);
+				}
+
+				if($_FILES['Estadopostulacion']['name']['espos_prehallasgo']){
+		          	$path="$estructura/$model->espos_prehallasgo";
+		          	$model->espos_prehallasgo->saveAs($path);
+				}
+				if($_FILES['Estadopostulacion']['name']['espos_copiaCarnet']){
+	                $path="$estructura/$model->espos_copiaCarnet";
+		          	$model->espos_copiaCarnet->saveAs($path);
+				}  
+				if($_FILES['Estadopostulacion']['name']['espos_alumnoRegular']){
+		          	$path="$estructura/$model->espos_alumnoRegular";
+		          	$model->espos_alumnoRegular->saveAs($path);
+				}
+				if($_FILES['Estadopostulacion']['name']['espos_curriculum']){
+	                $path="$estructura/$model->espos_curriculum";
+		          	$model->espos_curriculum->saveAs($path);
+				}  
+				if($_FILES['Estadopostulacion']['name']['espos_informeFinal']){
+		          	$path="$estructura/$model->espos_informeFinal";
+		          	$model->espos_informeFinal->saveAs($path);
+				}
+				//fin_copiar la imagen en el directorio
+				
+					$this->redirect(array('view','id'=>$model->al_rut));
+			}
 		}
 
 		$this->render('update',array(

@@ -4,6 +4,7 @@
 
 $this->menu=array(
 	array('label'=>'Proyecto', 'url'=>array('proyecto/admin')),
+	array('label'=>'Subir Archivos', 'url'=>array('estadopostulacion/update', 'id'=>Yii::app()->user->name)),
 );
 
 ?>
@@ -14,7 +15,7 @@ $this->menu=array(
 <div class="estado">
 
 <?php 
-if($model->espos_inscripcion==1){
+if($model->espos_inscripcion!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/inscripcion.png" class="completo">
 <?php 
@@ -31,7 +32,7 @@ else{
 
 <div class="estado">
 <?php 
-if($model->espos_informeInnovacion==1){
+if($model->espos_informeInnovacion!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/informeInnovacion.png" class="completo">
 <?php 
@@ -48,7 +49,7 @@ else{
 
 <div class="estado">
 <?php 
-if($model->espos_anexo2==1){
+if($model->espos_anexo2!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/anexo2.png" class="completo">
 <?php 
@@ -66,7 +67,7 @@ else{
 
 <div class="estado">
 <?php 
-if($model->espos_cartaEmpresa==1){
+if($model->espos_cartaEmpresa!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/cartaEmpresa.png" class="completo">
 <?php 
@@ -86,7 +87,7 @@ else{
 
 <div class="estado">
 <?php 
-if($model->espos_prehallasgo==1){
+if($model->espos_prehallasgo!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/prehallasgo.png" class="completo">
 <?php 
@@ -106,7 +107,7 @@ else{
 
 <div class="estado">
 <?php 
-if($model->espos_copiaCarnet==1){
+if($model->espos_copiaCarnet!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/copiaCarnet.png" class="completo">
 <?php 
@@ -126,7 +127,7 @@ else{
 
 <div class="estado">
 <?php 
-if($model->espos_alumnoRegular==1){
+if($model->espos_alumnoRegular!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/alumnoRegular.png" class="completo">
 <?php 
@@ -144,7 +145,7 @@ else{
 
 <div class="estado">
 <?php 
-if($model->espos_curriculum==1){
+if($model->espos_curriculum!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/curriculum.png" class="completo">
 <?php 
@@ -162,7 +163,7 @@ else{
 
 <div class="estado">
 <?php 
-if($model->espos_informeFinal==1){
+if($model->espos_informeFinal!=null){
 	?>
 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/informeFinal.png" class="completo">
 <?php 
