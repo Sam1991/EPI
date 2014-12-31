@@ -94,6 +94,7 @@ class NoticiaController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		$this->layout = '//layouts/columnAdmin';
 		$model=$this->loadModel($id);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

@@ -1,7 +1,13 @@
 <?php
 /* @var $this ProyectoController */
 /* @var $model Proyecto */
+if(Yii::app()->user->isSuperAdmin){
+$this->menu=array(
+	array('label'=>'Proyectos', 'url'=>array('admin')),
+);
 
+}
+else if(Yii::app()->user->checkAccess('alumno')){
 
 $this->menu=array(
 	array('label'=>'Editar', 'url'=>array('update', 'id'=>$model->pro_idProyecto)),
@@ -9,6 +15,7 @@ $this->menu=array(
 	array('label'=>'Agregar participante', 'url'=>array('alumnoproyecto/create', 'idp'=>$model->pro_idProyecto)),
 	
 );
+}
 ?>
 
 <h1>Proyecto <?php echo $model->pro_titulo; ?></h1>

@@ -9,13 +9,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Noticia', 'url'=>array('index')),
-	array('label'=>'Create Noticia', 'url'=>array('create')),
-	array('label'=>'View Noticia', 'url'=>array('view', 'id'=>$model->no_id)),
-	array('label'=>'Manage Noticia', 'url'=>array('admin')),
+	array('label'=>'Nueva Noticia', 'url'=>array('create')),
+	array('label'=>'Ver Noticias', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Noticia <?php echo $model->no_id; ?></h1>
+<h1>Editar Noticia</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

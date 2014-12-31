@@ -8,6 +8,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Editar <?php echo $model->act_nombre; ?></h1>
+<h1>Editar Actividad</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

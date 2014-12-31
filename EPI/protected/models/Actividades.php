@@ -32,11 +32,15 @@ class Actividades extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('act_convocatoria, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin', 'required'),
-			array('act_convocatoria', 'length', 'max'=>10),
+			array('act_convocatoria, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin,act_lugar', 'required'),
+			array('act_convocatoria', 'length', 'max'=>10, 'min'=>6),
+			array('act_nombre', 'length', 'min'=>3),
 			array('act_campus, act_horaInicio, act_horaFin', 'length', 'max'=>20),
 			array('act_nombre, act_fecha, act_lugar', 'length', 'max'=>255),
 			array('act_descripcion', 'safe'),
+			array('act_lugar', 'length','min'=>3),
+			array('act_fecha','compare','compareValue'=>date('Y-m-d'),'operator'=>'>='),
+			array('act_horaInicio', 'compare', 'compareValue'=>'act_horaFin','operator'=>'>','message'=>CrugeTranslator::t("El FIN debe ser mayor al INICIO")),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('act_id, act_convocatoria, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin, act_lugar, act_descripcion', 'safe', 'on'=>'search'),
@@ -61,14 +65,14 @@ class Actividades extends CActiveRecord
 	{
 		return array(
 			'act_id' => 'Act',
-			'act_convocatoria' => 'Convocatoria',
-			'act_campus' => 'Campus',
-			'act_nombre' => 'Nombre',
-			'act_fecha' => 'Fecha',
-			'act_horaInicio' => 'Hora Inicio',
-			'act_horaFin' => 'Hora Fin',
-			'act_lugar' => 'Lugar',
-			'act_descripcion' => 'Descripcion',
+			'act_convocatoria' => 'CONVOCATORIA',
+			'act_campus' => 'CAMPUS',
+			'act_nombre' => 'NOMBRE',
+			'act_fecha' => 'FECHA',
+			'act_horaInicio' => 'HORA INICIO',
+			'act_horaFin' => 'HORA FIN',
+			'act_lugar' => 'LUGAR',
+			'act_descripcion' => 'DESCRIPCIÓN',
 		);
 	}
 

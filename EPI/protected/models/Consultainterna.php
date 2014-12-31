@@ -40,6 +40,8 @@ class Consultainterna extends CActiveRecord
 			array('coni_consulta','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La CONSULTAR no es válida")),
 			array('coni_estado', 'numerical', 'integerOnly'=>true),
 			array('coni_telefono, coni_email', 'length', 'max'=>255),
+
+			array('coni_respuesta', 'length', 'min'=>2,'on' => 'editar'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('coni_id, coni_consulta, coni_telefono, coni_email, coni_fecha, coni_estado, coni_respuesta, coni_fechaRespuesta', 'safe', 'on'=>'search'),

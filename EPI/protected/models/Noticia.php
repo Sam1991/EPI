@@ -30,7 +30,9 @@ class Noticia extends CActiveRecord
 		return array(
 			array('no_titulo, no_subtitulo, no_cuerpo, no_imagen', 'required'),
 			array('no_titulo, no_subtitulo', 'length', 'max'=>100),
-			array('no_cuerpo', 'length', 'max'=>5000),
+			array('no_cuerpo', 'length', 'max'=>5000,'min'=>10),
+			array('no_titulo', 'length', 'min'=>10),
+			array('no_subtitulo', 'length', 'min'=>10),
 			array('no_imagen', 'file', 'types'=>'jpg, gif, png'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -56,10 +58,10 @@ class Noticia extends CActiveRecord
 	{
 		return array(
 			'no_id' => 'No',
-			'no_titulo' => 'Titulo',
-			'no_subtitulo' => 'Subtitulo',
-			'no_cuerpo' => 'Cuerpo',
-			'no_imagen' => 'Imagen',
+			'no_titulo' => 'TÍTULO',
+			'no_subtitulo' => 'SUBTÍTULO',
+			'no_cuerpo' => 'CUERPO',
+			'no_imagen' => 'IMAGEN',
 		);
 	}
 
