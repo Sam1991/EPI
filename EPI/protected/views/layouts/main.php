@@ -99,7 +99,7 @@
 									array('label'=>'Programa EPI', 'url'=>array('site/page', 'view'=>'programaEpi'),'visible'=>(!Yii::app()->user->isSuperAdmin && !Yii::app()->user->checkAccess('alumno'))),
 									array('label'=>'Convocatorias', 'url'=>array('site/page', 'view'=>'convocatorias'),'visible'=>(!Yii::app()->user->isSuperAdmin && !Yii::app()->user->checkAccess('alumno'))),
 									array('label'=>'Noticias', 'url'=>array('/noticia/index'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Galeria', 'url'=>array('site/page','view'=>'galeria'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Galería', 'url'=>array('site/page','view'=>'galeria'),'visible'=>(!Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Contacto', 'url'=>array('consulta/create'),'visible'=>(!Yii::app()->user->checkAccess('alumno'))),
 									array('label'=>'Ingresar', 'url'=>Yii::app()->user->ui->loginUrl, 'visible'=>Yii::app()->user->isGuest,'itemOptions'=>array('style'=>'background-color: #bebebe;')),
 

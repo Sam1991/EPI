@@ -45,9 +45,12 @@ class Encuestaactividad extends CActiveRecord
 			array('en_pregunta1, en_pregunta2, en_pregunta3, en_pregunta4', 'length', 'max'=>255),
 			array('en_comentario', 'safe'),
 			array('en_comentario', 'length', 'min'=>3),
+
+			array('act_id','unique','message'=>CrugeTranslator::t("Ya se creo una escuesta para la actividad")),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('en_id, al_rut, en_convocatoria, act_id, en_tipo, en_pregunta1, en_pregunta2, en_pregunta3, en_pregunta4, en_comentario', 'safe', 'on'=>'search'),
+
 		);
 	}
 
@@ -69,10 +72,10 @@ class Encuestaactividad extends CActiveRecord
 	{
 		return array(
 			'en_id' => 'En',
-			'al_rut' => 'al Rut',
-			'en_convocatoria' => 'Ec Convocatoria',
-			'act_id' => 'Act',
-			'en_tipo' => 'En Tipo',
+			'al_rut' => 'RUT',
+			'en_convocatoria' => 'CONVOCATORIA',
+			'act_id' => 'ACTIVIDAD',
+			'en_tipo' => 'TIPO',
 			'en_pregunta1' => 'Debe contestar la Pregunta 1',
 			'en_pregunta2' => 'Debe contestar la Pregunta 2',
 			'en_pregunta3' => 'Debe contestar la Pregunta 3',

@@ -49,6 +49,9 @@ class Alumno extends CActiveRecord
 			array('al_telefono', 'length', 'max'=>10, 'min'=>6),
 			array('al_telefono','match','pattern'=>'/^[0-9]{6,10}$/',
                	'message'=>CrugeTranslator::t("Teléfono incorrecto")),
+			array('al_email','unique','message'=>CrugeTranslator::t("El E-MAIL ya está registrado")),
+			array('al_rut','unique','message'=>CrugeTranslator::t("El N° CÉDULA DE IDENTIDAD ya está registrado")),
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('al_rut, al_nombre, al_carrera, al_email, al_telefono, al_comentario, al_clave, al_paterno, al_materno, al_campus, al_email2', 'safe', 'on'=>'search'),
@@ -77,7 +80,7 @@ class Alumno extends CActiveRecord
 			'al_carrera' => 'CARRERA',
 			'al_email' => 'E-MAIL',
 			'al_telefono' => 'TELÉFONO',
-			'al_comentario' => 'Comentario',
+			'al_comentario' => 'COMENTARIO',
 			'al_clave' => 'CLAVE',
 			'al_paterno' => 'APELLIDO PATERNO',
 			'al_materno' => 'APELLIDO MATERNO',

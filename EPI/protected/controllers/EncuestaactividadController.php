@@ -76,10 +76,16 @@ class EncuestaactividadController extends Controller
 
 			//una para cada alumno
 			$alumnos=Alumno::model()->findAll();
+			
+			
+
+			//guardar el primero para que haga las validaciones
+		$model->al_rut=$alumnos[0]->al_rut;
+		if($model->save()){
 
 			$values='';
-			for ($i=0; $i <count($alumnos) ; $i++) {
-				if($i!=0 ){
+			for ($i=1; $i <count($alumnos) ; $i++) {
+				if($i!=1 ){
 					$values=$values.", ";
 				}
 			 	$values=$values."('".$model->en_convocatoria."',".$model->act_id.",'".$model->en_tipo."','".$alumnos[$i]->al_rut."')";
@@ -92,7 +98,7 @@ class EncuestaactividadController extends Controller
 				$this->redirect(array('admin'));
 			}
 			//fin_una para cada alumno
-
+		}
 			
 				
 		}

@@ -46,7 +46,7 @@
 			<br>Para inscribirte debes completar un breve formulario on line con tus datos. Ingresa <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=alumno/create">aquí</a> al formulario de inscripción.	
 
 			<h3>Contacto</h3>
-			Te puedes contactar con el coordinador del Programa EPI, Claudio Inzunza, a través de su correo electrónico, cinzunza@ubiobio.cl, o al anexo 311 1048.
+			Te puedes contactar con el coordinador del Programa EPI, Claudio Inzunza, a través de su correo electrónico, <a href="mailto:cinzunza@ubiobio.cl">cinzunza@ubiobio.cl</a>, o al anexo 311 1048.
 			<h3>Preguntas frecuentes</h3>
 			Consulta <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/page&view=preguntasFrecuentes">aquí</a>
 			</p>

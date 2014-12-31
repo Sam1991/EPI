@@ -91,6 +91,8 @@ class ProyectoController extends Controller
 				$alumnoProyecto->save();
 				//fin_poner el creador como participante
 
+				
+
 			$this->redirect(array('view','id'=>$model->pro_idProyecto));
 			}
 		}
