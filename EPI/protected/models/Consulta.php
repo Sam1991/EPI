@@ -35,8 +35,7 @@ class Consulta extends CActiveRecord
 			//validaciones
 			array('con_email', 'email'),
 			array('con_telefono', 'length', 'max'=>10, 'min'=>6),
-			array('con_telefono','match','pattern'=>'/^[0-9]{6,10}$/',
-               	'message'=>CrugeTranslator::t("Teléfono incorrecto")),
+			array('con_telefono','match','pattern'=>'/^[0-9]{6,10}$/','message'=>CrugeTranslator::t("TELÉFONO incorrecto")),
 			array('con_consulta','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La CONSULTAR no es válida")),
 
 			// The following rule is used by search().

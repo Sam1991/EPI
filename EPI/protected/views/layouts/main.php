@@ -113,7 +113,7 @@
 								//link administrador
 									array('label'=>'Noticias', 'url'=>array('/noticia/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Inscritos', 'url'=>array('/alumno/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Consultas Publico', 'url'=>array('/consulta/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Consultas Público', 'url'=>array('/consulta/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Consultas Participantes', 'url'=>array('/consultainterna/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Actividades', 'url'=>array('/actividades/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Postulaciones', 'url'=>array('proyecto/admin/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),

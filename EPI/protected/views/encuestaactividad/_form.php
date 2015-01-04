@@ -19,8 +19,8 @@
 <?php  if ($model->isNewRecord ) {	?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'en_convocatoria'); ?>
-		<?php echo $form->textField($model,'en_convocatoria', array('value'=>'2015-1','readonly'=>'false')); ?>
+		<?php //echo $form->labelEx($model,'en_convocatoria'); ?>
+		<?php echo $form->hiddenField($model,'en_convocatoria', array('value'=>'2015-1','readonly'=>'false')); ?>
 		<?php echo $form->error($model,'en_convocatoria'); ?>
 	</div>
 

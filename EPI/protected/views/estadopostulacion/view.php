@@ -1,11 +1,21 @@
 <?php
 /* @var $this EstadopostulacionController */
 /* @var $model Estadopostulacion */
+if(Yii::app()->user->isSuperAdmin){
+$this->menu=array(
+	array('label'=>'Proyecto', 'url'=>array('proyecto/admin')),
+);
+
+}
+else if(Yii::app()->user->checkAccess('alumno')){
 
 $this->menu=array(
 	array('label'=>'Proyecto', 'url'=>array('proyecto/admin')),
 	array('label'=>'Subir Archivos', 'url'=>array('estadopostulacion/update', 'id'=>Yii::app()->user->name)),
+	
 );
+}
+
 
 ?>
 

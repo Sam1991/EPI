@@ -33,7 +33,6 @@ class Consultainterna extends CActiveRecord
 		return array(
 			array('coni_consulta, coni_telefono, coni_email, coni_fecha', 'required'),
 
-
 			// al administrdor responder la consulta
 			array('coni_respuesta,coni_estado,coni_fechaRespuesta', 'required','on' => 'editar'),
 			
@@ -137,7 +136,7 @@ class Consultainterna extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		// obtener datos del usuario activo 
-			$alumno=alumno::model()->find("al_rut='".Yii::app()->user->name."'");
+		$alumno=alumno::model()->find("al_rut='".Yii::app()->user->name."'");
 	
 		$criteria->addCondition("coni_email ='".$alumno->al_email."'");
 		$criteria->compare('coni_id',$this->coni_id);

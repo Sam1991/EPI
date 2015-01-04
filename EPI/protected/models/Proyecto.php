@@ -200,11 +200,6 @@ class Proyecto extends CActiveRecord
 			$criteria->addCondition("pro_idProyecto =-1");
 		}
 		// echo $condicion;
-		
-
-		
-
-
 
 
 		$criteria->compare('pro_idProyecto',$this->pro_idProyecto);

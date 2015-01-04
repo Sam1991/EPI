@@ -47,8 +47,7 @@ class Alumno extends CActiveRecord
 			array('al_email', 'email'),
 			array('al_email2', 'email'),
 			array('al_telefono', 'length', 'max'=>10, 'min'=>6),
-			array('al_telefono','match','pattern'=>'/^[0-9]{6,10}$/',
-               	'message'=>CrugeTranslator::t("Teléfono incorrecto")),
+			array('al_telefono','match','pattern'=>'/^[0-9]{6,10}$/','message'=>CrugeTranslator::t("Teléfono incorrecto")),
 			array('al_email','unique','message'=>CrugeTranslator::t("El E-MAIL ya está registrado")),
 			array('al_rut','unique','message'=>CrugeTranslator::t("El N° CÉDULA DE IDENTIDAD ya está registrado")),
 
@@ -139,19 +138,22 @@ class Alumno extends CActiveRecord
 	public function validateRut($attribute,$params){
 		$rut = $this->al_rut;
 		$suma = "";
+
 		if(strpos($rut,"-")==false){
 	        $RUT[0] = substr($rut, 0, -1);
 	        $RUT[1] = substr($rut, -1);
 	    }else{
 	        $RUT = explode("-", trim($rut));
 	    }
+
 	    $elRut = str_replace(".", "", trim($RUT[0]));
 	    $factor = 2;
+	    
 	    for($i = strlen($elRut)-1; $i >= 0; $i--):
 	        $factor = $factor > 7 ? 2 : $factor;
 	        $suma += $elRut{$i}*$factor++;
 	    endfor;
-	    $resto = $suma % 11;
+	    	    $resto = $suma % 11;
 	    $dv = 11 - $resto;
 	    if($dv == 11){
 	        $dv=0;
@@ -163,7 +165,7 @@ class Alumno extends CActiveRecord
 	   if($dv == trim(strtolower($RUT[1]))){
 	       return true;
 	   }else{
-	       $this->addError($attribute, 'El rut ingresado NO es válido');
+	       $this->addError($attribute, 'El RUT ingresado NO es válido');
 	   }
 	}
 }

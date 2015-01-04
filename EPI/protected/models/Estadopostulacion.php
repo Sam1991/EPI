@@ -60,16 +60,16 @@ class Estadopostulacion extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'al_rut' => 'Rut',
-			'espos_inscripcion' => 'Inscripcion',
-			'espos_informeInnovacion' => 'Informe Innovacion',
-			'espos_anexo2' => 'Anexo2',
-			'espos_cartaEmpresa' => 'Carta Empresa',
-			'espos_prehallasgo' => 'Prehallasgo',
-			'espos_copiaCarnet' => 'Copia Carnet',
-			'espos_alumnoRegular' => 'Alumno Regular',
-			'espos_curriculum' => 'Curriculum',
-			'espos_informeFinal' => 'Informe Final',
+			'al_rut' => 'RUT',
+			'espos_inscripcion' => 'INSCRIPCIÓN',
+			'espos_informeInnovacion' => 'INFORME INNOVACIÓN',
+			'espos_anexo2' => 'PROYECTO',
+			'espos_cartaEmpresa' => 'CARTA EMPRESA',
+			'espos_prehallasgo' => 'PREHALLAZGO',
+			'espos_copiaCarnet' => 'COPIA CARNET',
+			'espos_alumnoRegular' => 'ALUMNO REGULAR',
+			'espos_curriculum' => 'CURRÍCULUM',
+			'espos_informeFinal' => 'INFORME FINAL',
 		);
 	}
 
