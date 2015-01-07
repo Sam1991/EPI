@@ -44,7 +44,9 @@ else{
 <?php 
 if($model->espos_informeInnovacion!=null){
 	?>
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/informeInnovacion.png" class="completo">
+	<a  href="protected\proyectos/<?php echo $model->espos_informeInnovacion; ?>">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/informeInnovacion.png" class="completo">
+	</a>
 <?php 
 }
 else{
@@ -79,7 +81,9 @@ else{
 <?php 
 if($model->espos_cartaEmpresa!=null){
 	?>
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/cartaEmpresa.png" class="completo">
+	<a  href="protected\proyectos/<?php echo $model->espos_cartaEmpresa; ?>">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/cartaEmpresa.png" class="completo">
+	</a>
 <?php 
 }
 else{
@@ -99,7 +103,9 @@ else{
 <?php 
 if($model->espos_prehallasgo!=null){
 	?>
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/prehallasgo.png" class="completo">
+	<a  href="protected\proyectos/<?php echo $model->espos_prehallasgo; ?>">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/prehallasgo.png" class="completo">
+	</a>
 <?php 
 }
 else{
@@ -119,12 +125,15 @@ else{
 <?php 
 if($model->espos_copiaCarnet!=null){
 	?>
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/copiaCarnet.png" class="completo">
+	 <a  href="protected\proyectos/<?php echo $model->espos_copiaCarnet; ?>">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/copiaCarnet.png" class="completo">
+	 </a>
 <?php 
 }
 else{
  ?>
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/copiaCarnet.png" class="incompleto">
+ 	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/copiaCarnet.png" class="incompleto">
+	
 
 <?php 
 }
@@ -139,7 +148,9 @@ else{
 <?php 
 if($model->espos_alumnoRegular!=null){
 	?>
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/alumnoRegular.png" class="completo">
+	<a  href="protected\proyectos/<?php echo $model->espos_alumnoRegular; ?>">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/alumnoRegular.png" class="completo">
+	</a>
 <?php 
 }
 else{
@@ -157,7 +168,9 @@ else{
 <?php 
 if($model->espos_curriculum!=null){
 	?>
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/curriculum.png" class="completo">
+	<a  href="protected\proyectos/<?php echo $model->espos_curriculum; ?>">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/curriculum.png" class="completo">
+	</a>
 <?php 
 }
 else{
@@ -175,7 +188,9 @@ else{
 <?php 
 if($model->espos_informeFinal!=null){
 	?>
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/informeFinal.png" class="completo">
+	<a  href="protected\proyectos/<?php echo $model->espos_informeFinal; ?>">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/estado/informeFinal.png" class="completo">
+	</a>
 <?php 
 }
 else{
