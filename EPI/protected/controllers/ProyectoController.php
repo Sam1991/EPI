@@ -32,7 +32,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin'),
+				'actions'=>array('create','update','admin','pdf'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -201,4 +201,315 @@ class ProyectoController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function actionPdf()
+	 {
+	 	ob_clean();
+ 		$html2pdfPath = Yii::getPathOfAlias('application.extensions.tcpdf');
+  		require_once($html2pdfPath.'/tcpdf/tcpdf.php');
+
+  		$fecha = date("d-m-Y");
+
+        $pdf = new TCPDF();
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('EPI');
+        $pdf->SetTitle('Postulación proyecto');
+        $id=$_GET['id'];
+
+        $PDF_HEADER_LOGO = 'logo.jpg';
+        $PDF_HEADER_LOGO_HIGH = "180";
+       // $PDF_HEADER_LOGO_WIDTH = "130";
+
+
+        $pdf->SetHeaderData($PDF_HEADER_LOGO,$PDF_HEADER_LOGO_HIGH);
+        $pdf->setHeaderFont(Array('helvetica', '', 10));
+        $pdf->setFooterFont(Array('helvetica', '', 8));
+        $pdf->SetMargins(15, 18, 15);
+        $pdf->SetHeaderMargin(5);
+        $pdf->SetFooterMargin(10);
+        $pdf->SetAutoPageBreak(TRUE, 0);
+        $pdf->SetFont('dejavusans', '', 7);
+        $pdf->AddPage();
+        $pdf->SetFillColor(205, 205, 205);
+        $pdf->SetTextColor(0);
+        $pdf->SetDrawColor(10,63,122);
+        $pdf->SetLineWidth(0);
+        $pdf->SetFont('','',8);
+        $pdf->Text('142','25','Informe generado el '.$fecha);
+        $pdf->ln(5);
+
+		$pdf->SetFont('times', 'B', 12);
+		$pdf->Text('33','32','FORMULARIO CONVOCATORIA PARA ESTUDIANTES DE PREGRADO');
+		$pdf->Text('45','36','PARA EL DESARROLLO DE PROYECTOS DE INNOVACIÓN');
+		$pdf->ln(12);
+
+        // OBTENER DATOS ALUMNOPROYECTO       
+        $sql = "select al_rut from alumnoproyecto where '$id'=pro_idProyecto";
+        $data1 =  Yii::app()->db->createCommand($sql)->queryAll();
+        $rut = $data1[0]['al_rut'];
+
+        // OBTENER DATOS ALUMNO   
+        $sql2 = "select * from alumno where '$rut'=al_rut";
+        $data2 =  Yii::app()->db->createCommand($sql2)->queryAll();
+
+		// OBTENER DATOS PROYECTO    
+        $sql3 = "select * from proyecto where '$id'=pro_idProyecto";
+        $data3 =  Yii::app()->db->createCommand($sql3)->queryAll();
+       
+//INICIO RESUMEN ALUMNO
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('1. RESUMEN PROYECTO');
+        $pdf->writeHTML('1.1 ALUMNO(A)');
+
+		$pdf->Cell(0.1,5,'');		
+		$pdf->Cell(50,5,'NOMBRE ALUMNO(A):',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(130,5,$data2[0]['al_nombre'].' '.$data2[0]['al_paterno'].' '.$data2[0]['al_materno'],1,1,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(50,5,'TELÉFONO:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(50,5,$data2[0]['al_telefono'],1,0,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(40,5,'RUT:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(40,5,$data2[0]['al_rut'],1,1,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(50,5,'E-MAIL:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(130,5,$data2[0]['al_email'],1,1,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(50,5,'CARRERA:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(130,5,$data2[0]['al_carrera'],1,1,'C',true);
+		$pdf->ln(8);
+//FIN RESUMEN ALUMNO
+
+//INICIO RESUMEN PROYECTO
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('1.2 PROYECTO PROPUESTO');
+
+		$pdf->Cell(0.1,5,'');
+		$pdf->SetFillColor(205, 205, 205);		
+		$pdf->Cell(50,5,'TÍTULO PROYECTO:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(130,5,$data3[0]['pro_titulo'],1,1,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(50,5,'DURACIÓN PROYECTO:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(40,5,$data3[0]['pro_duracion'],1,0,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(40,5,'ÁMBITO:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(50,5,$data3[0]['pro_ambito'],1,1,'C',true);
+		$pdf->ln(8);
+//FIN RESUMEN PROYECTO
+
+//INICIO RESUMEN EMPRESA
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('1.3 EMPRESA O INSTITUCIÓN PATROCINANTE DEL PROYECTO');
+
+		$pdf->Cell(0.1,5,'');
+		$pdf->SetFillColor(205, 205, 205);		
+		$pdf->Cell(50,5,'NOMBRE EMPRESA:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(130,5,$data3[0]['pro_emNombre'],1,1,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(50,5,'NOMBRE CONTACTO:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(130,5,$data3[0]['pro_emContacto'],1,1,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(50,5,'TELÉFONO:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(30,5,$data3[0]['pro_emTelefono'],1,0,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(40,5,'E-MAIL:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(60,5,$data3[0]['emEmail'],1,1,'C',true);
+		$pdf->ln(8);
+//FIN RESUMEN EMPRESA
+
+//INICIO RESUMEN PROFESOR
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('1.4 PROFESOR GUÍA Y DIRECCIÓN DE ESCUELA');
+
+		$pdf->Cell(0.1,5,'');
+		$pdf->SetFillColor(205, 205, 205);		
+		$pdf->Cell(50,5,'NOMBRE PROFESOR GUÍA:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(130,5,$data3[0]['pro_profeNombre'],1,1,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(50,5,'E-MAIL:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(70,5,$data3[0]['pro_profeEmail'],1,0,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(30,5,'TELÉFONO:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(30,5,$data3[0]['pro_profeTelefono'],1,1,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(50,5,'DIRECCIÓN DE ESCUELA:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(80,5,$data3[0]['pro_dirEscuela'],1,0,'C',true);
+		$pdf->SetFillColor(205, 205, 205);
+		$pdf->SetFont('dejavusans','B',8);
+		$pdf->Cell(30,5,'V°B° ESCUELA:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(20,5,$data3[0]['pro_vBEscuela'],1,1,'C',true);
+		$pdf->ln(8);
+//FIN RESUMEN PROFESOR
+
+//INICIO RESUMEN APORTE
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('1.5 ESTRUCTURA DE COSTOS DEL PROYECTO');
+       
+		$pdf->Cell(0.1,5,'');
+		$pdf->SetFillColor(205, 205, 205);		
+		$pdf->Cell(50,5,'APORTES',1,0,'C',true);
+		$pdf->Cell(45,5,'APORTE ($) VALORADO:',1,0,'C',true);
+		$pdf->Cell(45,5,'APORTE ($) PECUNIARIO:',1,0,'C',true);
+		$pdf->Cell(40,5,'TOTAL ($):',1,1,'C',true);
+		$pdf->Cell(50,5,'EMPRESA PATROCINANTE:',1,0,'C',true);
+		$pdf->SetFillColor(255, 255, 255);
+		$pdf->SetFont('dejavusans','',8);
+		$pdf->Cell(45,5,$data3[0]['pro_aporteValorado'],1,0,'C',true);
+		$pdf->Cell(45,5,$data3[0]['pro_aportePecuniario'],1,0,'C',true);
+		$pdf->Cell(40,5,$data3[0]['pro_aporteValorado']+$data3[0]['pro_aportePecuniario'],1,1,'C',true);
+		$pdf->ln(8);
+//FIN RESUMEN APORTE
+
+//INICIO RESUMEN EJECUTIVO
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('1.6 RESUMEN EJECUTIVO DEL PROYECTO DE INNOVACIÓN');
+       
+		$pdf->Cell(0.1,5,'');
+		$pdf->Cell(180,50,$data3[0]['pro_resumenEjecutivo'],1,1,'',true);
+		$pdf->ln(8);
+// FIN RESUMEN EJECUTIVO
+
+		$pdf->AddPage();
+        $pdf->SetTextColor(0);
+        $pdf->SetDrawColor(10,63,122);
+        $pdf->SetLineWidth(0);
+        $pdf->ln(5);
+
+//INICIO RESUMEN EMPRESA PATROCINANTE
+        $pdf->ln(5);
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('2. EMPRESA PATROCINANTE');
+		$pdf->Cell(0.1,5,'');
+		$pdf->Cell(180,250,$data3[0]['pro_descripcionEmpresa'],1,1,'',true);
+		$pdf->ln(8);
+// FIN RESUMEN EMPRESA PATROCINANTE
+
+		$pdf->AddPage();
+        $pdf->SetTextColor(0);
+        $pdf->SetDrawColor(10,63,122);
+        $pdf->SetLineWidth(0);
+        $pdf->ln(5);
+	 
+//INICIO RESUMEN DEFINICIÓN DEL PROBLEMA
+        $pdf->ln(5);
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('3. DESCRIPCIÓN DEL ANTEPROYECTO');
+        $pdf->writeHTML('3.1 DEFINICIÓN DEL PROBLEMA U OPORTUNIDAD');
+       
+		$pdf->Cell(0.1,5,'');
+		$pdf->Cell(180,250,$data3[0]['pro_definicionProblema'],1,1,'',true);
+		$pdf->ln(8);
+// FIN RESUMEN DEFINICIÓN DEL PROBLEMA
+
+		$pdf->AddPage();
+        $pdf->SetTextColor(0);
+        $pdf->SetDrawColor(10,63,122);
+        $pdf->SetLineWidth(0);
+        $pdf->ln(5);
+
+//INICIO RESUMEN SOLUCIÓN PROPUESTA
+        $pdf->ln(5);
+		$pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('3.2 SOLUCIÓN INNOVADORA PROPUESTA');
+
+		$pdf->Cell(0.1,5,'');
+		$pdf->Cell(180,250,$data3[0]['pro_solucionPropuesta'],1,1,'',true);
+		$pdf->ln(8);
+// FIN RESUMEN SOLUCIÓN PROPUESTA
+
+		$pdf->AddPage();
+        $pdf->SetTextColor(0);
+        $pdf->SetDrawColor(10,63,122);
+        $pdf->SetLineWidth(0);
+        $pdf->ln(5);
+
+//INICIO RESUMEN ESTADO DEL ARTE
+        $pdf->ln(5);
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('3.3 ANÁLISIS DEL ESTADO DEL ARTE');
+       
+		$pdf->Cell(0.1,5,'');
+		$pdf->Cell(180,250,$data3[0]['pro_estadoArte'],1,1,'',true);
+		$pdf->ln(8);
+// FIN RESUMEN ESTADO DEL ARTE
+
+		$pdf->AddPage();
+        $pdf->SetTextColor(0);
+        $pdf->SetDrawColor(10,63,122);
+        $pdf->SetLineWidth(0);
+        $pdf->ln(5);
+
+//INICIO RESUMEN OBJETIVO GENERAL
+        $pdf->ln(5);
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('3.4 OBJETIVOS DEL PROYECTO');
+        $pdf->writeHTML('3.4.1 OBJETIVO GENERAL');
+
+		$pdf->Cell(0.1,5,'');
+		$pdf->Cell(180,30,$data3[0]['pro_objetivoGeneral'],1,1,'',true);
+		$pdf->ln(8);
+// FIN RESUMEN OBJETIVO GENERAL
+
+//INICIO RESUMEN METODOLOGIA
+		$pdf->ln(5);
+        $pdf->SetFont('dejavusans','B',8);
+        $pdf->writeHTML('3.6 METODOLOGÍA');
+
+		$pdf->Cell(0.1,5,'');
+		$pdf->Cell(180,205,$data3[0]['pro_metodologia'],1,1,'',true);
+		$pdf->ln(8);
+// FIN RESUMEN METODOLOGIA
+
+
+
+        $pdf->Output("Postulacion'$fecha'.pdf", "I");
+        Yii::app()->end();
+    		
+    	}
+
 }

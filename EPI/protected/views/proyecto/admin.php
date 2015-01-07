@@ -56,7 +56,14 @@ $('.search-form form').submit(function(){
 		*/
 		array(
 			'class'=>'CButtonColumn',
-			'template' => '{view}',
+			'template' => '{view} {pdf}',
+			'buttons'=>array(
+			 	'pdf' => array(
+			 		'label'=>'Generar PDF', 
+			 		'url'=>"CHtml::normalizeUrl(array('pdf','id'=>\$data->pro_idProyecto))",
+			 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/pdf_icon.gif', 
+			 		'options' => array('class'=>'pdf'),
+   					),
 		),
 	),
-)); ?>
+))); ?>
