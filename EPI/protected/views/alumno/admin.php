@@ -2,7 +2,9 @@
 /* @var $this AlumnoController */
 /* @var $model Alumno */
 
-
+$this->menu=array(
+	array('label'=>'Pasar a Excel', 'url'=>array('admin','excel'=>1)),
+);
 
 
 Yii::app()->clientScript->registerScript('search', "
@@ -45,3 +47,4 @@ $('.search-form form').submit(function(){
 		),
 	),
 )); ?>
+

@@ -182,6 +182,15 @@ class AlumnoController extends Controller
 	public function actionAdmin()
 	{
 		$this->layout = '//layouts/columnAdmin';
+
+		//para generar las encuestas
+		if(isset($_GET["excel"])){
+			$paises=alumno::model()->findAll();
+			$content=$this->renderPartial("excel",array("model"=>$paises),true);
+			Yii::app()->request->sendFile("EPI_Inscritos.xls",$content);
+
+		}
+
 		$model=new Alumno('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Alumno']))

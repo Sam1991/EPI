@@ -182,6 +182,15 @@ class EncuestaactividadController extends Controller
 	 */
 	public function actionAdmin()
 	{
+
+		//para generar las encuestas
+		if(isset($_GET["excel"])){
+			$encuestas=encuestaactividad::model()->findAll();
+			$content=$this->renderPartial("excel",array("model"=>$encuestas),true);
+			Yii::app()->request->sendFile("EPI_ResultadoEncuestas.xls",$content);
+
+		}
+
 		$model=new Encuestaactividad('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Encuestaactividad']))
