@@ -90,6 +90,8 @@ class Proyecto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'pro_ev' => array(self::BELONGS_TO, 'Proyectoevaluador', 'pro_idProyecto'),
+			'pro_al' => array(self::BELONGS_TO, 'Alumnoproyecto', 'pro_idProyecto'),
 		);
 	}
 
@@ -99,7 +101,7 @@ class Proyecto extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'pro_idProyecto' => 'Pro Id Proyecto',
+			'pro_idProyecto' => 'ID PROYECTO',
 			'pro_titulo' => 'TÍTULO PROYECTO',
 			'pro_duracion' => 'DURACIÓN PROYECTO',
 			'pro_ambito' => 'ÁMBITO',
@@ -225,11 +227,43 @@ class Proyecto extends CActiveRecord
 		$criteria->compare('pro_objetivoGeneral',$this->pro_objetivoGeneral,true);
 		$criteria->compare('pro_metodologia',$this->pro_metodologia,true);
 		$criteria->compare('pro_cartaGantt',$this->pro_cartaGantt,true);
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function searchEvaluador()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$proyectos = proyectoevaluador::model()->findAll();
+
+		$condicion='';
+		for ($i=0; $i <count($proyectos) ; $i++) { 
+			if($i>0){
+				$condicion=$condicion.' and ';		
+			}
+			$condicion=$condicion."pro_idProyecto!=".$proyectos[$i]->pro_idProyecto;
+			}
+		if(count($proyectos)==0){
+			$condicion='';
+		}
+
+		$criteria->addCondition($condicion);
+		$criteria->compare('pro_idProyecto',$this->pro_idProyecto,true);
+		$criteria->compare('pro_titulo',$this->pro_titulo,true);
+		$criteria->compare('pro_ambito',$this->pro_ambito,true);
+		$criteria->compare('pro_emNombre',$this->pro_emNombre,true);
+		$criteria->compare('pro_profeNombre',$this->pro_profeNombre,true);
+		$criteria->compare('pro_objetivoGeneral',$this->pro_objetivoGeneral,true);
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
@@ -239,5 +273,14 @@ class Proyecto extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+		public function getDatos ($pro_idProyecto, $dato){
+		$alumnoproyecto = Alumnoproyecto::model()->findByPk($pro_idProyecto);
+		if($alumnoproyecto===null)
+			throw new CHttpException(404,'La página solicitada No existe.');	
+		else if ($alumnoproyecto->$dato===null)
+			return '';
+		return $alumnoproyecto->$dato;
 	}
 }

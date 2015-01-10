@@ -32,7 +32,7 @@ class ProyectoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','pdf'),
+				'actions'=>array('create','update','admin','pdf','adminProyectos'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -172,6 +172,18 @@ class ProyectoController extends Controller
 					'model'=>$model,
 				));		
 		}
+	}
+
+		public function actionAdminProyectos()
+	{
+		$model=new Proyecto('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Proyecto']))
+			$model->attributes=$_GET['Proyecto'];
+
+			$this->render('adminProyectos',array(
+				'model'=>$model,
+			));	
 	}
 
 	/**

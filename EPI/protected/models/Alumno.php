@@ -37,7 +37,7 @@ class Alumno extends CActiveRecord
 			array('al_rut, al_nombre, al_carrera, al_email, al_telefono, al_comentario, al_clave, al_paterno, al_materno, al_campus', 'required'),
 			array('al_rut', 'length', 'max'=>15),
 			array('al_nombre, al_carrera, al_comentario, al_clave, al_paterno, al_materno, al_campus', 'length', 'max'=>100),
-			array('al_clave', 'length', 'max'=>10, 'min'=>20),
+			array('al_clave', 'length', 'max'=>20, 'min'=>6),
 			array('al_rut','validateRut'), 
 			array('al_carrera','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La CARRERA no es válida")),
 			array('al_nombre','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El NOMBRE no es válido")),

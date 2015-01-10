@@ -5,6 +5,7 @@
 
 $this->menu=array(
 	array('label'=>'Crear proyecto', 'url'=>array('create')),
+	array('label'=>'Evaluación Proyecto', 'url'=>array('proyectoevaluador/adminAlumno')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
