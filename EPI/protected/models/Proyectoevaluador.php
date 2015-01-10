@@ -186,11 +186,12 @@ class Proyectoevaluador extends CActiveRecord
 		return parent::model($className);
 	}
 
-	public function getRut ($pro_idProyecto){
-		$model = alumnoproyecto::model()->findAll($pro_idProyecto);
-			return $model;
-		}
-		
-	
-
+	public function getDatos ($pro_idProyecto, $dato){
+		$proyectos = Proyecto::model()->findByPk($pro_idProyecto);
+		if($proyectos===null)
+			throw new CHttpException(404,'La página solicitada No existe.');	
+		else if ($proyectos->$dato===null)
+			return '';
+		return $proyectos->$dato;
+	}	
 }

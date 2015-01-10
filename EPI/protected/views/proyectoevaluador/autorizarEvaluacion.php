@@ -13,7 +13,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Ver Evaluaciones Asignadas', 'url'=>array('adminEvaluador')),
+	//array('label'=>'Ver Evaluaciones Asignadas', 'url'=>array('adminEvaluador')),
 );
 ?>
 

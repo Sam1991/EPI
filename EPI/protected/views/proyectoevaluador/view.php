@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Modificar Evaluación', 'url'=>array('autorizarEvaluacion', 'id'=>$model->pre_id)),
+	array('label'=>'Autorizar/Modificar Evaluación', 'url'=>array('autorizarEvaluacion', 'id'=>$model->pre_id)),
 	array('label'=>'Administrar Evaluaciones', 'url'=>array('admin')),
 );
 ?>
@@ -18,8 +18,11 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'pre_id',
-		'pro_idProyecto',
+		//'pre_id',
+		//'pro_idProyecto',
+		array('label'=>'TÍTULO PROYECTO',
+			'type'=>'text',
+			'value'=>$model->getDatos($model->pro_idProyecto, 'pro_titulo')),
 		'ev_rut',
 		'pre_nota',
 		'pre_comentario',

@@ -3,7 +3,7 @@
 /* @var $model Proyecto */
 
 $this->menu=array(
-	array('label'=>'Estado Postulaciones', 'url'=>array('estadopostulacion/admin')),
+	//array('label'=>'Estado Postulaciones', 'url'=>array('estadopostulacion/admin')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -40,7 +40,7 @@ $('.search-form form').submit(function(){
 			'template' => '{asignar}',
 			'buttons'=>array(
 			 	'asignar' => array(
-			 		'label'=>'Asignar Proyectos', 
+			 		'label'=>'Asignar Evaluador', 
 			 		'url'=>"CHtml::normalizeUrl(array('proyectoevaluador/create','id'=>\$data->pro_idProyecto))",
 			 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/tick.gif', 
 			 		'options' => array('class'=>'asignar'),
