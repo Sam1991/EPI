@@ -1,5 +1,6 @@
 <h3>Alumnos Inscritos</h3>
 
+<?php foreach ($model as $data):?>	
 <table>
 	<tr>
 		<th style="border: solid rgb(188, 188, 188) 2px;">RUT</th>
@@ -13,7 +14,6 @@
 		<th style="border: solid rgb(188, 188, 188) 2px;">E-MAIL 2</th>
 		<th style="border: solid rgb(188, 188, 188) 2px;">COMENTARIO</th>
 	</tr>
-<?php foreach ($model as $data):?>	
 	<tr>
 		<td style="text-align: left;border: solid;"> <?php echo $data->al_rut ?></td>
 		<td style="text-align: left;border: solid;"> <?php echo $data->al_nombre ?></td>
@@ -26,6 +26,6 @@
 		<td style="text-align: left;border: solid;"> <?php echo $data->al_email2 ?></td>
 		<td style="text-align: left;border: solid;"> <?php echo $data->al_comentario ?></td>
 	</tr>
-<?php  endforeach;?>
 	
 </table>
+<?php  endforeach;?>

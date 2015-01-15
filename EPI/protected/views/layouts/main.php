@@ -136,7 +136,7 @@
 									array('label'=>'Actividades', 'url'=>array('/actividades/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Postulaciones', 'url'=>array('proyecto/admin/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Evaluaciones', 'url'=>array('/proyectoevaluador/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Encuestas', 'url'=>array('actividades/adminEncuestas'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Subir Archivo', 'url'=>array('subirarchivos/index'),'visible'=>(Yii::app()->user->isSuperAdmin)),
 										
 

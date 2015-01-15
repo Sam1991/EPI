@@ -40,7 +40,7 @@ class Actividades extends CActiveRecord
 			array('act_descripcion', 'safe'),
 			array('act_lugar', 'length','min'=>3),
 			array('act_fecha','compare','compareValue'=>date('Y-m-d'),'operator'=>'>='),
-			array('act_horaInicio', 'compare', 'compareValue'=>'act_horaFin','operator'=>'>','message'=>CrugeTranslator::t("El FIN debe ser mayor al INICIO")),
+			array('act_horaInicio', 'compare', 'compareValue'=>'act_horaFin','operator'=>'<','message'=>CrugeTranslator::t("El FIN debe ser mayor al INICIO")),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('act_id, act_convocatoria, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin, act_lugar, act_descripcion', 'safe', 'on'=>'search'),

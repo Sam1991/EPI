@@ -36,7 +36,7 @@ class ActividadesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','create'),
+				'actions'=>array('admin','delete','create','adminEncuestas','viewEncuestas'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -52,6 +52,20 @@ class ActividadesController extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	public function actionViewEncuestas($id)
+	{
+
+		//para generar las encuestas
+		if(isset($_GET["excel"])){
+			 $content=$this->renderPartial("excel",array("model"=>$this->loadModel($id),true));
+			 Yii::app()->request->sendFile("EPI_ResultadoEncuesta.xls",$content);
+		}
+
+		$this->render('viewEncuestas',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -140,6 +154,28 @@ class ActividadesController extends Controller
 			$model->attributes=$_GET['Actividades'];
 
 		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+
+
+	public function actionAdminEncuestas()
+	{
+		
+		//para generar las encuestas
+		if(isset($_GET["excel"])){
+			$Actividades=Actividades::model()->findAll();
+			$content=$this->renderPartial("excelEncuestas",array("model"=>$Actividades),true);
+			Yii::app()->request->sendFile("excelEncuestas.xls",$content);
+
+		}
+
+		$model=new Actividades('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Actividades']))
+			$model->attributes=$_GET['Actividades'];
+
+		$this->render('adminEncuestas',array(
 			'model'=>$model,
 		));
 	}
