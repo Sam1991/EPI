@@ -17,17 +17,12 @@
 )); ?>
 
 	<div class="row">
-		<?php //echo $form->labelEx($model,'al_rut'); ?>
-		<?php echo $form->textField($model,'al_rut',array('size'=>15,'maxlength'=>15,'readonly'=>'false')); ?>
-		<?php echo $form->error($model,'al_rut'); ?>
+		<?php //echo $form->labelEx($model,'pro_idProyecto'); ?>
+		<?php echo $form->hiddenField($model,'pro_idProyecto',array('size'=>15,'maxlength'=>15,'readonly'=>'false')); ?>
+		<?php echo $form->error($model,'pro_idProyecto'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'espos_anexo2'); ?>
-		<?php echo $form->textField($model,'espos_anexo2',array('readonly'=>'false')); ?>
-		<?php echo $form->error($model,'espos_anexo2'); ?>
-	</div>
-
+	
 	<div class="row">
 		<?php //echo $form->labelEx($model,'espos_inscripcion'); ?>
 		<?php echo $form->hiddenField($model,'espos_inscripcion',array('readonly'=>'false')); ?>

@@ -3,7 +3,6 @@
 /* @var $model Proyecto */
 $idp = $model->pro_idProyecto;
 $model2 = proyectoevaluador::model()->find('pro_idProyecto='.$idp.'');
-$id = $model2->pre_id;
 
 if(Yii::app()->user->isSuperAdmin){
 $this->menu=array(
@@ -22,6 +21,7 @@ $this->menu=array(
 }
 
 else if(Yii::app()->user->checkAccess('evaluador')){
+$id = $model2->pre_id;
 $this->menu=array(
 	array('label'=>'Evaluar Proyecto (Modificar Evaluación)', 'url'=>array('proyectoevaluador/update','id'=>$id)),
 );

@@ -9,6 +9,9 @@ Pueden inscribirse alumnos de cualquier carrera de la Universidad del Bío-Bío,
 Esta inscripción habilita para ingresar a la primera etapa: Etapa de Formación. Esta etapa consiste en un entrenamiento intensivo en conceptualización y modelos de innovación, además de recibir un entrenamiento en metodologías para generar la innovación. Esta capacitación se puede convalidar con una asignatura de formación integral (oferta institucional).
 <br>
 <br>
+El curso tiene cupos limitados, se enviará un correo para confirmar que ha sido aceptada o rechazada la inscripción y puede participar del programa, en el mismo correo se entregarán las instrucciones para ingresar a la plataforma del curso.
+<br>
+<br>
 Puedes revisar las bases de la convocatoria para ver las fechas y horarios de realización de las clases y talleres. Accede en este link.
 <br>
 <br>

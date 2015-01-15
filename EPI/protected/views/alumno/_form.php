@@ -87,7 +87,7 @@
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'al_comentario'); ?>
-		<?php echo $form->textArea($model,'al_comentario',array('size'=>60,'maxlength'=>100,'placeholder'=>'Motivación para ingresar al programa EPI (deseable incluir posible tema del proyecto de titulo y nombre de empresa o institución asociada al tema)')); ?>
+		<?php echo $form->textArea($model,'al_comentario',array('size'=>60,'maxlength'=>100,'placeholder'=>'Motivación para ingresar al programa EPI (incluir tema del proyecto de titulo y nombre de empresa o institución asociada al tema)')); ?>
 		<?php echo $form->error($model,'al_comentario'); ?>
 	</div>
 

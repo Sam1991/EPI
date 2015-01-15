@@ -9,8 +9,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Ver proyecto', 'url'=>array('view', 'id'=>$model->pro_idProyecto)),
-	array('label'=>'Proyecto', 'url'=>array('admin')),
+	array('label'=>'Actualizar Objetivos', 'url'=>array('objetivos/update', 'id'=>$model->pro_idProyecto)),
+	array('label'=>'Actualizar Carta Gantt', 'url'=>array('cartagantt/update', 'id'=>$model->pro_idProyecto)),
+	array('label'=>'Proyectos', 'url'=>array('admin')),
 );
 ?>
 

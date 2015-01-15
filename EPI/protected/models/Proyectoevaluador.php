@@ -37,7 +37,7 @@ class Proyectoevaluador extends CActiveRecord
 			array('pre_nota','nota'),
 			array('pre_comentario','comentario'),
 			array('pre_estadoPostulacion','estadopostulacion'),
-			array('pre_nota', 'numerical', 'integerOnly'=>true,'min'=>10, 'max'=>70),
+			array('pre_nota', 'numerical', 'integerOnly'=>true,'min'=>1, 'max'=>5),
 			array('ev_rut', 'length', 'max'=>15),
 			array('pre_estadoPostulacion', 'length', 'min'=>8, 'max'=>50),
 			array('pre_comentario,pre_nota', 'safe'),

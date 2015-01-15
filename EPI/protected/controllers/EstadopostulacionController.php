@@ -175,7 +175,7 @@ class EstadopostulacionController extends Controller
 				}
 				//fin_copiar la imagen en el directorio
 				
-					$this->redirect(array('view','id'=>$model->al_rut));
+					$this->redirect(array('view','id'=>$model->pro_idProyecto));
 			}
 		}
 

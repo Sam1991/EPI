@@ -91,7 +91,17 @@ class ProyectoController extends Controller
 				$alumnoProyecto->save();
 				//fin_poner el creador como participante
 
-				
+				//crear la tabla objetivos para el proyecto
+				$objetivosProyecto=new Objetivos;
+				$objetivosProyecto->pro_idProyecto=$model->pro_idProyecto;
+				$objetivosProyecto->save();
+				//fin_crear la tabla objetivos para el proyecto
+
+				//crear la tabla cartagantt para el proyecto
+				 $cartaganttProyecto=new Cartagantt;
+				 $cartaganttProyecto->pro_idProyecto=$model->pro_idProyecto;
+				 $cartaganttProyecto->save();
+				//fin_crear la tabla cartagantt para el proyecto				
 
 			$this->redirect(array('view','id'=>$model->pro_idProyecto));
 			}
@@ -117,8 +127,10 @@ class ProyectoController extends Controller
 		if(isset($_POST['Proyecto']))
 		{
 			$model->attributes=$_POST['Proyecto'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->pro_idProyecto));
+			if($model->save()){
+				
+				// $this->redirect(array('view','id'=>$model->pro_idProyecto));
+			}
 		}
 
 		$this->render('update',array(

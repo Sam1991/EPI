@@ -84,7 +84,27 @@
 					</div>
 			
 					<div class="collapse navbar-collapse navbar-ex-collapse">
-						<?php $this->widget('zii.widgets.CMenu',array(
+						<?php  
+							if(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin){
+							$this->widget('zii.widgets.CMenu',array(
+							'items'=>array(
+								//link para alumnos
+									array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Postulación', 'url'=>array('estadopostulacion/view&id='.Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'")->pro_idProyecto),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
+									),
+								'activeCssClass' => 'active',
+								'htmlOptions' => array('class'=>'nav navbar-nav',),
+													
+							)); 
+							}
+
+							else{
+
+
+						$this->widget('zii.widgets.CMenu',array(
 							'items'=>array(
 								// array('label'=>'Home', 'url'=>array('/site/index')),
 								// array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
@@ -104,11 +124,6 @@
 									array('label'=>'Ingresar', 'url'=>Yii::app()->user->ui->loginUrl, 'visible'=>Yii::app()->user->isGuest,'itemOptions'=>array('style'=>'background-color: #bebebe;')),
 
 									
-								//link para alumnos
-									array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Postulación', 'url'=>array('estadopostulacion/view&id='.Yii::app()->user->name),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 
 								//link para evaluadores
 									array('label'=>'Evaluaciones', 'url'=>array('/proyectoevaluador/adminEvaluador'),'visible'=>(Yii::app()->user->checkAccess('evaluador')&&!Yii::app()->user->isSuperAdmin)),
@@ -130,7 +145,11 @@
 								'activeCssClass' => 'active',
 								'htmlOptions' => array('class'=>'nav navbar-nav',),
 								
-							)); ?>
+							)); 
+
+							}
+							?>
+
 					</div>
 				</nav>
 				<div id="redesSociales" >

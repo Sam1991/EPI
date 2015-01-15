@@ -11,7 +11,7 @@ else if(Yii::app()->user->checkAccess('alumno')){
 
 $this->menu=array(
 	array('label'=>'Proyecto', 'url'=>array('proyecto/admin')),
-	array('label'=>'Subir Archivos', 'url'=>array('estadopostulacion/update', 'id'=>Yii::app()->user->name)),
+	array('label'=>'Subir Archivos', 'url'=>array('estadopostulacion/update', 'id'=>$model->pro_idProyecto)),
 	
 );
 }
@@ -19,7 +19,10 @@ $this->menu=array(
 
 ?>
 
-<h1><?php echo $model->al_rut; ?></h1>
+<?php  
+$nombreProyecto=Proyecto::model()->find("pro_idProyecto=".$model->pro_idProyecto)->pro_titulo;
+?>
+<h1><?php echo $nombreProyecto; ?></h1>
 
 
 <div class="estado">
