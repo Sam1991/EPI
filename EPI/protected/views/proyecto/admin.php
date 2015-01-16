@@ -52,7 +52,6 @@ $('.search-form form').submit(function(){
 		'pro_solucionPropuesta',
 		'pro_estadoArte',
 		'pro_metodologia',
-		'pro_cartaGantt',
 		*/
 		array(
 			'class'=>'CButtonColumn',

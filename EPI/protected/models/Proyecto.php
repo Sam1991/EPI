@@ -26,8 +26,7 @@
  * @property string $pro_estadoArte
  * @property string $pro_objetivoGeneral
  * @property string $pro_metodologia
- * @property string $pro_cartaGantt
- */
+  */
 class Proyecto extends CActiveRecord
 {
 	/**
@@ -46,12 +45,10 @@ class Proyecto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela, pro_aporteValorado, pro_aportePecuniario, pro_resumenEjecutivo, pro_descripcionEmpresa, pro_definicionProblema, pro_solucionPropuesta, pro_estadoArte, pro_objetivoGeneral, pro_metodologia, pro_cartaGantt', 'required'),
+			array('pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela, pro_aporteValorado, pro_aportePecuniario, pro_resumenEjecutivo, pro_descripcionEmpresa, pro_definicionProblema, pro_solucionPropuesta, pro_estadoArte, pro_objetivoGeneral, pro_metodologia', 'required'),
 
 			array('pro_aporteValorado, pro_aportePecuniario', 'numerical', 'integerOnly'=>true,'min'=>0, 'max'=>99999999),
-			
-			array('pro_cartaGantt', 'file','types'=>'jpg, gif, png,txt,pdf'),
-			
+							
 			array('pro_titulo','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El TÍTULO no es válido")),
 			
 			array('pro_ambito','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("El TÍTULO no es válido")),
@@ -78,7 +75,7 @@ class Proyecto extends CActiveRecord
 			array('pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('pro_idProyecto, pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela, pro_aporteValorado, pro_aportePecuniario, pro_resumenEjecutivo, pro_descripcionEmpresa, pro_definicionProblema, pro_solucionPropuesta, pro_estadoArte, pro_objetivoGeneral, pro_metodologia, pro_cartaGantt', 'safe', 'on'=>'search'),
+			array('pro_idProyecto, pro_titulo, pro_duracion, pro_ambito, pro_emNombre, pro_emContacto, pro_emTelefono, emEmail, pro_profeNombre, pro_profeEmail, pro_profeTelefono, pro_dirEscuela, pro_vBEscuela, pro_aporteValorado, pro_aportePecuniario, pro_resumenEjecutivo, pro_descripcionEmpresa, pro_definicionProblema, pro_solucionPropuesta, pro_estadoArte, pro_objetivoGeneral, pro_metodologia', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -123,7 +120,7 @@ class Proyecto extends CActiveRecord
 			'pro_estadoArte' => 'ESTADO ARTE',
 			'pro_objetivoGeneral' => 'OBJETIVO GENERAL',
 			'pro_metodologia' => 'METODOLOGÍA',
-			'pro_cartaGantt' => 'CARTA GANTT',
+			
 		);
 	}
 
@@ -167,7 +164,7 @@ class Proyecto extends CActiveRecord
 		$criteria->compare('pro_estadoArte',$this->pro_estadoArte,true);
 		$criteria->compare('pro_objetivoGeneral',$this->pro_objetivoGeneral,true);
 		$criteria->compare('pro_metodologia',$this->pro_metodologia,true);
-		$criteria->compare('pro_cartaGantt',$this->pro_cartaGantt,true);
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -226,7 +223,7 @@ class Proyecto extends CActiveRecord
 		$criteria->compare('pro_estadoArte',$this->pro_estadoArte,true);
 		$criteria->compare('pro_objetivoGeneral',$this->pro_objetivoGeneral,true);
 		$criteria->compare('pro_metodologia',$this->pro_metodologia,true);
-		$criteria->compare('pro_cartaGantt',$this->pro_cartaGantt,true);
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

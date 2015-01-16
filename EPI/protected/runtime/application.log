@@ -2545,3 +2545,102 @@ REQUEST_URI=/EPI/EPI/index.php?r=actividades/adminEncuestas&excel=2
 in C:\wamp\www\EPI\EPI\protected\views\actividades\excelEncuestas.php (60)
 in C:\wamp\www\EPI\EPI\protected\controllers\ActividadesController.php (168)
 in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/16 03:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in C:\wamp\www\EPI\framework\gii\CCodeGenerator.php:90
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionCode()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('code')
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/code')
+#6 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=gii/crud/code&id=1
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=gii/crud/index
+---
+2015/01/16 03:21:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in C:\wamp\www\EPI\framework\gii\CCodeGenerator.php:119
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionDiff()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('diff')
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/diff')
+#6 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=gii/crud/diff&id=0
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=gii/crud/index
+---
+2015/01/16 03:22:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in C:\wamp\www\EPI\framework\gii\CCodeGenerator.php:119
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionDiff()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('diff')
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/diff')
+#6 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=gii/crud/diff&id=1
+---
+2015/01/16 03:22:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in C:\wamp\www\EPI\framework\gii\CCodeGenerator.php:119
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionDiff()
+#1 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\wamp\www\EPI\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('diff')
+#5 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/diff')
+#6 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=gii/crud/diff&id=0
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=gii/crud/index
+---
+2015/01/16 03:25:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\EPI\EPI\protected\controllers\CartaganttController.php:158
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\controllers\CartaganttController.php(89): CartaganttController->loadModel('8')
+#1 [internal function]: CartaganttController->actionUpdate('8')
+#2 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CartaganttController), Array)
+#3 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CartaganttController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cartagantt/upda...')
+#14 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cartagantt/update&id=8
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=proyecto/update&id=8
+---
+2015/01/16 03:25:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\EPI\EPI\protected\controllers\CartaganttController.php:158
+Stack trace:
+#0 C:\wamp\www\EPI\EPI\protected\controllers\CartaganttController.php(89): CartaganttController->loadModel('8')
+#1 [internal function]: CartaganttController->actionUpdate('8')
+#2 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CartaganttController), Array)
+#3 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CartaganttController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cartagantt/upda...')
+#14 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cartagantt/update&id=8
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=proyecto/update&id=8
+---

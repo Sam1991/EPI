@@ -285,12 +285,6 @@ $this->menu=array(
 	</div>
 
 		<br><br>
-	<h7>3.8 CARTA GANTT </h7>
-	<br>
-		<b><?php echo CHtml::encode($data->getAttributeLabel('pro_cartaGantt')); ?>:</b>
-	<a  href="protected\proyectos/<?php echo $model->pro_cartaGantt; ?>"> Ver </a>
-		<br> <br>
-	<br><br>
 </div>
 
 

@@ -16,7 +16,6 @@
 		'htmlOptions' => array('enctype' => 'multipart/form-data'),//FORMULARIO IMAGEN
 )); ?>
 
-	
 <h7 >1.2 PROYECTO PROPUESTO</h7>
 	
 
@@ -198,14 +197,6 @@ Señale el método de trabajo que utilizará para alcanzar los objetivos especí
 		<?php echo $form->error($model,'pro_metodologia'); ?>
 	</div>
 	<br><br>
-<h7>3.8 CARTA GANTT </h7>
-	<div class="row">
-		<?php echo $form->fileField($model,'pro_cartaGantt'); ?>
-		<?php echo $form->error($model,'pro_cartaGantt'); ?>
-	</div>
-
-<br><br>
-
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Guardar'); ?>

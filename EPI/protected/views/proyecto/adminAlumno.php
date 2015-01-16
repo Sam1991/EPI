@@ -50,7 +50,6 @@ $('.search-form form').submit(function(){
 		'pro_estadoArte',
 		'pro_objetivoGeneral',
 		'pro_metodologia',
-		'pro_cartaGantt',
 		*/
 		array(
 			'class'=>'CButtonColumn',

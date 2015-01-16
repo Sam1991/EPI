@@ -71,18 +71,9 @@ class ProyectoController extends Controller
 		{
 			$model->attributes=$_POST['Proyecto'];
 
-			echo $model->pro_cartaGantt;
 
-			// para la subida de archivos
-			$model->pro_cartaGantt=CUploadedFile::getInstance($model,'pro_cartaGantt');
-			// Fin_para la subida de archivos
 			
 			if($model->save()){
-				//copiar la imagen en el directorio
-                $estructura =Yii::app()->basePath.'\proyectos';
-                $path="$estructura/$model->pro_cartaGantt";
-	          	$model->pro_cartaGantt->saveAs($path);
-				//fin_copiar la imagen en el directorio
 
 				//poner el creador como participante
 				$alumnoProyecto=new Alumnoproyecto;

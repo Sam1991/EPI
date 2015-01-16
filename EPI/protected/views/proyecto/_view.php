@@ -94,9 +94,6 @@
 	<?php echo CHtml::encode($data->pro_metodologia); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('pro_cartaGantt')); ?>:</b>
-	<?php echo CHtml::encode($data->pro_cartaGantt); ?>
-	<br />
 
 	*/ ?>
 

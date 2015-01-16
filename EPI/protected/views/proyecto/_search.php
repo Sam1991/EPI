@@ -121,11 +121,6 @@
 		<?php echo $form->textArea($model,'pro_metodologia',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'pro_cartaGantt'); ?>
-		<?php echo $form->textField($model,'pro_cartaGantt',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>
