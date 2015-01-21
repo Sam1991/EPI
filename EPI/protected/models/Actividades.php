@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'actividades':
  * @property integer $act_id
- * @property string $act_convocatoria
+ * @property string $con_semestre
  * @property string $act_campus
  * @property string $act_nombre
  * @property string $act_fecha
@@ -32,8 +32,8 @@ class Actividades extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('act_convocatoria, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin,act_lugar', 'required'),
-			array('act_convocatoria', 'length', 'max'=>10, 'min'=>6),
+			array('con_semestre, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin,act_lugar', 'required'),
+			array('con_semestre', 'length', 'max'=>10, 'min'=>6),
 			array('act_nombre', 'length', 'min'=>3),
 			array('act_campus, act_horaInicio, act_horaFin', 'length', 'max'=>20),
 			array('act_nombre, act_fecha, act_lugar', 'length', 'max'=>255),
@@ -43,7 +43,7 @@ class Actividades extends CActiveRecord
 			array('act_horaInicio', 'compare', 'compareValue'=>'act_horaFin','operator'=>'<','message'=>CrugeTranslator::t("El FIN debe ser mayor al INICIO")),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('act_id, act_convocatoria, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin, act_lugar, act_descripcion', 'safe', 'on'=>'search'),
+			array('act_id, con_semestre, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin, act_lugar, act_descripcion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,7 +65,7 @@ class Actividades extends CActiveRecord
 	{
 		return array(
 			'act_id' => 'Act',
-			'act_convocatoria' => 'CONVOCATORIA',
+			'con_semestre' => 'CONVOCATORIA',
 			'act_campus' => 'CAMPUS',
 			'act_nombre' => 'NOMBRE',
 			'act_fecha' => 'FECHA',
@@ -95,7 +95,7 @@ class Actividades extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('act_id',$this->act_id);
-		$criteria->compare('act_convocatoria',$this->act_convocatoria,true);
+		$criteria->compare('con_semestre',$this->con_semestre,true);
 		$criteria->compare('act_campus',$this->act_campus,true);
 		$criteria->compare('act_nombre',$this->act_nombre,true);
 		$criteria->compare('act_fecha',$this->act_fecha,true);
