@@ -4,7 +4,14 @@
 			<h1 class="titulo">Convocatorias</h1>
 			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/convocatorias_principal.png" style="margin-bottom: 35px;">
 			<p>
-				Desde el <font style="color: #06cca5;"> 22 de diciembre de 2014 </font> y hasta el <font style="color: #06cca5;">15 de marzo del 2015</font> se encuentran abierta la inscripcion al Programa EPI, en campus Concepción.
+				Desde el <font style="color: #06cca5; font-size: 14px; font-weight: bold;"> <?php setlocale(LC_TIME, "Spanish");
+				$inicio=Yii::app()->db->createCommand('select con_inicio from convocatoria where con_estado=1')->queryScalar();
+														echo strftime("%d de %B de %Y",strtotime($inicio));?>
+				</font> y hasta el <font style="color: #06cca5; font-size: 14px; font-weight: bold;"><?php $fin=Yii::app()->db->createCommand('select con_fin from convocatoria where con_estado=1')->queryScalar();
+														echo strftime("%d de %B de %Y",strtotime($fin));?>
+			</font> 
+
+				se encuentra abierta la inscripción al Programa EPI, en campus Concepción.
 
 				<h3>Requisitos</h3>
 				-Ser alumno regular.

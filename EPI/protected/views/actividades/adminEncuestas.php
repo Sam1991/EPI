@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Crear Encuesta', 'url'=>array('create')),
+	array('label'=>'Crear Encuesta', 'url'=>array('encuestaactividad/create')),
 	array('label'=>'Pasar a Excel', 'url'=>array('adminEncuestas','excel'=>2)),
 );
 
@@ -37,7 +37,7 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'act_convocatoria',
+		'con_semestre',
 		'act_campus',
 		'act_nombre',
 		'act_fecha',

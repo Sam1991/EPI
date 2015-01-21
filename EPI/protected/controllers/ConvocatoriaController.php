@@ -1,12 +1,12 @@
 <?php
 
-class AlumnoController extends Controller
+class ConvocatoriaController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2Iguales';
+	public $layout='//layouts/columnAdmin';
 
 	/**
 	 * @return array action filters
@@ -28,12 +28,12 @@ class AlumnoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update'),
-				'users'=>array('@'),
+				'actions'=>array('create','update'),
+				'users'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
@@ -51,18 +51,9 @@ class AlumnoController extends Controller
 	 */
 	public function actionView($id)
 	{
-
-		if(Yii::app()->user->isSuperAdmin){
-			$this->layout = '//layouts/columnAdmin';
-			$this->render('view',array(
+		$this->render('view',array(
 			'model'=>$this->loadModel($id),
-			));
-		}
-		else{
-			$this->render('exito',array(
-			'model'=>$this->loadModel($id),
-			));
-		}
+		));
 	}
 
 	/**
@@ -71,48 +62,19 @@ class AlumnoController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Alumno;
+		$model=new Convocatoria;
+
+       	$sql = "update convocatoria set con_estado=0 where con_estado=1";
+        $data =  Yii::app()->db->createCommand($sql)->query();
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
-		if(isset($_POST['Alumno']))
+		if(isset($_POST['Convocatoria']))
 		{
-			$model->attributes=$_POST['Alumno'];
-
-			if($model->save()){
-				$model->con_semestre=Yii::app()->db->createCommand('select con_semestre from convocatoria where con_estado=1')->queryScalar();
-				$model->save();
-				
-				//unir con cruge
-				$values = array(
-				  'username' => $model->al_rut,
-				  'email' => $model->al_email,
-				);
-				$usuario = Yii::app()->user->um->createNewUser($values,$model->al_clave);
-				
-				Yii::app()->user->um->changePassword($usuario,$model->al_clave);
-
-	            if(Yii::app()->user->um->save($usuario)){
-
-	           		// echo "Usuario creado: id=".$usuario->primaryKey;
-		        	
-		        	// asignar el rol alumno
-		        	$rbac = Yii::app()->user->rbac;
-                	$authitemName = 'alumno';
-                	$userId = $usuario->primaryKey;
-                	$rbac->assign($authitemName, $userId);
-					//fin-asignar el rol alumno
-	            }
-	            else{
-	                   $errores = CHtml::errorSummary($usuario);
-	                          echo "no se pudo crear el usuario: ".$errores;
-	            }
-				//fin_unir con cruge
-
-	            $this->redirect(array('view','id'=>$model->al_rut));
-			}
-				
+			$model->attributes=$_POST['Convocatoria'];
+			if($model->save())
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('create',array(
@@ -130,13 +92,13 @@ class AlumnoController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Alumno']))
+		if(isset($_POST['Convocatoria']))
 		{
-			$model->attributes=$_POST['Alumno'];
+			$model->attributes=$_POST['Convocatoria'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->al_rut));
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('update',array(
@@ -163,7 +125,7 @@ class AlumnoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Alumno');
+		$dataProvider=new CActiveDataProvider('Convocatoria');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -174,20 +136,10 @@ class AlumnoController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$this->layout = '//layouts/columnAdmin';
-
-		//para generar las encuestas
-		if(isset($_GET["excel"])){
-			$paises=alumno::model()->findAll();
-			$content=$this->renderPartial("excel",array("model"=>$paises),true);
-			Yii::app()->request->sendFile("EPI_Inscritos.xls",$content);
-
-		}
-
-		$model=new Alumno('search');
+		$model=new Convocatoria('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Alumno']))
-			$model->attributes=$_GET['Alumno'];
+		if(isset($_GET['Convocatoria']))
+			$model->attributes=$_GET['Convocatoria'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -198,12 +150,12 @@ class AlumnoController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Alumno the loaded model
+	 * @return Convocatoria the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Alumno::model()->findByPk($id);
+		$model=Convocatoria::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -211,11 +163,11 @@ class AlumnoController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Alumno $model the model to be validated
+	 * @param Convocatoria $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='alumno-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='convocatoria-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

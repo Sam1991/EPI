@@ -82,6 +82,14 @@ class ProyectoController extends Controller
 				$alumnoProyecto->save();
 				//fin_poner el creador como participante
 
+
+				//crear el estado de postulacion
+				$estadoPostulacionAlumno=new Estadopostulacion;
+				$estadoPostulacionAlumno->pro_idProyecto=$model->pro_idProyecto;
+				$estadoPostulacionAlumno->espos_inscripcion=1;
+				$estadoPostulacionAlumno->save();
+				//fin_crear el estado de postulacion
+
 				//crear la tabla objetivos para el proyecto
 				$objetivosProyecto=new Objetivos;
 				$objetivosProyecto->pro_idProyecto=$model->pro_idProyecto;

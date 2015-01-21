@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Crear Actividad', 'url'=>array('create')),
+	array('label'=>'Convocatorias', 'url'=>array('convocatoria/admin')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -34,7 +35,7 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'act_convocatoria',
+		'con_semestre',
 		'act_campus',
 		'act_nombre',
 		'act_fecha',

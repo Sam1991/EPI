@@ -17,8 +17,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'act_convocatoria'); ?>
-		<?php echo $form->textField($model,'act_convocatoria',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->label($model,'con_semestre'); ?>
+		<?php echo $form->textField($model,'con_semestre',array('size'=>10,'maxlength'=>10)); ?>
 	</div>
 
 	<div class="row">
