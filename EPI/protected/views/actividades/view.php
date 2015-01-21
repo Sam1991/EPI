@@ -16,7 +16,7 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'con_semestre',
+		//'con_semestre',
 		'act_campus',
 		'act_fecha',
 		'act_horaInicio',

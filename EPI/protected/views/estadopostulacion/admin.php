@@ -27,7 +27,8 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'al_rut',
+		//'pro_idProyecto',
+		array('name'=>'titulo','header'=>'TÍTULO PROYECTO','value'=>'$data->es_pro->pro_titulo'),
 		'espos_inscripcion',
 		'espos_informeInnovacion',
 		'espos_anexo2',

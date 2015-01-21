@@ -32,7 +32,7 @@ class Actividades extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('con_semestre, act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin,act_lugar', 'required'),
+			array('act_campus, act_nombre, act_fecha, act_horaInicio, act_horaFin,act_lugar', 'required'),
 			array('con_semestre', 'length', 'max'=>10, 'min'=>6),
 			array('act_nombre', 'length', 'min'=>3),
 			array('act_campus, act_horaInicio, act_horaFin', 'length', 'max'=>20),
@@ -92,8 +92,11 @@ class Actividades extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$model=convocatoria::model()->findAll("con_estado=1");
+		$convocatoria = $model[0]->con_semestre;
 
+		$criteria=new CDbCriteria;
+		$criteria->addCondition("con_semestre ='$convocatoria'");
 		$criteria->compare('act_id',$this->act_id);
 		$criteria->compare('con_semestre',$this->con_semestre,true);
 		$criteria->compare('act_campus',$this->act_campus,true);

@@ -17,6 +17,7 @@
  */
 class Estadopostulacion extends CActiveRecord
 {
+	public $titulo;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -50,6 +51,7 @@ class Estadopostulacion extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'es_pro' => array(self::BELONGS_TO, 'Proyecto', 'pro_idProyecto'),
 		);
 	}
 
@@ -59,7 +61,7 @@ class Estadopostulacion extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'al_rut' => 'RUT',
+			'pro_idProyecto' => 'ID PROYECTO',
 			'espos_inscripcion' => 'INSCRIPCIÓN',
 			'espos_informeInnovacion' => 'INFORME INNOVACIÓN',
 			'espos_anexo2' => 'PROYECTO',
@@ -88,9 +90,28 @@ class Estadopostulacion extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$model=convocatoria::model()->findAll("con_estado=1");
+		$convocatoria = $model[0]->con_semestre;
+		$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria."'");
 
-		$criteria->compare('al_rut',$this->al_rut,true);
+		$criteria=new CDbCriteria;
+		$condicion='';
+
+		for ($i=0; $i < count($alumnos); $i++) { 
+ 			$proyecto = alumnoproyecto::model()->findAll("al_rut='".$alumnos[$i]->al_rut."'");
+ 			$estado = $proyecto = estadopostulacion::model()->findAll("pro_idProyecto='".$proyecto[0]->pro_idProyecto."'");
+ 		//echo $proyectos[0]->pro_idProyecto." ";
+			if($i>0){
+				$condicion=$condicion.' or ';		
+			}
+			$condicion=$condicion."pro_idProyecto=".$estado[0]->pro_idProyecto;
+			}
+		if(count($proyecto)==0){
+			$condicion='';
+		}
+
+		$criteria->addCondition($condicion);
+		$criteria->compare('pro_idProyecto',$this->pro_idProyecto,true);
 		$criteria->compare('espos_inscripcion',$this->espos_inscripcion);
 		$criteria->compare('espos_informeInnovacion',$this->espos_informeInnovacion);
 		$criteria->compare('espos_anexo2',$this->espos_anexo2);

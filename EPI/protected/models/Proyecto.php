@@ -88,6 +88,7 @@ class Proyecto extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'pro_ev' => array(self::BELONGS_TO, 'Proyectoevaluador', 'pro_idProyecto'),
+			'pro_es' => array(self::BELONGS_TO, 'Estadopostulacion', 'pro_idProyecto'),
 			'pro_al' => array(self::BELONGS_TO, 'Alumnoproyecto', 'pro_idProyecto'),
 		);
 	}
@@ -140,8 +141,26 @@ class Proyecto extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$model=convocatoria::model()->findAll("con_estado=1");
+		$convocatoria = $model[0]->con_semestre;
+		$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria."'");
 
+		$criteria=new CDbCriteria;
+		$condicion='';
+
+		 for ($i=0; $i < count($alumnos); $i++) { 
+ 			$proyecto = alumnoproyecto::model()->findAll("al_rut='".$alumnos[$i]->al_rut."'");
+ 		//echo $proyectos[0]->pro_idProyecto." ";
+			if($i>0){
+				$condicion=$condicion.' or ';		
+			}
+			$condicion=$condicion."pro_idProyecto=".$proyecto[0]->pro_idProyecto;
+			}
+		if(count($proyecto)==0){
+			$condicion='';
+		}
+
+		$criteria->addCondition($condicion);
 		$criteria->compare('pro_idProyecto',$this->pro_idProyecto);
 		$criteria->compare('pro_titulo',$this->pro_titulo,true);
 		$criteria->compare('pro_duracion',$this->pro_duracion,true);

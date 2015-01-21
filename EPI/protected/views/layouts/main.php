@@ -94,6 +94,7 @@
 									//link para alumnos
 										array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Proyecto', 'url'=>array('proyecto/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
 										),

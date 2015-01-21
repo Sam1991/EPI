@@ -37,9 +37,9 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'con_semestre',
-		'act_campus',
+		//'con_semestre',
 		'act_nombre',
+		'act_campus',
 		'act_fecha',
 		'act_horaInicio',
 		'act_horaFin',
