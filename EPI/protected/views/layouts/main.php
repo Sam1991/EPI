@@ -86,19 +86,38 @@
 					<div class="collapse navbar-collapse navbar-ex-collapse">
 						<?php  
 							if(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin){
-							$this->widget('zii.widgets.CMenu',array(
-							'items'=>array(
-								//link para alumnos
-									array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Postulación', 'url'=>array('estadopostulacion/view&id='.Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'")->pro_idProyecto),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
-									array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
-									),
-								'activeCssClass' => 'active',
-								'htmlOptions' => array('class'=>'nav navbar-nav',),
-													
-							)); 
+								
+								//si el alumno no tiene asignado un proyecto
+								if(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin&&count(Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'"))==0){
+								$this->widget('zii.widgets.CMenu',array(
+								'items'=>array(
+									//link para alumnos
+										array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
+										),
+									'activeCssClass' => 'active',
+									'htmlOptions' => array('class'=>'nav navbar-nav',),
+														
+								));
+								} 
+								//si el alumno no tiene asignado un proyecto
+								else{
+								$this->widget('zii.widgets.CMenu',array(
+								'items'=>array(
+									//link para alumnos
+										array('label'=>'Consultas', 'url'=>array('consultainterna/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Postulación', 'url'=>array('estadopostulacion/view&id='.Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'")->pro_idProyecto),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
+										),
+									'activeCssClass' => 'active',
+									'htmlOptions' => array('class'=>'nav navbar-nav',),
+														
+								));
+								} 
 							}
 
 							else{
@@ -138,6 +157,7 @@
 									array('label'=>'Evaluaciones', 'url'=>array('/proyectoevaluador/admin'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Encuestas', 'url'=>array('actividades/adminEncuestas'), 'visible'=>(Yii::app()->user->isSuperAdmin)),
 									array('label'=>'Subir Archivo', 'url'=>array('subirarchivos/index'),'visible'=>(Yii::app()->user->isSuperAdmin)),
+									array('label'=>'Cursos', 'url'=>array('curso/index'),'visible'=>(Yii::app()->user->isSuperAdmin)),
 										
 
 									array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
