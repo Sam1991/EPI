@@ -85,6 +85,8 @@ class Alumno extends CActiveRecord
 			'al_materno' => 'APELLIDO MATERNO',
 			'al_campus' => 'CAMPUS',
 			'al_email2' => 'E-MAIL',
+			'con_semestre' => 'CONVOCATORIA',
+
 		);
 	}
 
@@ -117,6 +119,7 @@ class Alumno extends CActiveRecord
 		$criteria->compare('al_materno',$this->al_materno,true);
 		$criteria->compare('al_campus',$this->al_campus,true);
 		$criteria->compare('al_email2',$this->al_email2,true);
+		$criteria->compare('con_semestre',$this->con_semestre,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

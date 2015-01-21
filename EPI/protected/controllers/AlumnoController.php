@@ -80,8 +80,9 @@ class AlumnoController extends Controller
 		{
 			$model->attributes=$_POST['Alumno'];
 
-			          
 			if($model->save()){
+				$model->con_semestre=Yii::app()->db->createCommand('select con_semestre from convocatoria where con_estado=1')->queryScalar();
+				$model->save();
 				
 				//unir con cruge
 				$values = array(
@@ -108,14 +109,6 @@ class AlumnoController extends Controller
 	                          echo "no se pudo crear el usuario: ".$errores;
 	            }
 				//fin_unir con cruge
-
-				//crear el estado de postulacion
-				$estadoPostulacionAlumno=new Estadopostulacion;
-				$estadoPostulacionAlumno->al_rut=$model->al_rut;
-				$estadoPostulacionAlumno->espos_inscripcion=1;
-				$estadoPostulacionAlumno->save();
-
-				//fin_crear el estado de postulacion
 
 	            $this->redirect(array('view','id'=>$model->al_rut));
 			}
