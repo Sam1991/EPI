@@ -53,7 +53,7 @@ class Alumnoproyecto extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'al_rut' => 'Al Rut',
+			'al_rut' => 'RUT ALUMNO',
 			'pro_idProyecto' => 'Pro Id Proyecto',
 		);
 	}

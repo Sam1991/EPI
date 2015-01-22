@@ -79,13 +79,18 @@ class ActividadesController extends Controller
 		$model=new Actividades;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['Actividades']))
 		{
 			$model->attributes=$_POST['Actividades'];
-			if($model->save())
+			if($model->save()){
+				$model->con_semestre=Yii::app()->db->createCommand('select con_semestre from convocatoria where con_estado=1')->queryScalar();
+				$model->save();
+			}
+
 				$this->redirect(array('view','id'=>$model->act_id));
+
 		}
 
 		$this->render('create',array(
@@ -103,7 +108,7 @@ class ActividadesController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		 $this->performAjaxValidation($model);
 
 		if(isset($_POST['Actividades']))
 		{

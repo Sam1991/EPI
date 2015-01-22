@@ -2,11 +2,18 @@
 /* @var $this ProyectoController */
 /* @var $model Proyecto */
 
-
+if(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin&&count(Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'"))>0){
 $this->menu=array(
 	array('label'=>'Crear proyecto', 'url'=>array('create')),
 	array('label'=>'Evaluación Proyecto', 'url'=>array('proyectoevaluador/adminAlumno')),
 );
+}
+else{
+	$this->menu=array(
+	array('label'=>'Crear proyecto', 'url'=>array('create')),
+);
+}
+
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

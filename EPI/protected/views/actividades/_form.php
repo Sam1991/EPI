@@ -12,25 +12,27 @@
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
 )); ?>
+
+<?php //echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'con_semestre'); ?>
-		<?php echo $form->textField($model,'con_semestre',array('size'=>10,'maxlength'=>10,'placeholder'=>'CONVOCATORIA')); ?>
-		<?php echo $form->error($model,'con_semestre'); ?>
+		<?php //echo $form->textField($model,'con_semestre',array('size'=>10,'maxlength'=>10,'placeholder'=>'CONVOCATORIA')); ?>
+		<?php //echo $form->error($model,'con_semestre'); ?>
+	</div>
+
+		<div class="row">
+		<?php //echo $form->labelEx($model,'act_nombre'); ?>
+		<?php echo $form->textField($model,'act_nombre',array('size'=>60,'maxlength'=>255,'placeholder'=>'NOMBRE')); ?>
+		<?php echo $form->error($model,'act_nombre'); ?>
 	</div>
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'act_campus'); ?>
 		<?php echo $form->dropDownList($model,'act_campus',array(''=>'CAMPUS','Concepción'=>'Concepción','Chillan'=>'Chillan')); ?>
 		<?php echo $form->error($model,'act_campus'); ?>
-	</div>
-
-	<div class="row">
-		<?php //echo $form->labelEx($model,'act_nombre'); ?>
-		<?php echo $form->textField($model,'act_nombre',array('size'=>60,'maxlength'=>255,'placeholder'=>'NOMBRE')); ?>
-		<?php echo $form->error($model,'act_nombre'); ?>
 	</div>
 
 	<div class="row">

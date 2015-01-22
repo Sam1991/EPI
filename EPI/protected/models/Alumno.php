@@ -106,8 +106,11 @@ class Alumno extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$model=convocatoria::model()->findAll("con_estado=1");
+		$convocatoria = $model[0]->con_semestre;
 
+		$criteria=new CDbCriteria;
+		$criteria->addCondition("con_semestre ='$convocatoria'");
 		$criteria->compare('al_rut',$this->al_rut,true);
 		$criteria->compare('al_nombre',$this->al_nombre,true);
 		$criteria->compare('al_carrera',$this->al_carrera,true);
