@@ -11,7 +11,7 @@ $this->menu=array(
 );
 ?>
 
-	<div style="text-align:center">
+	<div style="text-align:center;padding-top:20px;">
 		<h1><?php echo $model->cu_nombre; ?></h1>
 	</div>
 
@@ -29,42 +29,56 @@ $this->menu=array(
 	),
 )); ?>
 -->
-<div style="width: 270px;margin-left:20px;display:inline-block;margin-left:90px;">
-	<h2>Creador curso</h2>
+<div style='width: 270px;margin-left:20px;display:inline-block;margin-left:90px;padding-bottom:20px;font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;'>
+	<h style="color: #353535;font-size: 18px;">Creador curso</h>
+
+	
+	<hr>
+	
+
+<div  style="display:inline-block;">
+	
 	<?php 
 	$estructura =Yii::app()->baseUrl.'/protected/cursos';
 	$path="$estructura/$model->cu_foto";
 	 ?>
+
 	<img src="<?php echo $path?>" style="border-radius: 50% 50% 50% 50%;">
+</div>
+
+<div style="display:inline-block;vertical-align:top;">
+	<b style="font-size:20px;"><?php echo $model->cu_creador ?></b>
+	<br>
+	Coordinador Programa EPI
+</div>
 	<br>
 	<br>
+	<br>
+	<b style="color: #353535;font-size: 18px;">DESCRIPCIÓN DEL CURSO</b>
 	<hr>
-	<h2>Información curso</h2>
 	<?php echo $model->cu_info ?>
 
 </div>
 
 <div style="display:inline-block;width:740px;vertical-align:top;margin:20px;margin-top:50px;">
-		<h2 class="tituloPrincipal">Documentos</h2>
+	<h2 class="tituloPrincipal">Documentos</h2>
 	<div style="background-color:#FFFFFF;box-shadow:0 1px 2px rgba(0,0,0,0.5);">
-
-<table >
-	
-		<?php $this->widget('zii.widgets.CListView', array(
-		'dataProvider'=>$dataProviderDocumentos,
-		'itemView'=>'_viewDocumentos',
-		)); ?>
-</table>
-		
+		<table >
+				<?php $this->widget('zii.widgets.CListView', array(
+				'dataProvider'=>$dataProviderDocumentos,
+				'itemView'=>'_viewDocumentos',
+				)); ?>
+		</table>
+					
 	</div>
 </div>
 
 
 <div style="width: 270px;display:inline-block;vertical-align:top;">
 	
-	<h2 >Comentarios</h2>
-	
-	<div style="background-color: #f9f9f9;">
+	<div style="background-color: #f9f9f9;padding:15px;margin-top:20px;">
+	<h style="color: #353535;font-size: 18px;">Consultas</h>
+	<hr>
 		<?php $this->widget('zii.widgets.CListView', array(
 		'dataProvider'=>$dataProviderConsulta,
 		'itemView'=>'_viewConsulta',
@@ -73,17 +87,20 @@ $this->menu=array(
 	</div>
 
 
-<!--
-	<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>Curso::model()->findAll(),
-	'attributes'=>array(
-		'coni_consulta',
-		'coni_fecha',
-		'coni_respuesta',
-		'coni_fechaRespuesta',
-	),
-)); ?>
--->
+	<div style="background-color: #f9f9f9;padding:15px;margin-top:20px;">
+	<h style="color: #353535;font-size: 18px;">Comentarios</h>
+	<hr>
+	<div style="margin-left:20px;">
+		
+		<?php $this->widget('zii.widgets.CListView', array(
+		'dataProvider'=>$dataProviderComentarios,
+		'itemView'=>'_viewComentarios',
+		)); ?>
+	</div>
+		
+	</div>
+
+
 </div>
 
 <style>

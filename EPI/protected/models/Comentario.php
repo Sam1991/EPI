@@ -1,24 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "documentos".
+ * This is the model class for table "comentario".
  *
- * The followings are the available columns in table 'documentos':
- * @property integer $doc_id
+ * The followings are the available columns in table 'comentario':
+ * @property integer $co_id
  * @property integer $cu_id
- * @property string $doc_fecha
- * @property string $doc_nombre
- * @property string $doc_tipo
- * @property string $doc_link
+ * @property string $co_texto
  */
-class Documentos extends CActiveRecord
+class Comentario extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'documentos';
+		return 'comentario';
 	}
 
 	/**
@@ -29,12 +26,11 @@ class Documentos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cu_id, doc_fecha, doc_nombre, doc_tipo', 'required'),
+			array('cu_id, co_texto', 'required'),
 			array('cu_id', 'numerical', 'integerOnly'=>true),
-			array('doc_nombre, doc_tipo', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('doc_id, cu_id, doc_fecha, doc_nombre, doc_tipo, doc_link', 'safe'),
+			array('co_id, cu_id, co_texto', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,12 +51,9 @@ class Documentos extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'doc_id' => 'Doc',
+			'co_id' => 'Co',
 			'cu_id' => 'Cu',
-			'doc_fecha' => 'Doc Fecha',
-			'doc_nombre' => 'Doc Nombre',
-			'doc_tipo' => 'Doc Tipo',
-			'doc_link' => 'Doc Link',
+			'co_texto' => 'Co Texto',
 		);
 	}
 
@@ -82,12 +75,9 @@ class Documentos extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('doc_id',$this->doc_id);
+		$criteria->compare('co_id',$this->co_id);
 		$criteria->compare('cu_id',$this->cu_id);
-		$criteria->compare('doc_fecha',$this->doc_fecha,true);
-		$criteria->compare('doc_nombre',$this->doc_nombre,true);
-		$criteria->compare('doc_tipo',$this->doc_tipo,true);
-		$criteria->compare('doc_link',$this->doc_link,true);
+		$criteria->compare('co_texto',$this->co_texto,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -98,7 +88,7 @@ class Documentos extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Documentos the static model class
+	 * @return Comentario the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

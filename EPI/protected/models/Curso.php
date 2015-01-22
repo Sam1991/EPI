@@ -56,11 +56,11 @@ class Curso extends CActiveRecord
 	{
 		return array(
 			'cu_id' => 'Cu',
-			'cu_nombre' => 'Cu Nombre',
-			'cu_creador' => 'Cu Creador',
-			'cu_foto' => 'Cu Foto',
-			'cu_info' => 'Cu Info',
-			'con_semestre' => 'Con Semestre',
+			'cu_nombre' => 'NOMBRE',
+			'cu_creador' => 'CREADOR',
+			'cu_foto' => 'FOTO CREADOR',
+			'cu_info' => 'INFORMACIÓN',
+			'con_semestre' => 'SEMESTRE',
 		);
 	}
 

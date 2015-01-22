@@ -17,19 +17,63 @@
 </td>
 
 
-
 <td style="border: solid #F0F0F0 1px;border-left:none;">
-	
-	<?php echo CHtml::link('Link Text',array($data->doc_link),array('target'=>'_blank')); ?>
-	
+<?php 
+
+// si es un doc o un pdf
+if ($data->doc_tipo!="video"){ 
+	$estructura =Yii::app()->baseUrl.'/protected/cursos';
+	$path="$estructura/$data->doc_link";
+?>
+	<a  href="<?php echo $path; ?>" target="_blank" >
+		
+		<?php if ($data->doc_tipo=="PDF"){?>
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pdf.jpg">
+					
+		<?php }
+
+		if ($data->doc_tipo=="DOC"){ ?>
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/doc.png">
+					
+		<?php }?>
+	</a>
+
+<?php } 
+// si es un video
+if ($data->doc_tipo=="video"){
+
+$documento=Documentos::model()->findByPk($data->doc_id);
+
+$this->beginWidget('zii.widgets.jui.CJuiDialog', array(
+	'id'=>$data->doc_id,
+	'options'=>array(
+		'title'=>$data->doc_nombre,
+		'width'=>890,
+		'height'=>570,
+		'autoOpen'=>false,
+		'resizable' => false,
+		'modal'=>true,
+		'close'=>'js:function(){ 
+		 $("#'.$data->doc_id.' iframe ").attr("src", $("#'.$data->doc_id.' iframe ").attr("src"));
+   		}',
+		'overlay'=>array(
+			'backgroundColor'=>'#676363',
+			'opacity'=>'0.1'
+			),
+		),
+
+	));
+echo $this->renderpartial('//curso/viewVideo',array('model'=>$documento));
+
+$this->endWidget('zii.widgets.jui.CJuiDialog');
+ 
+	$imageUrl = "".Yii::app()->request->baseUrl."/images/video.png";
+	$image = '<img src="'.$imageUrl.'">';
+	echo CHtml::link($image,'', array('onclick'=>'$("#'.$data->doc_id.'").dialog("open");return false;'));
+} 
+?>
+
 </td>
 
-
-
-
-	<!-- <b><?php echo CHtml::encode($data->getAttributeLabel('doc_tipo')); ?>:</b>
-	<?php echo CHtml::encode($data->doc_tipo); ?>
-	<br /> -->
-
-
 </tr>
+

@@ -1,28 +1,20 @@
 <?php
-/* @var $this CursoController */
+/* @var $this ComentarioController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Cursos',
+	'Comentarios',
 );
 
 $this->menu=array(
-	array('label'=>'Crear Curso', 'url'=>array('create')),
-	array('label'=>'Cursos', 'url'=>array('admin')),
+	array('label'=>'Create Comentario', 'url'=>array('create')),
+	array('label'=>'Manage Comentario', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Cursos</h1>
+<h1>Comentarios</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
-
-<style>
-.summary{
-	display: none;
-	
-}
-
-</style>

@@ -1,6 +1,6 @@
 <?php
 
-class DocumentosController extends Controller
+class ComentarioController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -51,8 +51,12 @@ class DocumentosController extends Controller
 	 */
 	public function actionView($id)
 	{
+
+		$model=$this->loadModel($id);
+		$model->co_texto=nl2br($model->co_texto);
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
 		));
 	}
 
@@ -62,36 +66,21 @@ class DocumentosController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Documentos;
+		//$model=new Comentario;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Documentos']))
+		if(isset($_POST['Comentario']))
 		{
-			$model->attributes=$_POST['Documentos'];
-			//si es un pdf o un doc
-			if($model->doc_tipo=="PDF"||$model->doc_tipo=="DOC"){
-				$model->doc_link=CUploadedFile::getInstance($model,'doc_link');
-			}
-			if($model->save()){
-
-			//si es un pdf o un doc
-			if($model->doc_tipo=="PDF"||$model->doc_tipo=="DOC"){
-				//copiar la imagen en el directorio
-                $estructura =Yii::app()->basePath.'\cursos';
-                $path="$estructura/$model->doc_link";
-	            $model->doc_link->saveAs($path);
-				//fin_copiar la imagen en el directorio
-			}
-
-				$this->redirect(array('curso/view','id'=>$model->cu_id));
-			}
+			$model->attributes=$_POST['Comentario'];
+			if($model->save())
+				$this->redirect(array('//curso/view','id'=>$model->cu_id));
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		// $this->render('create',array(
+		// 	'model'=>$model,
+		// ));
 	}
 
 	/**
@@ -106,11 +95,11 @@ class DocumentosController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Documentos']))
+		if(isset($_POST['Comentario']))
 		{
-			$model->attributes=$_POST['Documentos'];
+			$model->attributes=$_POST['Comentario'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->doc_id));
+				$this->redirect(array('view','id'=>$model->co_id));
 		}
 
 		$this->render('update',array(
@@ -137,7 +126,7 @@ class DocumentosController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Documentos');
+		$dataProvider=new CActiveDataProvider('Comentario');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -148,10 +137,10 @@ class DocumentosController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Documentos('search');
+		$model=new Comentario('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Documentos']))
-			$model->attributes=$_GET['Documentos'];
+		if(isset($_GET['Comentario']))
+			$model->attributes=$_GET['Comentario'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -162,12 +151,12 @@ class DocumentosController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Documentos the loaded model
+	 * @return Comentario the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Documentos::model()->findByPk($id);
+		$model=Comentario::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -175,11 +164,11 @@ class DocumentosController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Documentos $model the model to be validated
+	 * @param Comentario $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='documentos-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='comentario-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

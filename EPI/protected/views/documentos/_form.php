@@ -13,6 +13,7 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+	'htmlOptions' => array('enctype' => 'multipart/form-data'),//FORMULARIO IMAGEN
 )); ?>
 
 	<div class="row">
@@ -43,8 +44,7 @@
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'doc_tipo'); ?>
-		<?php echo $form->textField($model,'doc_tipo',array('value'=>$_GET["tipo"],'readonly'=>'false')); ?>
+		<?php echo $form->hiddenField($model,'doc_tipo',array('value'=>$_GET["tipo"],'readonly'=>'false')); ?>
 		<?php echo $form->error($model,'doc_tipo'); ?>
 	</div>
 
@@ -56,10 +56,20 @@
 		<?php echo $form->error($model,'doc_link'); ?>
 	</div>
 	
-<?php } ?>
+<?php } 
+else{
+?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'doc_link'); ?>
+		<?php echo $form->fileField($model,'doc_link'); ?>
+		<?php echo $form->error($model,'doc_link'); ?>
+	</div>
+<?php 	
+}
+?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Subir' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

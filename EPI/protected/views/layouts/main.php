@@ -102,7 +102,7 @@
 														
 								));
 								} 
-								//si el alumno no tiene asignado un proyecto
+								//si el alumno tiene asignado un proyecto
 								else{
 								$this->widget('zii.widgets.CMenu',array(
 								'items'=>array(
