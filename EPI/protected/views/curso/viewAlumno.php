@@ -94,5 +94,6 @@ $this->menu=array(
 	display: none;
 	
 }
+tr:focus, tr:hover {background-color:#06cca5;}
 
 </style>

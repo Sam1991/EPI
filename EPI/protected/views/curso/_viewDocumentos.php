@@ -28,7 +28,7 @@ if ($data->doc_tipo!="video"){
 	<a  href="<?php echo $path; ?>" target="_blank" >
 		
 		<?php if ($data->doc_tipo=="PDF"){?>
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pdf.jpg">
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/pdf.png">
 					
 		<?php }
 
