@@ -11,25 +11,7 @@ $this->menu=array(
 );
 ?>
 
-	<div style="text-align:center;padding-top:20px;">
-		<h1><?php echo $model->cu_nombre; ?></h1>
-	</div>
-
-
-<!--
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'cu_id',
-		'cu_nombre',
-		'cu_creador',
-		'cu_foto',
-		'cu_info',
-		'con_semestre',
-	),
-)); ?>
--->
-<div style='width: 270px;margin-left:20px;display:inline-block;margin-left:90px;padding-bottom:20px;font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;'>
+<div style='width: 270px;margin-left:20px;display:inline-block;margin-left:90px;padding-bottom:20px;font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;margin-top: 20px;'>
 	<h style="color: #353535;font-size: 18px;">Creador curso</h>
 
 	
@@ -61,9 +43,13 @@ $this->menu=array(
 </div>
 
 <div style="display:inline-block;width:740px;vertical-align:top;margin:20px;margin-top:50px;">
-	<h2 class="tituloPrincipal">Documentos</h2>
-	<div style="background-color:#FFFFFF;box-shadow:0 1px 2px rgba(0,0,0,0.5);">
-		<table >
+	<div style="text-align:center;padding-top:20px;margin-bottom:40px;">
+		<h1><?php echo $model->cu_nombre; ?></h1>
+	</div>
+	<div style="background-color:#F0F0F0;box-shadow:0 1px 2px rgba(0,0,0,0.5);">
+		
+	<h2 class="tituloPrincipal" style="padding-top:10px;padding-left:10px;">Documentos</h2>
+		<table style="background-color:#FFFFFF;">
 				<?php $this->widget('zii.widgets.CListView', array(
 				'dataProvider'=>$dataProviderDocumentos,
 				'itemView'=>'_viewDocumentos',
