@@ -223,12 +223,13 @@ class AlumnoController extends Controller
 		}
 		
 		echo "<script type='text/javascript'>alert('$message');</script>";
+		
 		//obtener alumnos rechazados
 		$alumnosRechazados=Alumno::model()->findAll("al_estado='Rechazado'"." and "." con_semestre ='$convocatoria'");
 
 		echo "alumnos rechazados <br>";
 		for($i=0;$i<count($alumnosRechazados);$i++){
-			echo $alumnosRechazados[$i]->al_rut.'<br>';
+			//echo $alumnosRechazados[$i]->al_rut.'<br>';
 
 		}
 		$this->actionAdmin();
