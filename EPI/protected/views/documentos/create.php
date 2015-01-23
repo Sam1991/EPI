@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Documentos', 'url'=>array('index')),
-	array('label'=>'Manage Documentos', 'url'=>array('admin')),
+	array('label'=>'Eliminar Documento', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Documentos</h1>
+<h1>Añadir <?php echo $_GET["tipo"]; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -51,8 +51,7 @@
 <?php if ($_GET["tipo"]=="video"){ ?>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'doc_link'); ?>
-		<?php echo $form->textField($model,'doc_link',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'doc_link',array('size'=>60,'maxlength'=>255,'placeholder'=>'Código de inserción')); ?>
 		<?php echo $form->error($model,'doc_link'); ?>
 	</div>
 	
@@ -60,7 +59,6 @@
 else{
 ?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'doc_link'); ?>
 		<?php echo $form->fileField($model,'doc_link'); ?>
 		<?php echo $form->error($model,'doc_link'); ?>
 	</div>

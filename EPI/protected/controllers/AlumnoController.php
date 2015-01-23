@@ -36,7 +36,7 @@ class AlumnoController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','aceptado','rechazado','email'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -144,6 +144,98 @@ class AlumnoController extends Controller
 		));
 	}
 
+		public function actionAceptado($id)
+	{
+		$alumno=$this->loadModel($id);
+		$alumno->al_estado='Aceptado';
+		if($alumno->save()){
+		$this->actionAdmin();
+		}
+		else{
+			//ver errores del modelo
+			$errores = CHtml::errorSummary($alumno);
+	        echo "no se pudo cambiar el estado: ".$errores;
+		}
+
+	}
+
+
+		public function actionRechazado($id)
+	{
+		$alumno=$this->loadModel($id);
+		$alumno->al_estado='Rechazado';
+		if($alumno->save()){
+		$this->actionAdmin();
+		}
+		else{
+			//ver errores del modelo
+			$errores = CHtml::errorSummary($alumno);
+	        echo "no se pudo cambiar el estado: ".$errores;
+		}
+
+	}
+
+		public function actionEmail()
+	{
+		$emailCoordinador="scarril@alumnos.ubiobio.cl";
+		//obtener el semestre actual
+		$convocatorias=convocatoria::model()->findAll("con_estado=1");
+		$convocatoria = $convocatorias[0]->con_semestre;
+		
+		//obtener alumnos aceptados
+		$alumnosAceptados=Alumno::model()->findAll("al_estado='Aceptado'"." and "." con_semestre ='$convocatoria'");
+
+		Yii::import('application.extensions.phpmailer.JPhpMailer');
+		
+		$message="alumnos aceptados: ";
+			
+		for($i=0;$i<count($alumnosAceptados);$i++){
+
+			
+
+			//guardar la clave_INICIO
+			$clave=$alumnosAceptados[$i]->al_nombre.$alumnosAceptados[$i]->al_paterno.$alumnosAceptados[$i]->con_semestre;
+			$alumnosAceptados[$i]->al_clave=$clave;
+			$alumnosAceptados[$i]->save();
+
+			$usuario = Yii::app()->user->um->loadUserByUsername($alumnosAceptados[$i]->al_rut);
+			$newPwd = $clave;
+            Yii::app()->user->um->changePassword($usuario, $newPwd);
+            Yii::app()->user->um->save($usuario);
+			//guardar la clave_FIN
+
+
+			$message=$message.$alumnosAceptados[$i]->al_rut;
+			$mail = new JPhpMailer;
+			$mail->IsSMTP();
+			$mail->Host = 'smtp.gmail.com';
+			$mail->SMTPAuth = true;
+			$mail->SMTPSecure = "tls"; 
+			$mail->Username = $emailCoordinador;
+			$mail->Password = '=Zuv1#Va';
+			$mail->SetFrom($emailCoordinador, 'EPI');
+			$mail->Subject = 'Programa EPI - Resultado';
+			$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
+			$mail->MsgHTML('<h1>Resultado</h1><p>Estas seleccionado para participar en el programa "estudiantes para innovar" de la universidad del Bio-bio</p><br><a href="epi.ubiobio.cl" style="text-decoration:none;color:#356ae9" target="_blank">epi.ubiobio.cl</a><p>Tu clave de acceso es: '.$clave.'</p>');
+			$mail->AddAddress($alumnosAceptados[$i]->al_email, '');
+			$mail->Send();
+
+		}
+		
+		echo "<script type='text/javascript'>alert('$message');</script>";
+		//obtener alumnos rechazados
+		$alumnosRechazados=Alumno::model()->findAll("al_estado='Rechazado'"." and "." con_semestre ='$convocatoria'");
+
+		echo "alumnos rechazados <br>";
+		for($i=0;$i<count($alumnosRechazados);$i++){
+			echo $alumnosRechazados[$i]->al_rut.'<br>';
+
+		}
+		$this->actionAdmin();
+
+	}
+
+
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
@@ -178,8 +270,13 @@ class AlumnoController extends Controller
 
 		//para generar las encuestas
 		if(isset($_GET["excel"])){
-			$paises=alumno::model()->findAll();
-			$content=$this->renderPartial("excel",array("model"=>$paises),true);
+
+			//obtener el semestre actual
+			$convocatorias=convocatoria::model()->findAll("con_estado=1");
+			$convocatoria = $convocatorias[0]->con_semestre;
+
+			$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria."'");
+			$content=$this->renderPartial("excelAlumnos",array("model"=>$alumnos),true);
 			Yii::app()->request->sendFile("EPI_Inscritos.xls",$content);
 
 		}

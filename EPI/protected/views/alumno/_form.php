@@ -91,14 +91,6 @@
 		<?php echo $form->error($model,'al_comentario'); ?>
 	</div>
 
-	<div class="row">
-		<?php //echo $form->labelEx($model,'al_clave'); ?>
-		<?php echo $form->textField($model,'al_clave',array('size'=>60,'maxlength'=>100,'placeholder'=>'Define tu clave de acceso')); ?>
-		<?php echo $form->error($model,'al_clave'); ?>
-	</div>
-
-
-
 	<div id="centrado">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Enviar' : 'Guardar',array('class' => 'guardar')); ?>
 	</div>
