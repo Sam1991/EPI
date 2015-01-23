@@ -4158,3 +4158,117 @@ REQUEST_URI=/EPI/EPI/index.php?r=proyecto/admin/admin
 in C:\wamp\www\EPI\EPI\protected\models\Proyecto.php (157)
 in C:\wamp\www\EPI\EPI\protected\views\proyecto\admin.php (29)
 in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (179)
+2015/01/21 21:12:31 [error] [php] Missing argument 2 for TCPDF::Write(), called in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php on line 488 and defined (C:\wamp\www\EPI\EPI\protected\extensions\tcpdf\tcpdf\tcpdf.php:4816)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#2 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#5 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#9 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
+in C:\wamp\www\EPI\EPI\protected\extensions\tcpdf\tcpdf\tcpdf.php (4816)
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (488)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/21 22:52:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cg_inicio1' in 'field list'. La sentencia SQL ejecutada fue: select datediff(cg_inicio1,cg_fin1) as dias1 .
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (640)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/21 22:52:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cg_inicio1' in 'field list'. The SQL statement executed was: select datediff(cg_inicio1,cg_fin1) as dias1 ' in C:\wamp\www\EPI\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(640): CDbCommand->queryAll()
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionPdf()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('pdf')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/pdf')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2015/01/21 22:55:50 [error] [php] Undefined offset: 0 (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:638)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (638)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/22 15:58:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(cg_inicio1)  as dia from cartagantt where '3'=pro_idProyecto' at line 1. La sentencia SQL ejecutada fue: select month(cg_inicio1) day(cg_inicio1)  as dia from cartagantt where '3'=pro_idProyecto.
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (667)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/22 15:58:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(cg_inicio1)  as dia from cartagantt where '3'=pro_idProyecto' at line 1. The SQL statement executed was: select month(cg_inicio1) day(cg_inicio1)  as dia from cartagantt where '3'=pro_idProyecto' in C:\wamp\www\EPI\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\EPI\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php(667): CDbCommand->queryAll()
+#2 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(49): ProyectoController->actionPdf()
+#3 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\EPI\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): CController->run('pdf')
+#12 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('proyecto/pdf')
+#13 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2015/01/22 15:58:53 [error] [php] Undefined index: mes (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:673)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (673)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/22 16:58:36 [error] [php] Undefined variable: dia21 (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:702)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (702)
+in C:\wamp\www\EPI\EPI\index.php (13)

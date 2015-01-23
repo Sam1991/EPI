@@ -31,7 +31,7 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'pro_titulo',
 		'pro_ambito',
-		'pro_objetivoGeneral',
+		//'pro_objetivoGeneral',
 		'pro_profeNombre',
 		'pro_emNombre',
 		
