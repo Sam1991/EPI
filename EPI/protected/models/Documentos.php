@@ -29,12 +29,12 @@ class Documentos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cu_id, doc_fecha, doc_nombre, doc_tipo, doc_link', 'required'),
+			array('cu_id, doc_fecha, doc_nombre, doc_tipo', 'required'),
 			array('cu_id', 'numerical', 'integerOnly'=>true),
-			array('doc_nombre, doc_tipo, doc_link', 'length', 'max'=>255),
+			array('doc_nombre, doc_tipo', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('doc_id, cu_id, doc_fecha, doc_nombre, doc_tipo, doc_link', 'safe', 'on'=>'search'),
+			array('doc_id, cu_id, doc_fecha, doc_nombre, doc_tipo, doc_link', 'safe'),
 		);
 	}
 

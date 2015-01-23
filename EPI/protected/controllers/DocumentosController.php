@@ -70,7 +70,20 @@ class DocumentosController extends Controller
 		if(isset($_POST['Documentos']))
 		{
 			$model->attributes=$_POST['Documentos'];
+			//si es un pdf o un doc
+			if($model->doc_tipo=="PDF"||$model->doc_tipo=="DOC"){
+				$model->doc_link=CUploadedFile::getInstance($model,'doc_link');
+			}
 			if($model->save()){
+
+			//si es un pdf o un doc
+			if($model->doc_tipo=="PDF"||$model->doc_tipo=="DOC"){
+				//copiar la imagen en el directorio
+                $estructura =Yii::app()->basePath.'\cursos';
+                $path="$estructura/$model->doc_link";
+	            $model->doc_link->saveAs($path);
+				//fin_copiar la imagen en el directorio
+			}
 
 				$this->redirect(array('curso/view','id'=>$model->cu_id));
 			}

@@ -3,25 +3,29 @@
 /* @var $data Consultainterna */
 ?>
 
+
+
+<!-- buscar al alumno -->
+<?php  
+
+$alumno=Alumno::model()->find("al_email='".$data->coni_email."'");
+
+
+?>
+
 <div class="view">
 
-	<div style="text-align:right;">
-	<?php echo CHtml::encode($data->coni_fecha); ?>
-	<br />
-	<b><?php echo CHtml::encode($data->coni_email); ?></b>
-	<br />
-		
-	</div>
+	<?php echo '<b>'.CHtml::encode($alumno->al_nombre).' '.CHtml::encode($alumno->al_paterno).'</b>'.'   '.CHtml::encode($data->coni_fecha); ?>
 	<br>
-	<b><?php echo CHtml::encode($data->getAttributeLabel('coni_consulta')); ?>:</b>
 	<?php echo CHtml::encode($data->coni_consulta); ?>
 	<br />
 	<br>
-	<hr>
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('coni_respuesta')); ?>:</b>
-	<?php echo CHtml::encode($data->coni_respuesta); ?>
-	<br />
+	<div style="margin-left:20px;">
+		<?php echo '<b>'.'Claudio'.'</b>'; ?>
+		<br>
+		<?php echo CHtml::encode($data->coni_respuesta); ?>
+		<br />
+	</div>
 
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('coni_fechaRespuesta')); ?>:</b>

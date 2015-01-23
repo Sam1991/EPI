@@ -2,14 +2,12 @@
 /* @var $this CursoController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Cursos',
-);
-
+if(Yii::app()->user->isSuperAdmin){
 $this->menu=array(
-	array('label'=>'Create Curso', 'url'=>array('create')),
-	array('label'=>'Manage Curso', 'url'=>array('admin')),
+	array('label'=>'Crear Curso', 'url'=>array('create')),
+	array('label'=>'Cursos', 'url'=>array('admin')),
 );
+		}
 ?>
 
 <h1>Cursos</h1>
@@ -18,3 +16,11 @@ $this->menu=array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+
+<style>
+.summary{
+	display: none;
+	
+}
+
+</style>

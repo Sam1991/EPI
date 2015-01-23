@@ -96,6 +96,7 @@
 										array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Proyecto', 'url'=>array('proyecto/create'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Cursos', 'url'=>array('curso/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
 										),
 									'activeCssClass' => 'active',
@@ -103,7 +104,7 @@
 														
 								));
 								} 
-								//si el alumno no tiene asignado un proyecto
+								//si el alumno tiene asignado un proyecto
 								else{
 								$this->widget('zii.widgets.CMenu',array(
 								'items'=>array(
@@ -112,6 +113,7 @@
 										array('label'=>'Actividades', 'url'=>array('actividades/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Postulación', 'url'=>array('estadopostulacion/view&id='.Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'")->pro_idProyecto),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Encuestas', 'url'=>array('encuestaactividad/admin'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
+										array('label'=>'Cursos', 'url'=>array('curso/index'),'visible'=>(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin)),
 										array('label'=>'Salir', 'url'=>Yii::app()->user->ui->logoutUrl	, 'visible'=>!Yii::app()->user->isGuest),
 										),
 									'activeCssClass' => 'active',

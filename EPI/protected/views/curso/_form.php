@@ -16,9 +16,6 @@
 	'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'cu_nombre'); ?>
@@ -26,6 +23,12 @@
 		<?php echo $form->error($model,'cu_nombre'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'con_semestre'); ?>
+		<?php echo $form->textField($model,'con_semestre',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'con_semestre'); ?>
+	</div>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'cu_creador'); ?>
 		<?php echo $form->textField($model,'cu_creador',array('size'=>60,'maxlength'=>255)); ?>
@@ -44,11 +47,6 @@
 		<?php echo $form->error($model,'cu_info'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'con_semestre'); ?>
-		<?php echo $form->textField($model,'con_semestre',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'con_semestre'); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

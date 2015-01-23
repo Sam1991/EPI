@@ -32,7 +32,7 @@ class CursoController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','video'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -51,17 +51,33 @@ class CursoController extends Controller
 	 */
 	public function actionView($id)
 	{
+		if(isset($_POST['Comentario']))
+		{
+			$model=new Comentario;	
+			$model->attributes=$_POST['Comentario'];	
+			$model->save();
+		}
 		
-		$dataProviderConsulta=new CActiveDataProvider('Consultainterna');
+		$dataProviderConsulta=new CActiveDataProvider('Consultainterna',array('criteria'=>array('condition'=>'coni_estado=1')));
 		$dataProviderConsulta->pagination->pageSize=1;
 
-		$dataProviderDocumentos=new CActiveDataProvider('Documentos');
 		$this->layout = '//layouts/columnCurso';
 		$model=$this->loadModel($id);
 		$model->cu_info=nl2br($model->cu_info);
-		$this->render('view',array(
-			'model'=>$model,'dataProviderConsulta'=>$dataProviderConsulta,'dataProviderDocumentos'=>$dataProviderDocumentos,
-		));
+		$dataProviderDocumentos=new CActiveDataProvider('Documentos',array('criteria'=>array('condition'=>'cu_id='.$model->cu_id,)));
+		$dataProviderComentarios=new CActiveDataProvider('Comentario',array('criteria'=>array('condition'=>'cu_id='.$model->cu_id,)));
+		
+		if(Yii::app()->user->isSuperAdmin){
+			$this->render('view',array(
+				'model'=>$model,'dataProviderConsulta'=>$dataProviderConsulta,'dataProviderDocumentos'=>$dataProviderDocumentos,'dataProviderComentarios'=>$dataProviderComentarios,
+			));
+		}
+		else {
+			$this->render('viewAlumno',array(
+				'model'=>$model,'dataProviderConsulta'=>$dataProviderConsulta,'dataProviderDocumentos'=>$dataProviderDocumentos,'dataProviderComentarios'=>$dataProviderComentarios,
+			));	
+		}
+
 	}
 
 	/**
@@ -96,6 +112,11 @@ class CursoController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionVideo($id){
+		$documento=Documentos::model()->findByPk($id);
+		$this->render('viewVideo',array('model'=>$documento));
 	}
 
 	/**
