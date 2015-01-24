@@ -59,7 +59,7 @@ class ActividadesController extends Controller
 	public function actionViewEncuestas($id)
 	{
 
-		//para generar las encuestas
+		//para generar las encuestas en excel
 		if(isset($_GET["excel"])){
 			 $content=$this->renderPartial("excel",array("model"=>$this->loadModel($id),true));
 			 Yii::app()->request->sendFile("EPI_ResultadoEncuesta.xls",$content);

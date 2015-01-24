@@ -32,7 +32,7 @@ class ConvocatoriaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','viewEncuestas'),
 				'users'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -51,8 +51,60 @@ class ConvocatoriaController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+
+		$model=$this->loadModel($id);
+
+		//encuestas
+		$actividades=new Actividades('search');
+		$actividades->unsetAttributes();  // clear any default values
+		if(isset($_GET['Actividades']))$actividades->attributes=$_GET['Actividades'];
+
+
+		//alumnos
+		$alumnos=new Alumno('search');
+		$alumnos->unsetAttributes();  // clear any default values
+		if(isset($_GET['Alumnos']))$actividades->attributes=$_GET['Alumnos'];
+
+		//para generar las encuestas
+		if(isset($_GET["encuestas"])){
+			$Actividades=Actividades::model()->findAll("con_semestre='".$model->con_semestre."'");
+			$content=$this->renderPartial("excelEncuestas",array("model"=>$Actividades),true);
+			Yii::app()->request->sendFile("EPI_Encuestas$model->con_semestre.xls",$content);
+
+		}
+
+
+		//para generar los alumnos en excel
+		if(isset($_GET["alumnos"])){
+			$convocatoria = $model->con_semestre;
+			$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria."'");
+			$content=$this->renderPartial("excelAlumnos",array("model"=>$alumnos),true);
+			Yii::app()->request->sendFile("EPI_Inscritos$model->con_semestre.xls",$content);
+		}
+
+		//proyectos
+		$proyectos=new Proyecto('search');
+		$proyectos->unsetAttributes();  // clear any default values
+		if(isset($_GET['Proyecto']))$actividades->attributes=$_GET['Proyecto'];
+
+		$this->render('viewDatos',array(
+			'model'=>$model,'actividades'=>$actividades,'alumnos'=>$alumnos,'proyectos'=>$proyectos,
+		));
+	}
+
+	public function actionViewEncuestas($id)
+	{
+		$model=Actividades::model()->find("act_id=".$id);
+
+		//para generar las encuestas en excel
+		if(isset($_GET["excel"])){
+			$Actividades=Actividades::model()->find("con_semestre='".$model->con_semestre."' and act_id=".$id);
+			 $content=$this->renderPartial("excel",array("model"=>$Actividades,true));
+			 Yii::app()->request->sendFile("EPI_ResultadoEncuesta.xls",$content);
+		}
+
+		$this->render('viewEncuestas',array(
+			'model'=>$model,
 		));
 	}
 

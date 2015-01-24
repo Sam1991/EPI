@@ -141,23 +141,110 @@ class Proyecto extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$model=convocatoria::model()->findAll("con_estado=1");
-		$convocatoria = $model[0]->con_semestre;
+		//obtener los alumnos de la convocatoria actual
+		$convocatoria = convocatoria::model()->find("con_estado=1")->con_semestre;
 		$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria."'");
 
 		$criteria=new CDbCriteria;
 		$condicion='';
 
-		 for ($i=0; $i < count($alumnos); $i++) { 
- 			$proyecto = alumnoproyecto::model()->findAll("al_rut='".$alumnos[$i]->al_rut."'");
- 		//echo $proyectos[0]->pro_idProyecto." ";
-			if($i>0){
-				$condicion=$condicion.' or ';		
+		$j=0;
+		$cantidad=0;
+
+		//obtener los proyectos de los alumnos
+		for ($i=0; $i < count($alumnos); $i++) { 
+			
+			//obtener el proyecto del alumno
+ 			$proyecto = alumnoproyecto::model()->find("al_rut='".$alumnos[$i]->al_rut."'");
+			
+
+			//si el alumno tiene un proyecto
+			if(count($proyecto)>0){
+			
+			//para que no se le ponga "or" al principio ni al final  
+			if($cantidad>=1){
+				$condicion=$condicion." or ";		
 			}
-			$condicion=$condicion."pro_idProyecto=".$proyecto[0]->pro_idProyecto;
+				$condicion=$condicion."pro_idProyecto=".$proyecto->pro_idProyecto;
+				$cantidad++;
 			}
-		if(count($proyecto)==0){
-			$condicion='';
+			
+		}
+		
+		//si no hay ningun proyecto
+		if($cantidad==0){
+			$condicion="pro_idProyecto=-1";
+		}
+
+		$criteria->addCondition($condicion);
+		$criteria->compare('pro_idProyecto',$this->pro_idProyecto);
+		$criteria->compare('pro_titulo',$this->pro_titulo,true);
+		$criteria->compare('pro_duracion',$this->pro_duracion,true);
+		$criteria->compare('pro_ambito',$this->pro_ambito,true);
+		$criteria->compare('pro_emNombre',$this->pro_emNombre,true);
+		$criteria->compare('pro_emContacto',$this->pro_emContacto,true);
+		$criteria->compare('pro_emTelefono',$this->pro_emTelefono,true);
+		$criteria->compare('emEmail',$this->emEmail,true);
+		$criteria->compare('pro_profeNombre',$this->pro_profeNombre,true);
+		$criteria->compare('pro_profeEmail',$this->pro_profeEmail,true);
+		$criteria->compare('pro_profeTelefono',$this->pro_profeTelefono,true);
+		$criteria->compare('pro_dirEscuela',$this->pro_dirEscuela,true);
+		$criteria->compare('pro_vBEscuela',$this->pro_vBEscuela,true);
+		$criteria->compare('pro_aporteValorado',$this->pro_aporteValorado);
+		$criteria->compare('pro_aportePecuniario',$this->pro_aportePecuniario);
+		$criteria->compare('pro_resumenEjecutivo',$this->pro_resumenEjecutivo,true);
+		$criteria->compare('pro_descripcionEmpresa',$this->pro_descripcionEmpresa,true);
+		$criteria->compare('pro_definicionProblema',$this->pro_definicionProblema,true);
+		$criteria->compare('pro_solucionPropuesta',$this->pro_solucionPropuesta,true);
+		$criteria->compare('pro_estadoArte',$this->pro_estadoArte,true);
+		$criteria->compare('pro_objetivoGeneral',$this->pro_objetivoGeneral,true);
+		$criteria->compare('pro_metodologia',$this->pro_metodologia,true);
+		
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+
+
+	public function searchConvocatoria($convocatoria)
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+
+		//obtener los alumnos de la convocatoria actual
+		$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria."'");
+
+		$criteria=new CDbCriteria;
+		$condicion='';
+
+		$j=0;
+		$cantidad=0;
+
+		//obtener los proyectos de los alumnos
+		for ($i=0; $i < count($alumnos); $i++) { 
+			
+			//obtener el proyecto del alumno
+ 			$proyecto = alumnoproyecto::model()->find("al_rut='".$alumnos[$i]->al_rut."'");
+			
+
+			//si el alumno tiene un proyecto
+			if(count($proyecto)>0){
+			
+			//para que no se le ponga "or" al principio ni al final  
+			if($cantidad>=1){
+				$condicion=$condicion." or ";		
+			}
+				$condicion=$condicion."pro_idProyecto=".$proyecto->pro_idProyecto;
+				$cantidad++;
+			}
+			
+		}
+		
+		//si no hay ningun proyecto
+		if($cantidad==0){
+			$condicion="pro_idProyecto=-1";
 		}
 
 		$criteria->addCondition($condicion);

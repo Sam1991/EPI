@@ -51,8 +51,9 @@ $('.search-form form').submit(function(){
 			'template' => '{view}',
 			'buttons'=>array(
 			 	'view' => array(
-			 		'label'=>'view', 
+			 		'label'=>'Resultado Encuesta', 
 			 		'url'=>"CHtml::normalizeUrl(array('viewEncuestas','id'=>\$data->act_id))",
+			 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/encuesta.jpg', 
 			 		),
  			),
 		),

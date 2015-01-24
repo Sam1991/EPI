@@ -112,6 +112,27 @@ class Actividades extends CActiveRecord
 		));
 	}
 
+	public function searchConvocatoria($convocatoria)
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+		$criteria->addCondition("con_semestre ='$convocatoria'");
+		$criteria->compare('act_id',$this->act_id);
+		$criteria->compare('con_semestre',$this->con_semestre,true);
+		$criteria->compare('act_campus',$this->act_campus,true);
+		$criteria->compare('act_nombre',$this->act_nombre,true);
+		$criteria->compare('act_fecha',$this->act_fecha,true);
+		$criteria->compare('act_horaInicio',$this->act_horaInicio,true);
+		$criteria->compare('act_horaFin',$this->act_horaFin,true);
+		$criteria->compare('act_lugar',$this->act_lugar,true);
+		$criteria->compare('act_descripcion',$this->act_descripcion,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

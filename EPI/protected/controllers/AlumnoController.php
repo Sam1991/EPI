@@ -269,7 +269,7 @@ class AlumnoController extends Controller
 	{
 		$this->layout = '//layouts/columnAdmin';
 
-		//para generar las encuestas
+		//para generar los alumnos en excel
 		if(isset($_GET["excel"])){
 
 			//obtener el semestre actual

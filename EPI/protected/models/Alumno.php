@@ -129,6 +129,31 @@ class Alumno extends CActiveRecord
 		));
 	}
 
+	public function searchConvocatoria($convocatoria)
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+
+		$criteria=new CDbCriteria;
+		$criteria->addCondition("con_semestre ='$convocatoria'");
+		$criteria->compare('al_rut',$this->al_rut,true);
+		$criteria->compare('al_nombre',$this->al_nombre,true);
+		$criteria->compare('al_carrera',$this->al_carrera,true);
+		$criteria->compare('al_email',$this->al_email,true);
+		$criteria->compare('al_telefono',$this->al_telefono,true);
+		$criteria->compare('al_comentario',$this->al_comentario,true);
+		$criteria->compare('al_clave',$this->al_clave,true);
+		$criteria->compare('al_paterno',$this->al_paterno,true);
+		$criteria->compare('al_materno',$this->al_materno,true);
+		$criteria->compare('al_campus',$this->al_campus,true);
+		$criteria->compare('al_email2',$this->al_email2,true);
+		$criteria->compare('con_semestre',$this->con_semestre,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

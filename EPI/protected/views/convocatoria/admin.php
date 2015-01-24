@@ -39,7 +39,7 @@ $('.search-form form').submit(function(){
 		//'con_estado',
 		array(
 			'class'=>'CButtonColumn',
-			'template' => '{update}',
+			'template' => '{update}{view}',
 			'buttons'=>array(
 			 	'update' => array(
 			 		'label'=>'Modificar Convocatoria', 
