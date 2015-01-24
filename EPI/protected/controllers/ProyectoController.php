@@ -533,6 +533,12 @@ class ProyectoController extends Controller
 		$pdf->ln(8);
 // FIN RESUMEN ESTADO DEL ARTE
 
+		$pdf->AddPage();
+        $pdf->SetTextColor(0);
+        $pdf->SetDrawColor(10,63,122);
+        $pdf->SetLineWidth(0);
+        $pdf->ln(5);
+
 		//INICIO RESUMEN OBJETIVO GENERAL
         $pdf->ln(5);
         $pdf->SetFont('dejavusans','B',8);
@@ -661,9 +667,6 @@ class ProyectoController extends Controller
     		   				        // OBTENER MES Y DIA
     $sql6 = "select month(cg_inicio".$h.") as mes, day(cg_inicio".$h.")  as dia from cartagantt where '$id'=pro_idProyecto";
     $data6 =  Yii::app()->db->createCommand($sql6)->queryAll();   
-    $dia=-1;
-    $mes=-1;
-    $dias=-1;
 
     if (count($data6)==0){
        	$pdf->writeHTML('Informe Incompleto');
