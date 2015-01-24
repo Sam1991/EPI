@@ -4,6 +4,7 @@
 
 $this->menu=array(
 	array('label'=>'Pasar a Excel', 'url'=>array('admin','excel'=>1)),
+	array('label'=>'Enviar Email', 'url'=>array('email')),
 );
 
 
@@ -36,14 +37,27 @@ $('.search-form form').submit(function(){
 		'al_telefono',
 		'al_carrera',
 		'al_campus',
-		/*
+		'al_estado',
 		'al_clave',
+		/*
 		'al_comentario',
 		'al_email2',
 		*/
 		array(
 			'class'=>'CButtonColumn',
-			'template' => '{view}',
+			'template' => '{view} {aceptado} {rechazado}',
+			'buttons'=>array(
+			 	'aceptado' => array(
+			 		'label'=>'Aceptado', 
+			 		'url'=>"CHtml::normalizeUrl(array('aceptado','id'=>\$data->al_rut))",
+			 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/tick.gif', 
+   					),
+			 	'rechazado' => array(
+			 		'label'=>'rechazado', 
+			 		'url'=>"CHtml::normalizeUrl(array('rechazado','id'=>\$data->al_rut))",
+			 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/cross.gif', 
+   					),
+ 			),
 		),
 	),
 )); ?>

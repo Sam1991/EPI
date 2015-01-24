@@ -660,7 +660,11 @@ class ProyectoController extends Controller
 
     		   				        // OBTENER MES Y DIA
     $sql6 = "select month(cg_inicio".$h.") as mes, day(cg_inicio".$h.")  as dia from cartagantt where '$id'=pro_idProyecto";
-    $data6 =  Yii::app()->db->createCommand($sql6)->queryAll();    
+    $data6 =  Yii::app()->db->createCommand($sql6)->queryAll();   
+    $dia=-1;
+    $mes=-1;
+    $dias=-1;
+
     if (count($data6)==0){
        	$pdf->writeHTML('Informe Incompleto');
       }

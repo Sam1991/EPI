@@ -5,7 +5,7 @@
 if(Yii::app()->user->isSuperAdmin){
 $this->menu=array(
 	array('label'=>'Crear Curso', 'url'=>array('create')),
-	array('label'=>'Cursos', 'url'=>array('admin')),
+	array('label'=>'Administrar Cursos', 'url'=>array('admin')),
 );
 		}
 ?>
