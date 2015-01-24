@@ -266,7 +266,7 @@ class ProyectoController extends Controller
 		$pdf->Text('45','36','PARA EL DESARROLLO DE PROYECTOS DE INNOVACIÓN');
 		$pdf->ln(12);
 
-        // OBTENER DATOS ALUMNOPROYECTO       
+		        // OBTENER DATOS ALUMNOPROYECTO       
         $sql = "select al_rut from alumnoproyecto where '$id'=pro_idProyecto";
         $data1 =  Yii::app()->db->createCommand($sql)->queryAll();
         if (count($data1)==0){
@@ -275,7 +275,7 @@ class ProyectoController extends Controller
         else{
         $rut = $data1[0]['al_rut'];
 
-        // OBTENER DATOS ALUMNO   
+       			 // OBTENER DATOS ALUMNO   
         $sql2 = "select * from alumno where '$rut'=al_rut";
         $data2 =  Yii::app()->db->createCommand($sql2)->queryAll();
         if (count($data2)==0){
@@ -283,7 +283,7 @@ class ProyectoController extends Controller
         }
         else{
 
-		// OBTENER DATOS PROYECTO    
+        			// OBTENER DATOS PROYECTO    
         $sql3 = "select * from proyecto where '$id'=pro_idProyecto";
         $data3 =  Yii::app()->db->createCommand($sql3)->queryAll();
 		if (count($data3)==0){
@@ -291,15 +291,15 @@ class ProyectoController extends Controller
         }
         else{
 
-		// OBTENER DATOS OBJETIVOS   
+				// OBTENER DATOS OBJETIVOS   
         $sql4 = "select * from objetivos where '$id'=pro_idProyecto";
         $data4 =  Yii::app()->db->createCommand($sql4)->queryAll();
 		if (count($data4)==0){
         	$pdf->writeHTML('Informe Incompleto');
         }
         else{
-       
-//INICIO RESUMEN ALUMNO
+
+        //INICIO RESUMEN ALUMNO
         $pdf->SetFont('dejavusans','B',8);
         $pdf->writeHTML('1. RESUMEN PROYECTO');
         $pdf->writeHTML('1.1 ALUMNO(A)');
@@ -334,7 +334,7 @@ class ProyectoController extends Controller
 		$pdf->SetFont('dejavusans','',8);
 		$pdf->Cell(130,5,$data2[0]['al_carrera'],1,1,'C',true);
 		$pdf->ln(8);
-//FIN RESUMEN ALUMNO
+//FIN RESUMEN ALUMNO	
 
 //INICIO RESUMEN PROYECTO
         $pdf->SetFont('dejavusans','B',8);
@@ -392,7 +392,7 @@ class ProyectoController extends Controller
 		$pdf->ln(8);
 //FIN RESUMEN EMPRESA
 
-//INICIO RESUMEN PROFESOR
+		//INICIO RESUMEN PROFESOR
         $pdf->SetFont('dejavusans','B',8);
         $pdf->writeHTML('1.4 PROFESOR GUÍA Y DIRECCIÓN DE ESCUELA');
 
@@ -429,7 +429,7 @@ class ProyectoController extends Controller
 		$pdf->ln(8);
 //FIN RESUMEN PROFESOR
 
-//INICIO RESUMEN APORTE
+		//INICIO RESUMEN APORTE
         $pdf->SetFont('dejavusans','B',8);
         $pdf->writeHTML('1.5 ESTRUCTURA DE COSTOS DEL PROYECTO');
        
@@ -448,7 +448,7 @@ class ProyectoController extends Controller
 		$pdf->ln(8);
 //FIN RESUMEN APORTE
 
-//INICIO RESUMEN EJECUTIVO
+		//INICIO RESUMEN EJECUTIVO
         $pdf->SetFont('dejavusans','B',8);
         $pdf->writeHTML('1.6 RESUMEN EJECUTIVO DEL PROYECTO DE INNOVACIÓN');
        
@@ -533,13 +533,7 @@ class ProyectoController extends Controller
 		$pdf->ln(8);
 // FIN RESUMEN ESTADO DEL ARTE
 
-		$pdf->AddPage();
-        $pdf->SetTextColor(0);
-        $pdf->SetDrawColor(10,63,122);
-        $pdf->SetLineWidth(0);
-        $pdf->ln(5);
-
-//INICIO RESUMEN OBJETIVO GENERAL
+		//INICIO RESUMEN OBJETIVO GENERAL
         $pdf->ln(5);
         $pdf->SetFont('dejavusans','B',8);
         $pdf->writeHTML('3.4 OBJETIVOS DEL PROYECTO');
@@ -551,7 +545,7 @@ class ProyectoController extends Controller
 		$pdf->writeHTML($data3[0]['pro_objetivoGeneral']);
 // FIN RESUMEN OBJETIVO GENERAL
 
-//INICIO RESUMEN OBJETIVOS ESPECIFICOS
+		//INICIO RESUMEN OBJETIVOS ESPECIFICOS
         $pdf->ln(32);
         $pdf->SetFont('dejavusans','B',8);
         $pdf->writeHTML('3.4.2 OBJETIVOS ESPECÍFICOS');
@@ -570,7 +564,7 @@ class ProyectoController extends Controller
 		$pdf->writeHTML('5. '.$data4[0]['ob_objetivo5']);
 // FIN RESUMEN OBJETIVOS ESPECIFICOS
 
-//INICIO RESUMEN RESULTADOS
+		//INICIO RESUMEN RESULTADOS
         $pdf->ln(35);
         $pdf->SetFont('dejavusans','B',8);
         $pdf->writeHTML('3.5 RESULTADOS ESPERADOS');
@@ -589,7 +583,7 @@ class ProyectoController extends Controller
 		$pdf->writeHTML('5. '.$data4[0]['ob_resultado5']);
 // FIN RESUMEN RESULTADOS
 
-//INICIO RESUMEN ACTIVIDADES
+		//INICIO RESUMEN ACTIVIDADES
         $pdf->ln(35);
         $pdf->SetFont('dejavusans','B',8);
         $pdf->writeHTML('3.6 ACTIVIDADES');
@@ -631,10 +625,11 @@ class ProyectoController extends Controller
         $pdf->SetDrawColor(10,63,122);
         $pdf->SetLineWidth(0);
         $pdf->ln(5);
-    }
-}
-}
-}
+
+        } // fin else data4
+		} // fin else data3
+        } // fin else data2
+		} // fin else data1
 
 //INICIO RESUMEN CARTA GANTT
 		$pdf->ln(5);
@@ -651,18 +646,19 @@ class ProyectoController extends Controller
 		$pdf->Cell(20,5,'3',1,0,'C',true);
 		$pdf->Cell(20,5,'4',1,0,'C',true);
 		$pdf->Cell(20,5,'5',1,1,'C',true);
+		$pdf->SetFillColor(255, 255, 255);	
 
-				        // OBTENER CANTIDAD DE DIAS
-for ($h=1; $h <= 5 ; $h++) { 		        
-    $sql5 = "select datediff(cg_fin".$h.",cg_inicio".$h.") as dias".$h." from cartagantt where '$id'=pro_idProyecto";
-    $data5 =  Yii::app()->db->createCommand($sql5)->queryAll();
-        if (count($data5)==0){
-       	$pdf->writeHTML('Informe Incompleto');
-      }
-    else{
-     $dias = $data5[0]['dias'.$h];
-    }
-   				        // OBTENER MES Y DIA
+		for ($h=1; $h <= 5 ; $h++) { 		        
+    		$sql5 = "select datediff(cg_fin".$h.",cg_inicio".$h.") as dias".$h." from cartagantt where '$id'=pro_idProyecto";
+    		$data5 =  Yii::app()->db->createCommand($sql5)->queryAll();
+        	if (count($data5)==0){
+       			$pdf->writeHTML('Informe Incompleto');
+      		}
+    		else{
+     			$dias = $data5[0]['dias'.$h];
+    		}
+
+    		   				        // OBTENER MES Y DIA
     $sql6 = "select month(cg_inicio".$h.") as mes, day(cg_inicio".$h.")  as dia from cartagantt where '$id'=pro_idProyecto";
     $data6 =  Yii::app()->db->createCommand($sql6)->queryAll();    
     if (count($data6)==0){
@@ -672,71 +668,94 @@ for ($h=1; $h <= 5 ; $h++) {
     	$dia = $data6[0]['dia'];
     	$mes = $data6[0]['mes'];
     	if ($mes > 7)
-     		$mes=(ceil($mes/2))-2;
+     		$mes=(ceil($mes/2))-3;
     	else
      		$mes=$mes-2;
-
     }
-
-	$pdf->SetFont('dejavusans','',8);
+	$pdf->SetFillColor(255, 255, 255);
+    $pdf->SetFont('dejavusans','',8);
 	$pdf->Cell(80,20,$h.'. '.$data4[0]['ob_actividades'.$h],1,0,'',true);
-	for ($i=1; $i <= 20; $i++) { 
-		if ($i>= 1 && $i<=4)
-			$bandera=1;
-		if ($i>= 5 && $i<=8)
-			$bandera=2;
-		if ($i>= 9 && $i<=12)
-			$bandera=3;
-		if ( $i>=13 && $i<=16)
-			$bandera=4;
-		if ( $i>=17 && $i<=20)
-			$bandera=5;
-		if ($dias >= 7 && $bandera==$mes){
-			$pdf->SetFillColor(73, 62, 204);
-			$pdf->Cell(5,20,$mes,1,0,'C',true);
-			$dias = $dias-7;
-		}
-		else{
-			$pdf->SetFillColor(255, 255, 255);
-			$pdf->Cell(5,20,'',1,0,'C',true);
-		}
-	}
-		$pdf->Cell(5,20,'',1,1,'C',true);
-}
-	/*
+	$bandera=1;
 
-		$pdf->Cell(80,20,'2. '.$data4[0]['ob_actividades2'],1,0,'',true);
-		for ($i=0; $i < 19; $i++) { 
-			$pdf->Cell(5,20,'',1,0,'C',true);
-		}
-		$pdf->Cell(5,20,'',1,1,'C',true);
+		for ($m=1; $m <= 20; $m++) { 
+			if ($m>= 1 && $m<=4 && $mes==1 && ($dia>=1 	&& $dia<=7))
+				$bandera=1;
+			else if ($m>= 1 && $m<=4 && $mes==1 && ($dia>=8 && $dia<=15))
+				$bandera=2;
+			else if ($m>= 1 && $m<=4 && $mes==1 && ($dia>=16 && $dia<=22))
+				$bandera=3;
+			else if ($m>= 1 && $m<=4 && $mes==1 && ($dia>=23 && $dia<=30))
+				$bandera=4;
 
-		$pdf->Cell(80,20,'3. '.$data4[0]['ob_actividades3'],1,0,'',true);
-		for ($i=0; $i < 19; $i++) { 
-			$pdf->Cell(5,20,'',1,0,'C',true);
-		}
-		$pdf->Cell(5,20,'',1,1,'C',true);
+			else if ($m>= 5 && $m<=8 && $mes==2 && ($dia>=1 && $dia<=7))
+				$bandera=5;
+			else if ($m>= 5 && $m<=8 && $mes==2 && ($dia>=8 && $dia<=15))
+				$bandera=6;
+			else if ($m>= 5 && $m<=8 && $mes==2 && ($dia>=16 && $dia<=22))
+				$bandera=7;
+			else if ($m>= 5 && $m<=8 && $mes==2 && ($dia>=23 && $dia<=30))
+				$bandera=8;
 
-		$pdf->Cell(80,20,'4. '.$data4[0]['ob_actividades4'],1,0,'',true);
-		for ($i=0; $i < 19; $i++) { 
-			$pdf->Cell(5,20,'',1,0,'C',true);
-		}
-		$pdf->Cell(5,20,'',1,1,'C',true);
+			else if ($m>= 9 && $m<=12 && $mes==3 && ($dia>=1 && $dia<=7))
+				$bandera=9;
+			else if ($m>= 9 && $m<=12 && $mes==3 && ($dia>=8 && $dia<=15))
+				$bandera=10;
+			else if ($m>= 9 && $m<=12 && $mes==3 && ($dia>=16 && $dia<=22))
+				$bandera=11;
+			else if ($m>= 9 && $m<=12 && $mes==3 && ($dia>=23 && $dia<=30))
+				$bandera=12;
 
-		$pdf->Cell(80,20,'5. '.$data4[0]['ob_actividades5'],1,0,'',true);
-		for ($i=0; $i < 19; $i++) { 
-			$pdf->Cell(5,20,'',1,0,'C',true);
-		}
-		$pdf->Cell(5,20,'',1,1,'C',true);
-		*/
+			else if ( $m>=13 && $m<=16 && $mes==4 && ($dia>=1 && $dia<=7))
+				$bandera=13;
+			else if ( $m>=13 && $m<=16 && $mes==4 && ($dia>=8 && $dia<=15))
+				$bandera=14;
+			else if ( $m>=13 && $m<=16 && $mes==4 && ($dia>=16 && $dia<=22))
+				$bandera=15;
+			else if ( $m>=13 && $m<=16 && $mes==4 && ($dia>=23 && $dia<=30))
+				$bandera=16;
 
-		$pdf->ln(8);
-// FIN RESUMEN CARTA GANTT
+			else if ( $m>=17 && $m<=20  && $mes==5 && ($dia>=1 && $dia<=7))
+				$bandera=17;
+			else if ( $m>=17 && $m<=20  && $mes==5 && ($dia>=8 && $dia<=15))
+				$bandera=18;
+			else if ( $m>=17 && $m<=20  && $mes==5 && ($dia>=16 && $dia<=22))
+				$bandera=19;
+			else if ( $m>=17 && $m<=20  && $mes==5 && ($dia>=23 && $dia<=30))
+				$bandera=20;
+			}// fin for bandera i<=20
 
+			for ($j=1; $j < $bandera; $j++) { 
+				$pdf->SetFillColor(255, 255, 255);
+				$pdf->Cell(5,20,'',1,0,'C',true);
+			}
+
+			for ($i=$bandera; $i<=19; $i++) {
+				if ($dias>=7){
+					$pdf->SetFillColor(73, 62, 204);
+					$pdf->Cell(5,20,'',1,0,'C',true);
+					$dias = $dias-7;
+				}	
+				else {
+				$pdf->SetFillColor(255, 255, 255);
+				$pdf->Cell(5,20,'',1,0,'C',true);
+				}	
+				if ($dias>=7 && $i+1==20){
+					$pdf->SetFillColor(73, 62, 204);
+					$pdf->Cell(5,20,'',1,1,'C',true);
+					$dias = $dias-7;				
+				}
+				else if ($i+1==20){
+					$pdf->SetFillColor(255, 255, 255);
+					$pdf->Cell(5,20,'',1,1,'C',true);
+				}
+
+			}
+	
+    	} // fin for actividades
 
         $pdf->Output("Postulacion'$fecha'.pdf", "I");
         Yii::app()->end();
     		
-    	}
+} //fin pdf
 
-}
+} // fin controlador
