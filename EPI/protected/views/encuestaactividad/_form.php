@@ -25,8 +25,10 @@
 	</div>
 
 	<div class="row">
+
 		<?php echo $form->labelEx($model,'act_id'); ?>
-		<?php echo $form->dropDownList($model,'act_id',CHtml::listData(Actividades::model()->findAll(),"act_id","act_nombre")); ?>
+		<?php $convocatoria=Convocatoria::model()->findAll("con_estado=1");
+		echo $form->dropDownList($model,'act_id',CHtml::listData(Actividades::model()->findAll('con_semestre="'.$convocatoria[0]->con_semestre.'"'),"act_id","act_nombre")); ?>
 		<?php echo $form->error($model,'act_id'); ?>
 	</div>
 

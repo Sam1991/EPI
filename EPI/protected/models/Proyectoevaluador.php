@@ -116,6 +116,29 @@ class Proyectoevaluador extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+
+		$convocatoria=Convocatoria::model()->findAll("con_estado=1");
+		$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria[0]->con_semestre."'");
+
+		$condicion='';
+
+		if(count($alumnos)!=0){
+
+		for ($i=0; $i < count($alumnos); $i++) { 
+ 			$proyecto = alumnoproyecto::model()->findAll("al_rut='".$alumnos[$i]->al_rut."'");
+ 			$evaluacion = $proyecto = proyectoevaluador::model()->findAll("pro_idProyecto='".$proyecto[0]->pro_idProyecto."'");
+ 		//echo $proyectos[0]->pro_idProyecto." ";
+			if($i>0){
+				$condicion=$condicion.' or ';		
+			}
+			$condicion=$condicion."pro_idProyecto=".$evaluacion[0]->pro_idProyecto;
+			}
+		if(count($proyecto)==0)
+			$condicion='';
+		}
+		else $condicion='0';
+
+		$criteria->addCondition($condicion);
 		$criteria->compare('pre_id',$this->pre_id);
 		$criteria->compare('pro_idProyecto',$this->pro_idProyecto);
 		$criteria->compare('pro_titulo',$this->titulo,true);
@@ -136,7 +159,29 @@ class Proyectoevaluador extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$convocatoria=Convocatoria::model()->findAll("con_estado=1");
+		$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria[0]->con_semestre."'");
+
+		$condicion='';
+
+		if(count($alumnos)!=0){
+
+		for ($i=0; $i < count($alumnos); $i++) { 
+ 			$proyecto = alumnoproyecto::model()->findAll("al_rut='".$alumnos[$i]->al_rut."'");
+ 			$evaluacion = $proyecto = proyectoevaluador::model()->findAll("pro_idProyecto='".$proyecto[0]->pro_idProyecto."'");
+ 		//echo $proyectos[0]->pro_idProyecto." ";
+			if($i>0){
+				$condicion=$condicion.' or ';		
+			}
+			$condicion=$condicion."pro_idProyecto=".$evaluacion[0]->pro_idProyecto;
+			}
+		if(count($proyecto)==0)
+			$condicion='';
+		}
+		else $condicion='0';
+
 		$rut = Yii::app()->user->name;
+		$criteria->addCondition($condicion);
 		$criteria->addCondition("ev_rut='$rut'");
 		$criteria->compare('pre_id',$this->pre_id);
 		$criteria->compare('pro_idProyecto',$this->pro_idProyecto);

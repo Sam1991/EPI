@@ -105,9 +105,12 @@ class Encuestaactividad extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		//encuestas de la convocatoria actual
+		$convocatoria=Convocatoria::model()->findAll("con_estado=1");
+
 		//solo muestra las respondidas
 		$criteria->addCondition("en_estado =1");
-
+		$criteria->addCondition("en_convocatoria='".$convocatoria[0]->con_semestre."'");
 
 
 		$criteria->compare('en_id',$this->en_id);

@@ -4,6 +4,7 @@
 
 $this->menu=array(
 	array('label'=>'Crear Encuesta', 'url'=>array('create')),
+	array('label'=>'Encuestas Respondidas', 'url'=>array('admin')),
 	array('label'=>'Pasar a Excel', 'url'=>array('admin','excel'=>1)),
 );
 

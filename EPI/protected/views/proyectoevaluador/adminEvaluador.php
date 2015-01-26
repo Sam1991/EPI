@@ -35,13 +35,19 @@ $('.search-form form').submit(function(){
 	
 		array(
 			'class'=>'CButtonColumn',
-			'template' => '{view}',
+			'template' => '{view} {pdf}',
 			'buttons'=>array(
 			 	'view' => array(
 			 		'label'=>'Visualizar Proyecto', 
 			 		'url'=>"CHtml::normalizeUrl(array('proyecto/view','id'=>\$data->pro_idProyecto))",
 			 		'options' => array('class'=>'View'),
 			 		),
+			 	'pdf' => array(
+			 		'label'=>'Generar PDF Proyecto', 
+			 		'url'=>"CHtml::normalizeUrl(array('proyecto/pdf','id'=>\$data->pro_idProyecto))",
+			 		'imageUrl'=>Yii::app()->request->baseUrl.'/images/pdf_icon.gif', 
+			 		'options' => array('class'=>'pdf'),
+   					),
 			 	),
 		),
 	),
