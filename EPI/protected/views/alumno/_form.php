@@ -54,19 +54,26 @@
 		<?php echo $form->error($model,'al_rut'); ?>
 	</div>
 
-	
+	<div class="row">
+		<?php //echo $form->labelEx($model,'al_campus'); ?>
+		<?php echo $form->dropDownList($model,'al_campus',array(''=>'Campus','Concepción'=>'Concepción','Chillán'=>'Chillán'),
+		 array(
+		 	'ajax'=>array(
+		 		'type'=>'POST',
+		 		'url'=>Ccontroller::createUrl('alumno/ObtenerCarreras'),
+		 		'update'=>'#Alumno_al_carrera',
+		 		),
+		 	)
+		 	);?>
+		<?php echo $form->error($model,'al_campus'); ?>
+	</div>
 
 	<div class="row">
 		<?php //echo $form->labelEx($model,'al_carrera'); ?>
-		<?php echo $form->textField($model,'al_carrera',array('size'=>60,'maxlength'=>100,'placeholder'=>'Carrera')); ?>
+		<?php echo $form->dropDownList($model,'al_carrera',array(''=>'Carrera')); ?>
 		<?php echo $form->error($model,'al_carrera'); ?>
 	</div>
 
-	<div class="row">
-		<?php //echo $form->labelEx($model,'al_campus'); ?>
-		<?php echo $form->textField($model,'al_campus',array('size'=>60,'maxlength'=>100,'placeholder'=>'Campus')); ?>
-		<?php echo $form->error($model,'al_campus'); ?>
-	</div>
 	<div class="row">
 		<?php //echo $form->labelEx($model,'al_email'); ?>
 		<?php echo $form->textField($model,'al_email',array('size'=>30,'maxlength'=>30,'placeholder'=>'e-mail 1(ubiobio)')); ?>

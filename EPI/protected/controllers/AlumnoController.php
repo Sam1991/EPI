@@ -28,7 +28,7 @@ class AlumnoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create'),
+				'actions'=>array('index','view','create','ObtenerCarreras'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -63,6 +63,23 @@ class AlumnoController extends Controller
 			'model'=>$this->loadModel($id),
 			));
 		}
+	}
+
+
+
+	public function actionObtenerCarreras(){
+
+		//obtener campus del formulario
+		$campus=$_POST['Alumno']['al_campus'];
+
+		//generar las carreras
+		$carreras=Carreracampus::model()->findAll("ca_campus='".$campus."'");
+
+
+		foreach ($carreras as $data):
+		echo CHtml::tag('option',array('value'=>$data->ca_carrera),CHtml::encode($data->ca_carrera),true);
+		endforeach;
+
 	}
 
 	/**

@@ -2,10 +2,15 @@
 /* @var $this AlumnoController */
 /* @var $model Alumno */
 
-$this->menu=array(
-	array('label'=>'Pasar a Excel', 'url'=>array('admin','excel'=>1)),
-	array('label'=>'Enviar Email', 'url'=>array('email')),
-);
+//obtener convocatoria
+$convocatoria= Convocatoria::model()->find("con_estado=1");
+
+if (count(Alumno::model()->findAll("con_semestre='".$convocatoria->con_semestre."'"))>0) {
+	$this->menu=array(
+		array('label'=>'Pasar a Excel', 'url'=>array('admin','excel'=>1)),
+		array('label'=>'Enviar Email', 'url'=>array('email')),
+	);
+}
 
 
 Yii::app()->clientScript->registerScript('search', "
