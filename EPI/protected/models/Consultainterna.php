@@ -36,7 +36,7 @@ class Consultainterna extends CActiveRecord
 			// al administrdor responder la consulta
 			array('coni_respuesta,coni_estado,coni_fechaRespuesta', 'required','on' => 'editar'),
 			
-			array('coni_consulta','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La CONSULTAR no es válida")),
+			array('coni_consulta','match','pattern'=>'/^([a-zA-Zñáéíóú\s]{3,80})$/','message'=>CrugeTranslator::t("La CONSULTA no es válida")),
 			array('coni_estado', 'numerical', 'integerOnly'=>true),
 			array('coni_telefono, coni_email', 'length', 'max'=>255),
 

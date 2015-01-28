@@ -218,16 +218,20 @@ class AlumnoController extends Controller
 			$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
 			$mail->MsgHTML('<h1>Resultado</h1><p>Estas seleccionado para participar en el programa "estudiantes para innovar" de la universidad del Bio-bio</p><br><a href="epi.ubiobio.cl" style="text-decoration:none;color:#356ae9" target="_blank">epi.ubiobio.cl</a><p>Tu clave de acceso es: '.$clave.'</p>');
 			$mail->AddAddress($alumnosAceptados[$i]->al_email, '');
-			$mail->Send();
+			
+			if ($mail->Send()) {
+				
+			}
+			else{
+				echo "no se envio";
+			}
 
 		}
 		
-		echo "<script type='text/javascript'>alert('$message');</script>";
 		
 		//obtener alumnos rechazados
 		$alumnosRechazados=Alumno::model()->findAll("al_estado='Rechazado'"." and "." con_semestre ='$convocatoria'");
 
-		echo "alumnos rechazados <br>";
 		for($i=0;$i<count($alumnosRechazados);$i++){
 			//echo $alumnosRechazados[$i]->al_rut.'<br>';
 

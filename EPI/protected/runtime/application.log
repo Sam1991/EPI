@@ -5504,3 +5504,141 @@ Stack trace:
 REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
 in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (684)
 in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:08:28 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:26:54 [error] [php] Division by zero (C:\wamp\www\EPI\EPI\protected\views\convocatoria\viewEncuestas.php:71)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): ConvocatoriaController->renderFile()
+#1 C:\wamp\www\EPI\framework\web\CController.php(782): ConvocatoriaController->renderPartial()
+#2 C:\wamp\www\EPI\EPI\protected\controllers\ConvocatoriaController.php(108): ConvocatoriaController->render()
+#3 unknown(0): ConvocatoriaController->actionViewEncuestas()
+#4 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ConvocatoriaController->runAction()
+#8 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ConvocatoriaController->filterAccessControl()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(265): ConvocatoriaController->runActionWithFilters()
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ConvocatoriaController->run()
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=convocatoria/viewEncuestas&id=5
+in C:\wamp\www\EPI\EPI\protected\views\convocatoria\viewEncuestas.php (71)
+in C:\wamp\www\EPI\EPI\protected\controllers\ConvocatoriaController.php (108)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:32:03 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:32:09 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:32:37 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:32:41 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\wamp\www\EPI\EPI\protected\modules\cruge\controllers\UiController.php (158)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:41:49 [error] [php] Undefined offset: 0 (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:684)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (684)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:43:47 [error] [php] Undefined offset: 0 (C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php:684)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ProyectoController->runAction()
+#1 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ProyectoController->filterAccessControl()
+#4 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\EPI\framework\web\CController.php(265): ProyectoController->runActionWithFilters()
+#7 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ProyectoController->run()
+#8 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=proyecto/pdf&id=3
+in C:\wamp\www\EPI\EPI\protected\controllers\ProyectoController.php (684)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/26 16:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=convocatorias
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
+2015/01/26 16:50:51 [error] [php] Division by zero (C:\wamp\www\EPI\EPI\protected\views\actividades\viewEncuestas.php:71)
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CController.php(869): ActividadesController->renderFile()
+#1 C:\wamp\www\EPI\framework\web\CController.php(782): ActividadesController->renderPartial()
+#2 C:\wamp\www\EPI\EPI\protected\controllers\ActividadesController.php(70): ActividadesController->render()
+#3 unknown(0): ActividadesController->actionViewEncuestas()
+#4 C:\wamp\www\EPI\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\EPI\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\EPI\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(133): ActividadesController->runAction()
+#8 C:\wamp\www\EPI\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\EPI\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\EPI\framework\web\filters\CInlineFilter.php(58): ActividadesController->filterAccessControl()
+#11 C:\wamp\www\EPI\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\EPI\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\EPI\framework\web\CController.php(265): ActividadesController->runActionWithFilters()
+#14 C:\wamp\www\EPI\framework\web\CWebApplication.php(282): ActividadesController->run()
+#15 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\EPI\EPI\index.php(13): CWebApplication->run()
+REQUEST_URI=/EPI/EPI/index.php?r=actividades/viewEncuestas&id=5
+in C:\wamp\www\EPI\EPI\protected\views\actividades\viewEncuestas.php (71)
+in C:\wamp\www\EPI\EPI\protected\controllers\ActividadesController.php (70)
+in C:\wamp\www\EPI\EPI\index.php (13)
+2015/01/27 01:51:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "cruge/site/page"' in C:\wamp\www\EPI\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\EPI\framework\web\CWebApplication.php(141): CWebApplication->runController('cruge/site/page')
+#1 C:\wamp\www\EPI\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\EPI\EPI\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/EPI/EPI/index.php?r=cruge/site/page&view=convocatorias
+HTTP_REFERER=http://localhost/EPI/EPI/index.php?r=cruge/ui/login
+---
