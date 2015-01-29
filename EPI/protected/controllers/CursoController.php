@@ -162,7 +162,12 @@ class CursoController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Curso');
+		//obtener el semestre actual
+		$convocatoria = Convocatoria::model()->find("con_estado=1")->con_semestre;
+
+		//poner solo los del semestre
+		$dataProvider=new CActiveDataProvider('Curso',array('criteria'=>array('condition'=>"con_semestre='$convocatoria'")));
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

@@ -23,9 +23,9 @@ $('.search-form form').submit(function(){
 	'id'=>'encuestaactividad-grid',
 	'dataProvider'=>$model->searchAlumno(),
 	'filter'=>$model,
+	'filterPosition'=>'none',
 	'columns'=>array(
-		'en_convocatoria',
-		'act_id',
+		'Actividad.act_nombre',
 		'en_tipo',
 		/*
 		'en_pregunta1',
@@ -40,3 +40,5 @@ $('.search-form form').submit(function(){
 		),
 	),
 )); ?>
+
+

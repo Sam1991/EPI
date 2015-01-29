@@ -75,7 +75,7 @@ class AlumnoController extends Controller
 		//generar las carreras
 		$carreras=Carreracampus::model()->findAll("ca_campus='".$campus."'");
 
-
+		//pasar al dropdowlist
 		foreach ($carreras as $data):
 		echo CHtml::tag('option',array('value'=>$data->ca_carrera),CHtml::encode($data->ca_carrera),true);
 		endforeach;
@@ -194,21 +194,20 @@ class AlumnoController extends Controller
 
 		public function actionEmail()
 	{
+		
+
 		$emailCoordinador="scarril@alumnos.ubiobio.cl";
+		
 		//obtener el semestre actual
-		$convocatorias=convocatoria::model()->findAll("con_estado=1");
-		$convocatoria = $convocatorias[0]->con_semestre;
+		$convocatoria = Convocatoria::model()->find("con_estado=1")->con_semestre;
 		
 		//obtener alumnos aceptados
 		$alumnosAceptados=Alumno::model()->findAll("al_estado='Aceptado'"." and "." con_semestre ='$convocatoria'");
 
 		Yii::import('application.extensions.phpmailer.JPhpMailer');
 		
-		$message="alumnos aceptados: ";
-			
+		
 		for($i=0;$i<count($alumnosAceptados);$i++){
-
-			
 
 			//guardar la clave_INICIO
 			$clave=$alumnosAceptados[$i]->al_nombre.$alumnosAceptados[$i]->al_paterno.$alumnosAceptados[$i]->con_semestre;
@@ -221,8 +220,7 @@ class AlumnoController extends Controller
             Yii::app()->user->um->save($usuario);
 			//guardar la clave_FIN
 
-
-			$message=$message.$alumnosAceptados[$i]->al_rut;
+			//enviar email
 			$mail = new JPhpMailer;
 			$mail->IsSMTP();
 			$mail->Host = 'smtp.gmail.com';
@@ -233,16 +231,12 @@ class AlumnoController extends Controller
 			$mail->SetFrom($emailCoordinador, 'EPI');
 			$mail->Subject = 'Programa EPI - Resultado';
 			$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
-			$mail->MsgHTML('<h1>Resultado</h1><p>Estas seleccionado para participar en el programa "estudiantes para innovar" de la universidad del Bio-bio</p><br><a href="epi.ubiobio.cl" style="text-decoration:none;color:#356ae9" target="_blank">epi.ubiobio.cl</a><p>Tu clave de acceso es: '.$clave.'</p>');
+			$mail->MsgHTML('<h1>Resultado</h1><p>Te informamos que has sido aceptado para ingresar a la primera etapa, Etapa de Formación, del Programa de Innovación "Estudiantes para Innovar" (EPI). Te enviaremos pronto un correo con los detalles de horarios y salas.<br><br>Puedes acceder a la plataforma <a href="epi.ubiobio.cl" style="text-decoration:none;color:#356ae9" target="_blank">epi.ubiobio.cl</a>, tu clave de acceso es: '.$clave.'<br><br>Atentos saludos,</p>');
 			$mail->AddAddress($alumnosAceptados[$i]->al_email, '');
+			// Activo condificacción utf-8
+			$mail->CharSet = 'UTF-8';
+			$mail->Send();
 			
-			if ($mail->Send()) {
-				
-			}
-			else{
-				echo "no se envio";
-			}
-
 		}
 		
 		
@@ -250,6 +244,24 @@ class AlumnoController extends Controller
 		$alumnosRechazados=Alumno::model()->findAll("al_estado='Rechazado'"." and "." con_semestre ='$convocatoria'");
 
 		for($i=0;$i<count($alumnosRechazados);$i++){
+
+			//enviar email
+			$mail = new JPhpMailer;
+			$mail->IsSMTP();
+			$mail->Host = 'smtp.gmail.com';
+			$mail->SMTPAuth = true;
+			$mail->SMTPSecure = "tls"; 
+			$mail->Username = $emailCoordinador;
+			$mail->Password = '=Zuv1#Va';
+			$mail->SetFrom($emailCoordinador, 'EPI');
+			$mail->Subject = 'Programa EPI - Resultado';
+			$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
+			$mail->MsgHTML('<h1>Resultado</h1><p>Te informamos que lamentablemente no has sido aceptado para ingresar en el Programa de Innovación "Estudiantes para Innovar" (EPI). El proceso de selección puso atención, principalmente, al grado innovador del los temas de tesis propuestos. Durante el segundo semestre tendrás una nueva oportunidad para postular.</p><br>Atentos saludos,');
+			$mail->AddAddress($alumnosRechazados[$i]->al_email, '');
+			$mail->CharSet = 'UTF-8';
+			$mail->Send();
+
+			
 			//echo $alumnosRechazados[$i]->al_rut.'<br>';
 
 		}
@@ -294,8 +306,7 @@ class AlumnoController extends Controller
 		if(isset($_GET["excel"])){
 
 			//obtener el semestre actual
-			$convocatorias=convocatoria::model()->findAll("con_estado=1");
-			$convocatoria = $convocatorias[0]->con_semestre;
+			$convocatoria = $convocatorias=convocatoria::model()->find("con_estado=1")->con_semestre;
 
 			$alumnos=alumno::model()->findAll("con_semestre='".$convocatoria."'");
 			$content=$this->renderPartial("excelAlumnos",array("model"=>$alumnos),true);

@@ -62,6 +62,7 @@ class Encuestaactividad extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'Actividad'=>array(self::BELONGS_TO, 'Actividades', 'act_id'),
 		);
 	}
 
@@ -135,22 +136,17 @@ class Encuestaactividad extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+
 		
 		// solo vea sus encuestas
 		$criteria->addCondition("al_rut ='".Yii::app()->user->name."'");
 
-		//obtener el nombre de la actividad
-		// $actividad=Actividad::model()->find("act_id=".$this->act_id);
-		// echo  $actividad->act_nombre;
-		// echo $this->act_id;
 		//solo las que no ha respondido
 		$criteria->addCondition("en_estado =0");
-
 
 		$criteria->compare('en_id',$this->en_id);
 		$criteria->compare('al_rut',$this->al_rut,true);
 		$criteria->compare('en_convocatoria',$this->en_convocatoria,true);
-		$criteria->compare('act_id',$this->act_id);
 		$criteria->compare('en_tipo',$this->en_tipo,true);
 		$criteria->compare('en_pregunta1',$this->en_pregunta1,true);
 		$criteria->compare('en_pregunta2',$this->en_pregunta2,true);
@@ -160,9 +156,13 @@ class Encuestaactividad extends CActiveRecord
 		$criteria->compare('en_estado',$this->en_estado);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+                'pagination'=>array(
+                        'pageSize'=>100,
+                ),
+                'criteria'=>$criteria,
+        ));
 	}
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

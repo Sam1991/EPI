@@ -2,16 +2,24 @@
 /* @var $this ProyectoController */
 /* @var $model Proyecto */
 
-if(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin&&count(Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'"))>0){
-$this->menu=array(
-	array('label'=>'Crear proyecto', 'url'=>array('create')),
-	array('label'=>'Evaluación Proyecto', 'url'=>array('proyectoevaluador/adminAlumno')),
-);
-}
-else{
-	$this->menu=array(
-	array('label'=>'Crear proyecto', 'url'=>array('create')),
-);
+
+if(Yii::app()->user->checkAccess('alumno')&&!Yii::app()->user->isSuperAdmin){
+
+	//si el alumno tiene un proyecto
+	if(count(Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'"))>0){
+
+		$this->menu=array(
+			array('label'=>'Evaluación Proyecto', 'url'=>array('proyectoevaluador/adminAlumno')),
+		);
+	}
+
+	//si el alumno no tiene un proyecto
+	if(count(Alumnoproyecto::model()->find("al_rut='".Yii::app()->user->name."'"))<=0){
+
+		$this->menu=array(
+		array('label'=>'Crear proyecto', 'url'=>array('create')),
+		);
+	}
 }
 
 
